@@ -6,6 +6,7 @@ import { store, persistor } from "@/lib/store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import dynamic from "next/dynamic";
 import "react-toastify/dist/ReactToastify.css";
+import { setupAxiosInterceptors } from "@/utils/helpers/axios-interceptor";
 
 // Dynamically load ToastContainer with no SSR
 const ToastContainerDynamic = dynamic(
@@ -32,6 +33,7 @@ const MainProvider = ({ children }: { children: ReactNode }) => {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
+    setupAxiosInterceptors();
   }, []);
 
   // Skip rendering on the server completely
