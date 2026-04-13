@@ -23,9 +23,9 @@ export type User_Type = {
   createdAt: string; // ISO date string
   updatedAt: string; // ISO date string
   deletedAt: string | null; // ISO date string or null
-  reset_token: string | null;
-  reset_token_expiry: string | null; // ISO date string or null
-  password: string;
+  reset_token?: string | null;
+  reset_token_expiry?: string | null; // ISO date string or null
+  password?: string;
   token: string;
   role: {
     id: number;

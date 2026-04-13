@@ -19,7 +19,7 @@ export const AxiosPost = async <T>(
     if (data) {
       bodyData =
         config.contentType === "multipart/form-data"
-          ? ConvertObjectToFormData(data)
+          ? ConvertObjectToFormData(data as Record<string, unknown>)
           : ConvertObjectToJson(data);
     }
     const response = await axios.post<T>(url, bodyData, REQUEST_CONFIG(config));
@@ -56,7 +56,7 @@ export const AxiosPut = async <T>(
     if (data)
       bodyData =
         config.contentType === "multipart/form-data"
-          ? ConvertObjectToFormData(data)
+          ? ConvertObjectToFormData(data as Record<string, unknown>)
           : ConvertObjectToJson(data);
     const response = await axios.put(url, bodyData, REQUEST_CONFIG(config));
     // console.log(response.data);
@@ -78,7 +78,7 @@ export const AxiosPatch = async <T>(
     if (data) {
       bodyData =
         config.contentType === "multipart/form-data"
-          ? ConvertObjectToFormData(data)
+          ? ConvertObjectToFormData(data as Record<string, unknown>)
           : ConvertObjectToJson(data);
     }
     const response = await axios.patch<T>(

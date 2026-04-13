@@ -35,9 +35,7 @@ const useFCMToken = () => {
         }
 
         const token = await getToken(messaging(), {
-          vapidKey:
-            process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY ||
-            "BMg4cJ6Pl4TqQ-oS0M_EXaFSNBXQTQbiOLLom_cleNrfMVHrrgmdF41hH1hQfKqC-CODBySbM7VmetTmH2dVCME",
+          vapidKey: process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY || "",
           serviceWorkerRegistration: swRegistration,
         });
 

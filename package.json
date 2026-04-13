@@ -32,6 +32,7 @@
     "country-state-city": "^3.2.1",
     "d3-scale": "^4.0.2",
     "dayjs": "^1.11.13",
+    "dompurify": "^3.3.3",
     "emoji-picker-react": "^4.12.2",
     "firebase": "^11.7.1",
     "js-cookie": "^3.0.5",
@@ -66,6 +67,7 @@
     "winston": "^3.17.0"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20.14.14",
     "@types/react": "^18.3.3",

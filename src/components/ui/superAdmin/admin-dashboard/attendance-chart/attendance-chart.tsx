@@ -126,7 +126,7 @@ const AttendanceChart: React.FunctionComponent<IProps> = ({
               __html: `
               #chart-${chartId} {
                 --color-attendance: ${chartConfig.attendance.lightColor};
-              }  
+              }
             `,
             }}
           />
