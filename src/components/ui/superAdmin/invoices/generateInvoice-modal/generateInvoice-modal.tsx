@@ -48,7 +48,7 @@ const GenerateInvoiceModal: React.FC<BasicModalProps> = ({
   const [studentList, setStudentList] = useState<any[]>([]);
 
   const { data, isLoading } = useQuery({
-    queryKey: ["getAllEnrollments", student],
+    queryKey: ["enrollments", "for-invoice-gen", student],
     queryFn: () =>
       getAllEnrollments(
         {

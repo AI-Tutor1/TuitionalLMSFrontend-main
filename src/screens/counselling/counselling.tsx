@@ -80,7 +80,7 @@ const Counselling = () => {
     error: enrollmentsError,
     isLoading: enrollmentsLoading,
   } = useQuery({
-    queryKey: ["getAllEnrollments", role, id],
+    queryKey: ["enrollments", "for-counselling", role, id],
     queryFn: () =>
       getAllEnrollments(
         {

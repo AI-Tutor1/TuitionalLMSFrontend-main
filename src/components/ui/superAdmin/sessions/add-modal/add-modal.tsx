@@ -58,7 +58,8 @@ const AddModal: React.FC<BasicModalProps> = ({
 
   const { data, isLoading } = useQuery({
     queryKey: [
-      "getAllEnrollments",
+      "enrollments",
+      "for-session-add-modal",
       debouncedSearch?.length >= 3 && debouncedSearch,
     ],
     queryFn: () =>

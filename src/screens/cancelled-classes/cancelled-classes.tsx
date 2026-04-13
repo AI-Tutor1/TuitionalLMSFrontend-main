@@ -93,7 +93,8 @@ const CancelledClasses: FC = () => {
   // Data fetching
   const { data, error, isLoading } = useQuery({
     queryKey: [
-      "getAllEnrollments",
+      "cancelled-classes",
+      "list",
       filters.currentPage,
       filters.rowsPerPage,
       filters.dateFilter,

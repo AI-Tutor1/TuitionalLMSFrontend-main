@@ -342,7 +342,7 @@ const EnrollmentForm: FC = () => {
         {
           successMessage && toast.success(successMessage);
         }
-        queryClient.invalidateQueries({ queryKey: ["getAllEnrollments"] });
+        queryClient.invalidateQueries({ queryKey: ["enrollments", "list"] });
 
         // Handle conflict found
         if (data?.conflictFound === true) {
@@ -479,7 +479,7 @@ const EnrollmentForm: FC = () => {
         on_break: null,
         is_permanent: null,
       });
-      queryClient.invalidateQueries({ queryKey: ["getAllEnrollments"] });
+      queryClient.invalidateQueries({ queryKey: ["enrollments", "list"] });
     },
     onError: (error: unknown) => {
       const axiosError = error as MyAxiosError;
@@ -741,7 +741,8 @@ const EnrollmentForm: FC = () => {
   // Data fetching
   const { data, error, isLoading } = useQuery({
     queryKey: [
-      "getAllEnrollments",
+      "enrollments",
+      "list",
       filters.currentPage,
       filters.rowsPerPage,
       filters.dateFilter,

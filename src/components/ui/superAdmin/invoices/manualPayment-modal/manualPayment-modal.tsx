@@ -83,7 +83,8 @@ const ManualPaymentModal: React.FC<BasicModalProps> = ({
   const { data: getAllEnrollmentsData, isLoading: getAllEnrollmentsLoading } =
     useQuery({
       queryKey: [
-        "getAllEnrollments",
+        "enrollments",
+        "for-manual-payment",
         formState?.searchName?.length >= 3 && formState.searchName,
       ],
       queryFn: () =>
