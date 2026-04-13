@@ -10,7 +10,6 @@ import {
 } from "recharts";
 import classes from "./userEngagement-chart.module.css";
 import ChartContainer from "../chartContainer/chartContainer";
-import { sanitizeHTML } from "@/utils/helpers/sanitize-html";
 
 // Define data types
 type DataPoint = {
@@ -177,7 +176,7 @@ export default function UserEngagementChart({
         {/* Inject theme variables */}
         <style
           dangerouslySetInnerHTML={{
-            __html: sanitizeHTML(`
+            __html: `
             #chart-${chartId} {
               --color-activeUsers: ${chartConfig.activeUsers.lightColor};
               --color-avgTimeSpent: ${chartConfig.avgTimeSpent.lightColor};
@@ -185,7 +184,7 @@ export default function UserEngagementChart({
               --color-returningUsers: ${chartConfig.returningUsers.lightColor};
               --color-engagementRate: ${chartConfig.engagementRate.lightColor};
             }
-          `),
+          `,
           }}
         />
 
