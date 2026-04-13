@@ -12,6 +12,7 @@ import classes from "./messageItem.module.css";
 import { MessageData } from "@/types/chat/messages.types";
 import { useState } from "react";
 import { VoicePlayer } from "../../voicePlayer/voicePlayer";
+import { sanitizeHTML } from "@/utils/helpers/sanitize-html";
 
 interface MessageItemProps {
   message: MessageData;
@@ -173,8 +174,10 @@ export const MessageItem: React.FC<MessageItemProps> = React.memo(
                 <p
                   className={classes.repliedMessageText}
                   dangerouslySetInnerHTML={{
-                    __html: linkifyHTML(
-                      message.repliedToMessage.message_content || "",
+                    __html: sanitizeHTML(
+                      linkifyHTML(
+                        message.repliedToMessage.message_content || "",
+                      ),
                     ),
                   }}
                 ></p>
@@ -214,7 +217,7 @@ export const MessageItem: React.FC<MessageItemProps> = React.memo(
             <div
               className={classes.messageText}
               dangerouslySetInnerHTML={{
-                __html: linkifyHTML(message.message_content),
+                __html: sanitizeHTML(linkifyHTML(message.message_content)),
               }}
             ></div>
 

@@ -9,6 +9,7 @@ import { useAppSelector } from "@/lib/store/hooks/hooks";
 import moment from "moment";
 import AttendanceChartModal from "../attendance-chart-modal/attendance-chart-modal"; // ✅ added modal import
 import HorizontalBarChart from "@/components/global/charts/horizontalBar-chart/horizontalBar-chart";
+import { sanitizeHTML } from "@/utils/helpers/sanitize-html";
 
 // Define data type
 type SubjectData = {
@@ -123,11 +124,11 @@ const AttendanceChart: React.FunctionComponent<IProps> = ({
         <div className={classes.chartWrapper}>
           <style
             dangerouslySetInnerHTML={{
-              __html: `
+              __html: sanitizeHTML(`
               #chart-${chartId} {
                 --color-attendance: ${chartConfig.attendance.lightColor};
-              }  
-            `,
+              }
+            `),
             }}
           />
           {renderContent()}

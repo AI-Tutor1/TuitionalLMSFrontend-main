@@ -28,6 +28,7 @@ import NewPolicyModal from "@/components/ui/superAdmin/policy/newPolicy-modal/ne
 import UpdatePolicyModal from "@/components/ui/superAdmin/policy/updatePolicy-modal/updatePolicy-modal";
 import ViewPolicyModal from "@/components/ui/superAdmin/policy/viewPolicy-modal/viewPolicy-modal";
 import SearchBox from "@/components/global/search-box/search-box";
+import { sanitizeHTML } from "@/utils/helpers/sanitize-html";
 import FilterDropdown from "@/components/global/filter-dropdown/filter-dropdown";
 import {
   CreateNewPolicy_Api_Payload,
@@ -320,7 +321,7 @@ export default function Policies() {
                   <div
                     className={classes.policyContent}
                     dangerouslySetInnerHTML={{
-                      __html: policy.policy_content || "",
+                      __html: sanitizeHTML(policy.policy_content || ""),
                     }}
                   />{" "}
                 </div>
