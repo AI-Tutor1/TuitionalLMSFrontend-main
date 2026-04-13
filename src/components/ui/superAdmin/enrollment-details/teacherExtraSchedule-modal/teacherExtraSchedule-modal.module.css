@@ -1,0 +1,72 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  min-width: 320px;
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  height: max-content;
+}
+
+.headingBox {
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: 1;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-grey);
+  font-size: var(--regular20-);
+  line-height: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100% !important;
+}
+
+.fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--black-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.multipleFields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7.5px;
+}

@@ -1,0 +1,90 @@
+/* Modal Container */
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: 50%;
+  min-width: 320px;
+  max-height: 95%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header Section */
+.headingBox {
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: 1;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+  font-size: var(--regular20-);
+  line-height: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Scrollable Content Area */
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  user-select: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+  padding: 2px;
+}
+
+/* Form Fields */
+.fields {
+  flex: 1 1 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+}
+
+.fields > p {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100% !important;
+}

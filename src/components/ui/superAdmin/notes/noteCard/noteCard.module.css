@@ -1,0 +1,115 @@
+/* ===== Note Box Container ===== */
+.noteBox {
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Optional: adds spacing between grid items */
+  height: max-content;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+/* ===== Shared Typography ===== */
+.title {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular20-);
+  line-height: var(--regular20);
+  color: var(--black-color);
+  margin: 0 !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.description {
+  color: var(--text-grey);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.description,
+.info > p,
+.actions > p,
+.actions > span,
+.count {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  margin: 0;
+}
+
+/* ===== Shared Flex Layout ===== */
+.header,
+.info,
+.actions,
+.actionsBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header,
+.info {
+  justify-content: space-between;
+}
+.actions {
+  justify-content: space-between;
+}
+
+.actionsBox {
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.crudBox {
+  display: flex;
+  gap: 10px;
+}
+
+.actionsBox svg {
+  cursor: pointer;
+}
+
+.actionsBox:hover svg {
+  transform: scale(1.1);
+}
+
+.actions > p {
+  cursor: pointer;
+  color: var(--main-blue-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.analyticsBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.downloadBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}

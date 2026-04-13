@@ -1,0 +1,39 @@
+.ongoingClassBox {
+  width: 100%;
+  border-radius: 10px;
+  padding: clamp(0.625rem, 0.4905rem + 0.6329vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  min-height: 320px;
+  flex: 1;
+}
+
+.heading {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-bold-700);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  height: max-content;
+}
+
+.innerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+@media (max-width: 992px) {
+  .ongoingClassBox {
+    height: 300px !important;
+  }
+}

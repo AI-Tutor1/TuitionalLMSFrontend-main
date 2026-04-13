@@ -1,0 +1,68 @@
+/* ── Add these to your existing user-table.module.css ── */
+
+/* Wrapper for the collapsible detail panel */
+.collapseWrapper {
+  width: 100%;
+  border-bottom: 2px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 160px;
+  padding: 10px;
+  flex: 1;
+}
+
+.detailLabel {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.detailValue {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 7.5px;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.iconBox:hover {
+  transform: scale(1.09);
+}
+
+.iconBox > svg {
+  font-size: var(--regular16-);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .detailGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+}

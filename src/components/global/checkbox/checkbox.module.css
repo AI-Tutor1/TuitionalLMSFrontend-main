@@ -1,0 +1,88 @@
+.checkboxWrapper {
+  display: inline-flex;
+  flex-direction: column;
+}
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.checkboxLabel.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.checkboxLabel.disabled:hover {
+  transform: none;
+}
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+.checkboxCustom {
+  width: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  height: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  background-color: var(--white-color);
+  cursor: pointer;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.checkboxCustom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #2563eb;
+  transform: scale(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkboxCustom:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.checkboxCustom.checked {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+.checkboxCustom.checked::before {
+  transform: scale(0.55);
+}
+.checkboxCustom.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+.checkboxCustom.disabled:hover {
+  border-color: var(--text-color);
+  box-shadow: none;
+}
+.checkboxInput:focus + .checkboxCustom {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+.labelText {
+  margin-left: 12px;
+  font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+  color: var(--black-color);
+  cursor: pointer;
+  font-family: var(--leagueSpartan-regular-400);
+  line-height: 1.5;
+  user-select: none;
+}
+.disabled .labelText {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--black-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.disabled:hover .labelText {
+  color: var(--black-color);
+}

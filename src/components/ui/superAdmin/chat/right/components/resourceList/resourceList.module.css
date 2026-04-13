@@ -1,0 +1,83 @@
+.resourcesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.resourceItem {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s;
+}
+
+.resourceItem:hover {
+  box-shadow: 0 6px 24px rgba(60, 60, 90, 0.08);
+}
+
+.resourcePreview {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 18px;
+}
+
+.resourceIconContainer {
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileIcon {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.resourceContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.resourceName {
+  font-weight: 600;
+  color: #222;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resourceMeta {
+  color: #888;
+  font-size: 0.98em;
+  margin-top: 4px;
+}
+
+.resourceDownloadButton {
+  border-radius: 0;
+  background: #f7f7ff;
+  height: 100%;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #eee;
+  transition: background 0.15s;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.resourceDownloadButton:hover {
+  background: #e7eafd;
+}
+
+.resourceDownloadIcon {
+  color: #5661f6;
+  font-size: 2rem;
+}

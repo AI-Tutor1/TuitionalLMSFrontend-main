@@ -1,0 +1,220 @@
+.container {
+  height: 100%;
+}
+
+.churnItem {
+  flex: 1;
+  background-color: #c7eaff;
+  border: 2px solid #c7eaff;
+  display: flex;
+  flex-direction: column;
+  min-width: 310px;
+  height: 100%;
+  border-radius: 10px;
+}
+.churnItem:hover {
+  cursor: pointer;
+}
+.enrollmentInfo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5px;
+  padding: clamp(0.625rem, 0.4972rem + 0.5682vw, 0.9375rem);
+}
+
+.enrollmentInfoFieldFeedBy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+
+.enrollmentInfoFieldFeedBy > span {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+
+.churnId {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+.feedbackBox {
+  flex: 1;
+  padding: clamp(0.625rem, 0.4972rem + 0.5682vw, 0.9375rem);
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+.feedbacksHighlight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 7.5px;
+  transition: background-color 0.2s;
+  background-color: #dcf2ff;
+}
+
+.feedbackHeader.expand {
+  border-radius: 7.5px 7.5px 0px 0px;
+}
+
+.feedbackHeader:hover {
+  background-color: #c7eaff;
+}
+
+/* Chevron icon animation */
+.chevronIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.chevronExpanded {
+  transform: rotate(180deg);
+}
+
+/* Smooth expand/collapse animation */
+.reasonsQuestionBox {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  padding: 0 10px;
+  background-color: #f1faff;
+}
+.reasonsQuestionBox.expanded {
+  max-height: 2000px; /* Large enough to accommodate content */
+  padding: 10px;
+  border-bottom: 2px solid #dcf2ff;
+  border-left: 2px solid #dcf2ff;
+  border-right: 2px solid #dcf2ff;
+  border-radius: 0px 0px 5px 5px;
+}
+.reasonsQuestionBox.collapsed {
+  max-height: 0;
+  padding: 0 10px;
+}
+
+.reasonsQuestionBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enrollmentInfoField,
+.enrollmentInfoFieldFeedbackBy {
+  margin: 0 !important;
+  font-family: var(--leagueSpartan-semiBold-600);
+  width: calc(16.6% - 10px);
+  min-width: 250px;
+  overflow: hidden;
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+.enrollmentInfoField > span {
+  margin: 0 !important;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+
+.enrollmentInfoFieldFeedbackBy {
+  min-width: max-content;
+}
+
+.feebBackActions {
+  display: flex;
+  gap: 10px;
+}
+
+.reasonBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+.reason,
+.question {
+  font-size: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.5966rem + 0.6818vw, 1.125rem);
+}
+
+.reason {
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.question {
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.qnaBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dMain-color);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 7px;
+  flex-shrink: 0;
+  height: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.iconBox > svg {
+  font-size: clamp(0.875rem, 0.804rem + 0.357vw, 1.125rem);
+}
+
+.actionBox {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: flex-end;
+  width: max-content;
+  align-self: flex-end;
+}

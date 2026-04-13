@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 100% !important;
+  /* border: 3px solid red; */
+}
+
+.heading {
+  font-family: var(--leagueSpartan-semiBold-600) !important;
+  font-size: var(--sub-heading) !important;
+  line-height: var(--sub-heading) !important;
+  margin: 0 !important;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.components > svg {
+  width: 1.354vw;
+  height: 1.354vw;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: max-content;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.downloadBox {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(228, 245, 255, 0.8);
+  backdrop-filter: blur(7.5px);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  height: 20%;
+}
+
+.pdfContainer {
+  height: 80%;
+  overflow: hidden !important;
+  width: 100%;
+}
+
+.pdfContainer > iframe {
+  overflow: hidden !important;
+  /* border: 1px solid green; */
+}

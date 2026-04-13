@@ -1,0 +1,455 @@
+.container {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  letter-spacing: 1px;
+  padding-top: 2.5px;
+  padding-right: 3px;
+  overflow-y: auto;
+}
+
+.sectionHeading {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+}
+
+.actionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.actionText {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.addModal {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  padding: 5px;
+  transition: all 0.3s ease;
+  width: var(--medium24-);
+  height: var(--medium24-);
+}
+
+.addModal:hover {
+  transform: scale(1.02);
+}
+
+.row1 {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row1Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.row1MainBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-rows: max-content;
+  gap: 10px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 1fr));
+  grid-template-rows: max-content;
+  gap: 10px;
+  flex: 1;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notesBoxWrapper {
+  padding: 10px;
+}
+
+.section1Components {
+  border-radius: 10px;
+  backdrop-filter: blur(200px);
+  box-shadow: var(--main-inner-boxShadow-color);
+  background-color: var(--main-white-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  opacity: var(-dark-opacity-);
+}
+
+.section1ComponentsChild {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.imageBox {
+  border-radius: 100%;
+  position: relative;
+  width: var(--medium28-);
+  height: var(--medium28-);
+  overflow: hidden;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.userLabel {
+  color: var(--text-grey);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0px !important;
+}
+
+.paymentStatusBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userName {
+  color: var(--black-color);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0px !important;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--medium30-);
+  height: var(--medium30-);
+  overflow: hidden;
+  border-radius: 100%;
+  background-color: var(--blue-color1);
+}
+
+.logoBoxIcon {
+  width: var(--regular20-) !important;
+  height: var(--regular20-) !important;
+  color: var(--pure-black-color) !important;
+}
+
+.child {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--grey-color1);
+}
+
+.child:last-child {
+  border: none;
+}
+
+.childLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.childRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.childLogoBox {
+  width: var(--medium28-);
+  height: var(--medium28-);
+  background-color: var(--blue-color1);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.childLogoIcon {
+  color: var(--pure-black-color);
+  width: 75% !important;
+  height: 75% !important;
+}
+
+.childInfo {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section4ChildHead {
+  border-bottom: 1px solid var(--grey-color1);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+}
+
+.section4HeadCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  text-align: center;
+  height: 100%;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  padding: 10px 15px;
+}
+
+.section4HeadCellBordered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  text-align: center;
+  height: 100%;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  padding: 10px 15px;
+  border-right: 1px solid var(--grey-color1);
+}
+
+.section4ChildBody {
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+}
+
+.attendanceBodyChild {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-color1);
+  height: 70px;
+}
+
+.attendanceNameCell {
+  width: 33.3%;
+  height: 100%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  border-right: 1px solid var(--grey-color1);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.attendanceInCell {
+  width: 33.3%;
+  height: 100%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  border-right: 1px solid var(--grey-color1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attendanceOutCell {
+  width: 33.3%;
+  height: 100%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attendanceUserWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.attendanceUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.attendanceUserName {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  margin: 0px !important;
+}
+
+.attendanceUserRole {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.attendanceTimeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.attendanceTimeIcon {
+  color: var(--main-blue-color);
+}
+
+.mainContentBoxes {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-radius: 10px;
+  backdrop-filter: blur(200px);
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  overflow-y: auto;
+  max-height: calc(100% - var(--sub-heading) - 10px);
+  opacity: var(--dark-opacity-);
+  min-height: 300px;
+}
+
+.transactions {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  border-bottom: 1px solid var(--grey-color1);
+}
+
+.transactions:last-child {
+  border: none;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.role {
+  padding: 4px 10px;
+  width: max-content;
+  border-radius: 5px;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  letter-spacing: 1px;
+}
+
+.transactionDetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cost {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--black-color);
+}
+
+.transactionType {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--pure-white-color);
+  width: max-content;
+  text-align: center;
+}
+
+.notesBox {
+  flex: 1 1 49%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+.notesText {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notesText > p {
+  margin: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .row2 {
+    grid-template-columns: repeat(1, minmax(340px, 1fr));
+  }
+}
+
+.fields {
+  flex: 1 1 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0px 2px;
+  width: 100%;
+  /* border: 4px solid purple; */
+}
+
+.fields > p {
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}

@@ -1,0 +1,134 @@
+.mobileViewContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  gap: 10px;
+  overflow: auto;
+}
+
+.container {
+  flex: 1;
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 10px;
+  box-shadow: var(--cards--boxShadow-color);
+  background-color: var(--cards--background-color);
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--cards-header-color);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.date {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+}
+
+.profileSection {
+  display: flex;
+  align-items: flex-start;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.imageBox {
+  position: relative;
+  width: var(--medium28-);
+  height: var(--medium28-);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
+  min-width: calc(50% - 10px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.field > * {
+  margin-bottom: 0;
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+}
+
+.label {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-grey);
+  letter-spacing: 0.5px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.iconBox:hover {
+  transform: scale(1.09);
+}
+
+.iconBox > svg {
+  font-size: var(--regular20-);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.role {
+  padding: 5px 10px;
+  width: max-content;
+  border-radius: 5px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+}
+
+.infoCell {
+  display: flex;
+  align-items: center;
+}

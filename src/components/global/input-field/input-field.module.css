@@ -1,0 +1,45 @@
+.inputBox {
+  background-color: transparent;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  height: 5.5vh;
+  max-height: 50px;
+  min-height: 45px;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.input {
+  background-color: transparent !important;
+  border: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: var(--black-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.input::placeholder {
+  color: var(--icon-color);
+}
+
+.icon {
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.icon > svg {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  filter: brightness(0) invert(0);
+}

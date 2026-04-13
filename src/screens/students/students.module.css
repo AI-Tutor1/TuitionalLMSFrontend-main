@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid purple; */
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* border: 2px solid purple; */
+  gap: 1.146vw;
+  height: 7%;
+  margin-top: 1%;
+}
+
+.aside1 {
+  width: max-content;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 10px;
+}
+
+.aside2 {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px solid red; */
+}
+
+.loaderBox {
+  /* border: 2px solid purple; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.loader {
+  width: 8vw !important;
+  height: 8vw !important;
+}
+
+.loader > svg {
+  color: var(--main-color);
+}
+
+.wrapper1 {
+  width: 20%;
+  height: 100%;
+}
+
+.wrapper2 {
+  padding: 4px;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0px -1px 10px 0px rgba(56, 182, 255, 0.35) inset;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageBox {
+  position: relative;
+  height: var(--text-size);
+  width: var(--text-size);
+  margin-inline: 10px;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}

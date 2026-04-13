@@ -1,0 +1,23 @@
+.tutorProfileContent {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  width: var(--medium24-);
+  height: var(--medium24-);
+}
+
+.ellipsisCol {
+  flex: 1; /* Takes remaining width */
+  min-width: 0; /* Important for ellipsis to work in flex */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

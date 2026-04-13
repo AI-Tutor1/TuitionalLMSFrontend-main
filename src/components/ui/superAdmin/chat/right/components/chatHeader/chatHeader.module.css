@@ -1,0 +1,91 @@
+.chatHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 2px solid var(--color-dashboard-border);
+}
+
+.chatHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chatHeaderRight {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 5vh !important;
+  height: 5vh !important;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  margin: 0;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+}
+
+.userStatus {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.userStatus.online {
+  color: #4caf50;
+}
+
+.userStatus.offline {
+  color: #757575;
+}
+
+.threadInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.threadLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.threadSubtitle {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chatHeader {
+    padding: 8px 12px;
+  }
+
+  .avatar {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .userName {
+    font-size: 14px;
+  }
+
+  .threadLabel {
+    font-size: 14px;
+  }
+}

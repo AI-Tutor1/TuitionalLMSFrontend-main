@@ -1,0 +1,121 @@
+.table {
+  flex: 1 1 calc(100% - 10px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Ensure the container doesn't overflow */
+  width: 100%;
+  overflow: hidden;
+}
+
+.tableChild {
+  flex: 1 1 calc(100% - 10px);
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  height: max-content;
+}
+
+.tableHeadCell {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-style: normal;
+  color: var(--text-grey);
+  padding: 10px 0px; /* Add padding between columns */
+  display: flex;
+  align-items: center;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  padding-top: 10px;
+  /* Ensure minimum width for the body */
+  min-width: 1100px; /* Should match tableHead min-width */
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dashboard-border);
+  height: max-content;
+  padding-bottom: 10px;
+  /* Ensure rows don't shrink below minimum width */
+  min-width: 1100px; /* Should match tableHead min-width */
+}
+
+.tableColumn {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--black-color);
+  height: max-content;
+  min-height: max-content;
+  padding-right: 15px; /* Add padding between columns */
+}
+
+/* Special handling for columns with longer content */
+.tableColumn[style*="width: 15%"] {
+  /* Email column might need more space */
+  min-width: 180px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .tableHead,
+  .tableBody,
+  .tableRow {
+    min-width: 1300px; /* Increase for smaller screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .tableHead,
+  .tableBody,
+  .tableRow {
+    min-width: 1400px; /* Even wider on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .tableHead,
+  .tableBody,
+  .tableRow {
+    min-width: 1500px; /* Maximum width on mobile for readability */
+  }
+
+  .tableHeadCell,
+  .tableColumn {
+    font-size: 14px; /* Slightly smaller font on mobile */
+  }
+}
+
+/* Optional: Add hover effect for rows */
+.tableRow:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Optional: Loading state */
+.tableBody.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Ensure proper spacing for AED currency values */
+.tableColumn:has-text("AED") {
+  white-space: nowrap;
+}

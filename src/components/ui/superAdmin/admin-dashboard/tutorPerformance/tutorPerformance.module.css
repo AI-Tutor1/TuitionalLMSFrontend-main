@@ -1,0 +1,182 @@
+/* Main container */
+.container {
+  background-color: var(--main-white-color);
+  border-radius: 0.75rem;
+  padding: 12.5px !important;
+  border: 1px solid var(--color-dashboard-border);
+  box-shadow: var(--cards--boxShadow-color);
+  font-family: var(--leagueSpartan-medium-500);
+  height: 600px;
+  letter-spacing: 0.5px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  margin: 0;
+}
+
+.title {
+  font-size: var(--regular22-) !important;
+  line-height: var(--regular22-) !important;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-grey);
+  margin: 0;
+  font-size: var(--regular20-) !important;
+  line-height: var(--regular20-) !important;
+}
+
+.viewAllButton {
+  color: var(--main-blue-color);
+  font-size: var(--regular20-) !important;
+  line-height: var(--regular20-) !important;
+  display: flex;
+  align-items: center;
+}
+
+.viewButton {
+  color: var(--main-blue-color);
+}
+.chevronIcon {
+  height: var(--regular20-) !important;
+  width: var(--regular20-) !important;
+  margin-left: 0.25rem;
+}
+
+/* Table container styles */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.tableContainer {
+  min-width: 500px;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+.headerRow {
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+.headerCell {
+  padding: 0.5rem 0rem;
+  text-align: left;
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.headerCellRight {
+  text-align: right;
+}
+
+/* Table body styles */
+.tableRow {
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+.tableRow:hover {
+  cursor: pointer;
+  background-color: var(--color-dashboard-border);
+}
+
+.tableCell {
+  padding: 0.5rem 0.25rem !important;
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--black-color);
+}
+
+.tableCellRight {
+  text-align: right;
+}
+
+.tutorNameBox {
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Tutor info styles */
+.tutorName {
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--black-color);
+}
+
+.tutorSubject {
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--text-grey);
+}
+
+/* Rating badge */
+.ratingBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px !important;
+  border-radius: 9999px;
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  background-color: var(--green-background-color4);
+  color: var(--green-text-color1);
+}
+
+/* View button */
+.viewButton {
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--main-blue-color);
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  .chevronIcon {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .tableWrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .tableContainer {
+    min-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .headerCell,
+  .tableCell {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .ratingBadge {
+    padding: 0 0.5rem;
+  }
+}

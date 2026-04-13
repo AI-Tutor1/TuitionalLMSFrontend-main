@@ -1,0 +1,43 @@
+/* Tooltip styling */
+.tooltip {
+  background-color: var(--main-white-color);
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 8px;
+  box-shadow: var(--cards--boxShadow-color);
+  min-width: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tooltipLabel {
+  color: var(--text-grey);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.tooltipContent {
+  display: grid;
+  gap: 10px;
+}
+
+.tooltipItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+}
+
+.tooltipName {
+  color: var(--text-grey);
+  flex: 1;
+}
+
+.tooltipValue {
+  color: var(--black-color);
+}

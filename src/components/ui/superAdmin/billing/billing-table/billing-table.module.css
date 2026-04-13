@@ -1,0 +1,77 @@
+.imageBox {
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+  border: 100%;
+  width: var(--medium28-);
+  height: var(--medium28-);
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.studentsBox {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.studentsBox > :nth-child(3) {
+  color: var(--main-blue-color);
+}
+
+.smallLoader {
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallLoaderChild {
+  width: 70%;
+  height: 70%;
+}
+
+.smallLoaderChild > svg {
+  color: var(--main-blue-color);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.balanceStatus {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.roleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}

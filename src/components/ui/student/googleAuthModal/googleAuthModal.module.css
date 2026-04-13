@@ -1,0 +1,17 @@
+.googleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+.text {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 2vh;
+  user-select: none;
+}

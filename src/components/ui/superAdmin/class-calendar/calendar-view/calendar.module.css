@@ -1,0 +1,489 @@
+/* ==================== CALENDAR CONTAINER ==================== */
+.customCalendar {
+  display: flex;
+  flex-direction: column;
+  opacity: 85%;
+  border-radius: 10px;
+  width: calc(100% - 5px);
+  margin: 0px 2px;
+  font-family: var(--leagueSpartan-medium-500);
+  flex: 1;
+  overflow: hidden;
+  border: 2px solid var(--color-dashboard-border);
+  background: var(--main-white-color);
+  backdrop-filter: blur(500px);
+}
+
+/* ==================== TOOLBAR STYLES ==================== */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 5px;
+  border-bottom: 1px solid var(--color-dashboard-border);
+  backdrop-filter: blur(500px);
+  flex-shrink: 0;
+  border-radius: 10px 10px 0px 0px;
+  height: max-content;
+  gap: 5px;
+}
+
+.toolbarNav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background: var(--main-white-color);
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 5px;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  line-height: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px;
+}
+
+.navButton:hover {
+  background: var(--main-blue-color);
+  border-color: var(--color-dashboard-border);
+  color: var(--pure-white-color);
+}
+
+.navButton:active {
+  background: var(--color-dashboard-border);
+  transform: translateY(1px);
+}
+
+.toolbarTitle {
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--black-color);
+  margin: 0;
+  text-align: center;
+}
+
+.viewButtons {
+  display: flex;
+  background: var(--color-dashboard-border);
+  border-radius: 7.5px;
+  overflow: hidden;
+  /* padding: 2.5px; */
+}
+
+.viewButton {
+  padding: 5px;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  line-height: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewButton:hover {
+  background: var(--main-blue-color);
+  color: var(--black-color);
+}
+
+.viewButton.active {
+  background: var(--main-blue-color);
+  color: var(--pure-white-color);
+  box-shadow: var(--cards--boxShadow-color);
+}
+
+/* ==================== CALENDAR BODY ==================== */
+.calendarBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 10px 10px;
+  overflow-y: auto;
+}
+
+/* ==================== MONTH VIEW STYLES ==================== */
+.monthView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.monthlyWeekHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: var(--grey-color1);
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+.dayHeader {
+  text-align: center;
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  border-right: 1px solid var(--color-dashboard-border);
+  padding-top: 2px;
+}
+
+.dayHeader:last-child {
+  border-right: none;
+}
+
+.monthGrid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.weekRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+}
+
+.dayCell {
+  border-right: 1px solid var(--color-dashboard-border);
+  border-bottom: 1px solid var(--color-dashboard-border);
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  background: var(--main-white-color);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dayCell:hover {
+  overflow: visible;
+}
+
+.dayCell:last-child {
+  border-right: none;
+}
+
+.dayCell.today {
+  background: var(--orange-background-color1);
+}
+
+.dayCell.otherMonth {
+  background: var(--dMain-color);
+  color: var(--text-grey);
+}
+
+.dayNumber {
+  padding: 2.5px;
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  color: var(--black-color);
+  width: max-content;
+}
+
+.dayEvents {
+  flex: 1;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.moreEvents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-blue-color);
+  text-align: center;
+  font-size: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  line-height: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  transition: all 0.3s ease-in;
+}
+
+.moreEvents:hover {
+  text-decoration: underline;
+}
+
+/* ==================== WEEK VIEW STYLES ==================== */
+.weekView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.weekHeader {
+  display: grid;
+  grid-template-columns:
+    clamp(2.75rem, 2.5752rem + 0.8228vw, 3.5625rem)
+    repeat(7, 1fr);
+  background: var(--main-white-color);
+  border-bottom: 1px solid var(--color-dashboard-border);
+  width: 100%;
+}
+
+.timeColumn {
+  border-right: 1px solid var(--color-dashboard-border);
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-dashboard-border);
+  gap: 2.5px;
+  font-size: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  line-height: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  padding-top: 2px;
+}
+
+.dayColumn:last-child {
+  border-right: none;
+}
+
+.dayName {
+  font-size: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  line-height: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  color: var(--text-grey);
+}
+
+.dayDate {
+  font-size: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  line-height: clamp(0.5rem, 0.232rem + 0.714vw, 0.875rem);
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.weekBody {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns:
+    clamp(2.75rem, 2.5752rem + 0.8228vw, 3.5625rem)
+    repeat(7, 1fr);
+  height: 17.5px;
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+.timeLabel {
+  font-size: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  line-height: clamp(0.438rem, 0.388rem + 0.25vw, 0.688rem);
+  color: var(--text-grey);
+  text-align: right;
+  border-right: 1px solid var(--color-dashboard-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeSlot {
+  border-right: 1px solid var(--color-dashboard-border);
+  min-height: 17.5px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timeSlot:last-child {
+  border-right: none;
+}
+
+.timeSlot:hover {
+  background: var(--main-white-color);
+  overflow: visible;
+  z-index: 5;
+}
+
+/* Week View Events Container */
+.weekEventsContainer {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.dayEventsColumn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.weekEventCard {
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  padding-left: 0px;
+  box-shadow: var(--cards--boxShadow-color);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+}
+
+/* ==================== DAY VIEW STYLES ==================== */
+.dayView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dayHeader {
+  background: var(--main-white-color);
+  border-bottom: 1px solid var(--color-dashboard-border);
+  flex-shrink: 0;
+}
+
+.dayHeader h3 {
+  margin: 0;
+  font-size: clamp(0.75rem, 0.625rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.625rem + 0.5vw, 1.125rem);
+  color: var(--black-color);
+  padding: clamp(5px, 1vw, 10px);
+}
+
+.dayBody {
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  width: 100%;
+}
+
+.hourRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: clamp(3.125rem, 2.9502rem + 0.8228vw, 3.9375rem) 1fr;
+  height: 17.5px;
+  border-bottom: 1px solid var(--color-dashboard-border);
+  flex-shrink: 0;
+}
+
+.hourLabel {
+  padding: 2.5px;
+  font-size: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  line-height: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  color: var(--text-grey);
+  text-align: center;
+  border-right: 1px solid var(--color-dashboard-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17.5px;
+}
+
+.hourEvents {
+  padding: 2.5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: relative;
+  min-height: 17.5px;
+  height: 100%;
+}
+
+/* ==================== EVENT CARD STYLES ==================== */
+.field {
+  padding: 2.5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 3px solid;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  position: absolute;
+  box-shadow: var(--cards--boxShadow-color);
+  background: var(--main-white-color);
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.field:hover,
+.field:active,
+.field:focus {
+  transform: scale(1) translateY(-5px) translateX(-2.5px);
+  z-index: 1000 !important;
+  opacity: 1;
+  box-shadow: var(--cards--boxShadow-color);
+  width: max-content;
+  height: max-content;
+}
+
+.field:hover .textFields,
+.field:active .textFields,
+.field:focus .textFields {
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.wrapper span {
+  font-size: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  line-height: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.textFields {
+  font-size: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  line-height: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.timeBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.timeBox p {
+  font-size: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  line-height: clamp(0.375rem, 0.236rem + 0.637vw, 1rem);
+  margin: 0;
+  font-family: var(--leagueSpartan-semiBold-600);
+}

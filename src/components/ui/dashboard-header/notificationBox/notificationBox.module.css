@@ -1,0 +1,57 @@
+.mainConatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 15px;
+}
+
+.notificationsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  height: var(--xxLarge48-);
+  width: var(--xxLarge48-);
+  background-color: var(--toggle-highlight-color);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.notificationsIcon:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.number {
+  background-color: var(--main-blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--regular22-);
+  width: var(--regular22-);
+  margin-right: 15px;
+  border-radius: 100%;
+  padding: 0;
+  position: absolute;
+  top: -5px;
+  right: -18px;
+}
+.number > p {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--pure-white-color);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  margin: 0 !important;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .notificationsIcon {
+    height: var(--large38-);
+    width: var(--large38-);
+  }
+}

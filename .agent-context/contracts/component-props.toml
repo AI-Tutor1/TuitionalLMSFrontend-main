@@ -1,0 +1,197 @@
+# .agent-context/contracts/component-props.toml
+# Component interface contracts — standard prop shapes.
+# Agents must follow these when creating or modifying components.
+# Last updated: 2026-04-13
+
+# ─────────────────────────────────────────────
+# GLOBAL COMPONENT CONTRACTS
+# ─────────────────────────────────────────────
+
+[global.button]
+path = "src/components/global/button/button.tsx"
+props = """
+{
+  icon?: ReactNode,
+  text?: string,
+  type?: 'button' | 'submit' | 'reset',
+  clickFn?: () => void,
+  loading?: boolean,
+  disabled?: boolean,
+  inlineStyling?: CSSProperties
+}
+"""
+
+[global.pagination]
+path = "src/components/global/pagination/pagination.tsx"
+props = """
+{
+  page: number,
+  rowsPerPage: number,
+  totalEntries: number,
+  dropDownValues: string[] | number[],
+  totalPages?: number,
+  onPageChange: (event, newPage: number) => void,
+  rowsPerPageChange: (event) => void,
+  inlineStyles?: CSSProperties
+}
+"""
+
+[global.search_box]
+path = "src/components/global/search-box/search-box.tsx"
+props = """
+{
+  placeholder: string,
+  changeFn: (e) => void,
+  value: string,
+  inlineStyles?: CSSProperties
+}
+"""
+
+[global.filter_by_date]
+path = "src/components/global/filter-by-date/filter-by-date.tsx"
+props = """
+{
+  changeFn: (value: [string, string] | null) => void,
+  value: string | [string, string],
+  minWidth?: string
+}
+"""
+
+[global.filter_dropdown]
+path = "src/components/global/filter-dropdown/filter-dropdown.tsx"
+props = """
+{
+  placeholder: string,
+  data: string[],
+  handleChange: (value: string) => void,
+  value: string,
+  inlineBoxStyles?: CSSProperties
+}
+"""
+
+[global.multi_select_dropdown]
+path = "src/components/global/multi-select-dropDown/multi-select-dropDown.tsx"
+props = """
+{
+  icon?: boolean,
+  inlineBoxStyles?: CSSProperties,
+  placeholder: string,
+  data: { id: number, name: string }[],
+  handleChange: (event, selectedOptions: { id: number }[]) => void,
+  value: { id: number, name: string }[]
+}
+"""
+
+[global.input_field]
+path = "src/components/global/input-field/input-field.tsx"
+props = """
+{
+  label?: string,
+  type?: string,
+  placeholder?: string,
+  value: string | number,
+  onChange: (e) => void,
+  required?: boolean,
+  inlineStyles?: CSSProperties
+}
+"""
+
+[global.loading_box]
+path = "src/components/global/loading-box/loading-box.tsx"
+props = """
+{
+  inlineStyling?: CSSProperties
+}
+"""
+
+[global.error_box]
+path = "src/components/global/error-box/error-box.tsx"
+props = """
+{
+  inlineStyling?: CSSProperties
+}
+"""
+
+[global.tabs]
+path = "src/components/global/tabs/tabs.tsx"
+# Used for tab navigation (e.g., enrollment details: Detail | Class Schedule | Sessions)
+
+[global.toggle_button]
+path = "src/components/global/toggle-button/toggle-button.tsx"
+# Used for On Break toggles in enrollments
+
+[global.mobile_filter_button]
+path = "src/components/global/mobile-filters-button/mobile.filters-button.tsx"
+props = """
+{
+  isOpen: boolean,
+  onClick: () => void,
+  inlineStyles?: CSSProperties
+}
+"""
+
+# ─────────────────────────────────────────────
+# MODAL CONTRACTS
+# ─────────────────────────────────────────────
+
+[modal.delete_confirmation]
+# Standard delete modal — reused across all modules
+standard_props = """
+{
+  modalOpen: boolean,
+  handleClose: () => void,
+  heading: string,           // Always "Are You Sure?"
+  subHeading: string,        // "Are you sure you want to delete this {entity}? This action is permanent."
+  handleDelete: () => void,
+  loading: boolean,
+  buttonText?: string        // Defaults to "Delete"
+}
+"""
+
+[modal.add_form]
+# Standard add modal pattern
+standard_props = """
+{
+  modalOpen: boolean,
+  handleClose: () => void,
+  heading: string,           // "Add {Entity}"
+  subHeading: string,        // "Fill out the form in order to create the {entity}."
+  handleAdd: (payload) => void,
+  loading: boolean,
+  success?: boolean          // Reset form on success
+}
+"""
+
+[modal.edit_form]
+# Standard edit modal pattern — same as add but pre-filled
+standard_props = """
+{
+  modalOpen: boolean,
+  handleClose: () => void,
+  heading: string,           // "Edit {Entity}"
+  subHeading: string,        // "Fill out the form in order to edit the {entity} details."
+  handleEdit: (payload) => void,
+  loading: boolean,
+  data: object               // Pre-filled form data
+}
+"""
+
+# ─────────────────────────────────────────────
+# SCREEN-LEVEL TABLE CONTRACTS
+# ─────────────────────────────────────────────
+
+[table.standard]
+# Every data table receives these props from its parent screen
+standard_props = """
+{
+  data: T[],
+  currentPage: number,
+  totalCount: number,
+  totalPages: number,
+  rowsPerPage: number,
+  handleChangePage: (event, newPage: number) => void,
+  handleChangeRowsPerPage: (event) => void,
+  handleDeleteModal: (event, id: number) => void,
+  handleEditModal: (event, item: T) => void
+}
+"""

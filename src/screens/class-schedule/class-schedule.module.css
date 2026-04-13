@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* padding-top: 5px; */
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}

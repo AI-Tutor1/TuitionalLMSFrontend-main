@@ -1,0 +1,40 @@
+.button {
+  background-color: var(--main-color);
+  color: var(--pure-white-color);
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  user-select: none;
+  height: 5.5vh;
+  max-height: 50px;
+  min-height: 45px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.loader {
+  color: var(--pure-white-color) !important;
+  height: var(--regular18-) !important;
+  width: var(--regular18-) !important;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon > svg {
+  height: var(--regular18-);
+  width: var(--regular18-);
+  color: var(--pure-white-color) !important;
+}

@@ -1,0 +1,140 @@
+.card {
+  border-left: 3px solid #38b6ff;
+  border-right: 1px solid #e4e4e7;
+  border-bottom: 1px solid #e4e4e7;
+  border-top: 1px solid #e4e4e7;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.capitalizeText {
+  text-transform: capitalize;
+  font-family: var(--leagueSpartan-medium-500);
+  padding: 3.5px 10px;
+  border-radius: 20px;
+  border: 1px solid #e4e4e7;
+}
+
+.cardDescription {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.createdDate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionsBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.studentName {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.meetingLink,
+.feedback {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meetingLink {
+  border: 1px solid #e4e4e7;
+  color: var(--text-color);
+}
+
+.meetingLink:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.feedback {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.sideActions {
+  transition: all 0.2s ease-in-out;
+  padding: 5px 10px;
+  position: relative;
+}
+.sideActions:hover {
+  background-color: #f3f4f6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sideActionsModal {
+  position: absolute;
+  right: 0;
+  bottom: -74px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.childs {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.childs:hover {
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+.sideActionsModal > :nth-child(2) {
+  color: rgb(220 38 38);
+}

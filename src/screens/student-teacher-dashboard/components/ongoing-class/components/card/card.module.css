@@ -1,0 +1,195 @@
+.cardBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 10px;
+  border: 0.5px solid var(--color-dashboard-border);
+  box-shadow: var(var(--cards--boxShadow-color));
+  background-color: var(--main-white-color);
+}
+
+/* Card Sections */
+.firstBox,
+.secondBox {
+  display: flex;
+  padding: 10px;
+  width: max-content;
+}
+
+.firstBox {
+  width: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--modal-background-color);
+  border-radius: 10px 0 0 10px;
+  padding: 20px 10px;
+  height: 100%;
+}
+
+.secondBox {
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  border-radius: 0 10px 10px 0;
+  flex: 1;
+}
+
+/* First Box Elements */
+.firstBox > * {
+  width: 100%;
+  margin: 0 !important;
+  text-align: center;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.firstBox > :nth-child(2) {
+  color: var(--text-color);
+}
+
+.firstBox > :nth-child(3) {
+  color: var(--black-color);
+}
+
+.rescheduled {
+  border-radius: 7.5px;
+  padding: 5px 10px;
+  background-color: var(--main-blue-color);
+  color: var(--pure-white-color);
+}
+
+/* Info Box */
+.infoBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+/* Text Styles - Combined common properties */
+.infoBox > p,
+.nameImageBox > p,
+.studentsBox > p {
+  margin: 0;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.facultyBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.line {
+  height: 4vh;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--main-white-color) 0%,
+    var(--main-blue-color) 50%,
+    var(--main-white-color) 100%
+  );
+}
+
+/* Name and Image Layout */
+.nameImageBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+/* Images Layout */
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+/* Common Image Box Properties */
+.imageBox,
+.imageBox2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: var(--medium26-);
+  width: var(--medium26-);
+}
+
+.imageBox2 {
+  position: absolute;
+  left: clamp(0.3125rem, 0.2453rem + 0.3165vw, 0.625rem);
+}
+
+/* Button Style */
+.button {
+  padding: clamp(0.3125rem, 0.2453rem + 0.3165vw, 0.625rem);
+  height: max-content;
+  border-radius: clamp(0.3125rem, 0.2453rem + 0.3165vw, 0.625rem);
+  border: 1px solid var(--main-color);
+  background: var(--white-color);
+  color: var(--main-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  width: max-content;
+}
+
+/* Students Section */
+.studentsBox {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 10px;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+}
+
+.studentsBox > p > div {
+  display: flex;
+  align-items: center;
+}
+
+.studentsBox > p > div > p {
+  color: var(--main-blue-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: max-content;
+}
+
+.ticketBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.ticketBox:hover {
+  transform: scale(1.1);
+}

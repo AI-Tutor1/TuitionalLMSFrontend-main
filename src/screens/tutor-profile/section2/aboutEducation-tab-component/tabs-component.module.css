@@ -1,0 +1,31 @@
+.container {
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container > svg {
+  font-size: 1.3vw;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text > p {
+  margin: 0 !important;
+  font-size: 1rem;
+}
+
+.title {
+  font-family: var(--leagueSpartan-medium-500);
+  color: #9c9c9c;
+}
+
+.value {
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: #2d2d2d;
+}

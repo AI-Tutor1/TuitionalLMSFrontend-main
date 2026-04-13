@@ -1,0 +1,143 @@
+/* Modal Container */
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: 50%;
+  max-width: 50%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header Section */
+.headingBox {
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-grey);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+/* Scrollable Content Area */
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  user-select: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+  padding: 15px;
+}
+
+.field > label {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+.durationBox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  color: var(--black-color);
+}
+
+.fieldBox {
+  max-height: 500px;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  width: 100%;
+  font-family: var(--leagueSpartan-medium-500);
+  letter-spacing: 1px;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  padding: 2px;
+}
+
+.deleteLogoBox {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  margin: 15px 15px 0px 15px;
+  align-self: center;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteLogoBox > img {
+  color: var(--white-color) !important;
+}
+
+.questionAnswersBox {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mainBox {
+    width: 80%;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBox {
+    width: 85%;
+    max-width: 85%;
+  }
+
+  .contentBox {
+    gap: 10px;
+  }
+}

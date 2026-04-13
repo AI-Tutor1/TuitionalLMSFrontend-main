@@ -1,0 +1,141 @@
+/* Content layout */
+.chartWrapper {
+  width: 100%;
+  flex: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: var(--regular-);
+  line-height: var(--regular-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* Map container - left side */
+.mapContainer {
+  width: 40%;
+  height: 100%;
+  background-color: var(--blue-color5);
+  border-radius: 8px;
+  overflow: hidden;
+  /* margin-bottom: 1rem; */
+}
+
+.mapPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mapIcon {
+  height: 6rem;
+  width: 6rem;
+  color: var(--main-blue-color);
+}
+
+.mapText {
+  color: white;
+  max-width: 80%;
+  margin: 0;
+}
+
+/* Country list container - right side */
+.countryListContainer {
+  width: 60%;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.countryList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Country item styling */
+.countryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.countryNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.countryDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--main-blue-color);
+  border-radius: 9999px;
+}
+
+.countryName {
+  color: var(--black-color);
+}
+
+.countryMetrics {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.countryCount {
+  color: var(--text-grey);
+}
+
+.progressBarBg {
+  width: 4rem;
+  height: 0.5rem;
+  background-color: var(--grey-color1);
+  border-radius: 9999px;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--main-blue-color);
+  border-radius: 9999px;
+}
+
+.countryPercentage {
+  color: var(--text-grey);
+}
+
+.mapContainer {
+}
+
+/* You can remove these placeholder styles since we're replacing it */
+.mapPlaceholder {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* .chartWrapper {
+    flex-direction: column;
+  } */
+
+  .countryListContainer {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .mapContainer {
+    display: none;
+  }
+}

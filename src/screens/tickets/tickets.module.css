@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 7.5px; */
+  height: 100%;
+  gap: 2.5px;
+  padding-top: 1px;
+}
+
+[data-theme="dark"] .container {
+  backdrop-filter: blur(1000px);
+}
+
+.filtersBox {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}

@@ -1,0 +1,108 @@
+{
+  "lastUpdated": "2026-04-13T16:00:00Z",
+  "description": "Domain clustering of related entities. Inspired by Graphify's Leiden community detection, but manually assigned based on business module boundaries. Cross-domain changes require extra validation.",
+  "domains": {
+    "shared": {
+      "label": "Shared Infrastructure",
+      "cohesion": 0.85,
+      "entities": {
+        "components": ["button", "loading-box", "error-box", "pagination", "input-field", "search-box", "filter-by-date", "filter-dropdown", "multi-select-dropdown", "dropdown-simple", "dropdown-objects", "mobile-filter-button", "tabs", "text-box", "checkbox", "radio-button", "toggle-button", "tooltip", "date-picker", "phone-number", "drag-upload", "image-uploader", "file-uploader", "quill", "html-reviewer", "marquee", "fcm-handler", "google-auth", "theme-provider", "dotted-loader", "video-player", "notifications-modal", "custom-text-input", "charts"],
+        "utils": ["api-methods", "payload-conversion", "useDebounce", "sanitize-html", "mutation-utils", "query-params", "axios-interceptor"],
+        "store": ["user-slice", "resources-slice", "role-slice", "usersByGroup-slice", "assignedPages-slice"]
+      },
+      "crossDomainRisk": "Changes here affect ALL other domains"
+    },
+    "auth": {
+      "label": "Authentication & Authorization",
+      "cohesion": 0.92,
+      "entities": {
+        "screens": ["signin", "forgot-password", "password-reset", "confirm-password"],
+        "services": ["auth.ts"],
+        "components": ["withAuth", "form-header"],
+        "types": ["auth.types.ts"]
+      },
+      "crossDomainRisk": "withAuth wraps every protected page"
+    },
+    "enrollments": {
+      "label": "Enrollment Management",
+      "cohesion": 0.78,
+      "entities": {
+        "screens": ["enrollments", "enrollment-details", "enrollment-logs", "counselling"],
+        "components": ["enrollment-table", "add-modal", "edit-enrollment-modal", "delete-modal", "enrollment-pause-modal", "instantClass-modal", "extraClass-modal-wrapper", "mobileView-card", "enrollment-logs-table", "enrollment-logs-mobileCard"],
+        "services": ["enrollments.ts", "getEnrollmentByGroup-id.ts"],
+        "api": ["enrollment.api.ts"],
+        "types": ["getAllEnrollments.types.ts"]
+      },
+      "crossDomainRisk": "Enrollments feed into sessions, billing, invoices, class-schedule"
+    },
+    "sessions": {
+      "label": "Session Management",
+      "cohesion": 0.82,
+      "entities": {
+        "screens": ["sessions", "session-details"],
+        "components": ["session-table", "add-modal", "mobileViewCard", "teacherDurationUpdateModal", "session-details/*"],
+        "services": ["sessions.ts"],
+        "api": ["sessions.api.ts"],
+        "types": ["getAllSessionsWithGroupIds.types.ts", "createSession.types.ts", "getSessionById.types.ts", "monthlySessionCount.types.ts", "sessionHourlyCount.types.ts", "attendanceRate.types.ts"]
+      },
+      "crossDomainRisk": "Sessions generate transactions and billing"
+    },
+    "billing": {
+      "label": "Billing & Payments",
+      "cohesion": 0.75,
+      "entities": {
+        "screens": ["billing", "parent-billing&Payments"],
+        "components": ["billing-table", "add-modal"],
+        "services": ["billing.ts"],
+        "api": []
+      },
+      "crossDomainRisk": "Billing reads from sessions and feeds into invoices"
+    },
+    "invoices": {
+      "label": "Invoice Management",
+      "cohesion": 0.80,
+      "entities": {
+        "screens": ["invoices"],
+        "components": ["consumer-overview/*", "leads-overview/*", "generateInvoice-modal", "manualPayment-modal", "newUserInvoice-modal", "updateBalance-modal"],
+        "services": ["invoices.ts"],
+        "api": [],
+        "types": ["invoices.types.ts"]
+      },
+      "crossDomainRisk": "Invoices read from enrollments and billing"
+    },
+    "chat": {
+      "label": "Real-time Messaging",
+      "cohesion": 0.90,
+      "entities": {
+        "screens": ["chat"],
+        "components": ["left/*", "right/*", "userCard", "chatHeader", "messageInput", "messageList", "messageItem", "emptyState", "resourceList", "voicePlayer", "messageActionsMenu", "reactionPicker", "messageViewers"],
+        "services": ["chat.ts", "chat.hooks.ts", "rooms.ts"],
+        "utils": ["socket.ts", "useSocket.ts", "useChat.ts", "useFileUpload.ts", "useRecording.ts"],
+        "types": ["messages.types.ts", "getRooms.types.ts"]
+      },
+      "crossDomainRisk": "Chat auto-created from enrollments. Isolated real-time subsystem."
+    },
+    "class-schedule": {
+      "label": "Class Scheduling",
+      "cohesion": 0.72,
+      "entities": {
+        "screens": ["class-schedule", "class-calendar", "class-calendar-v1", "cancelled-classes", "reschedules", "student-teacher-classSchedules"],
+        "components": ["class-schedule/*", "class-calendar/*", "cancelled-classes/*", "reschedules/*"],
+        "services": ["class-schedule-dayOfWeek.ts", "class-schedule-groupedByDay.ts", "class-schedule-scheduleInstan.ts", "extend-class.ts", "getOngoingClasses.ts", "cancelled-reschedules.ts"],
+        "types": ["getOngoingClasses.types.ts", "extendClassDuration.types.ts"]
+      },
+      "crossDomainRisk": "Class schedules are created from enrollments"
+    },
+    "dashboard": {
+      "label": "Admin Dashboard & Analytics",
+      "cohesion": 0.88,
+      "entities": {
+        "screens": ["admin-dashboard", "admin-ongoingClasses"],
+        "components": ["admin-dashboard/*", "admin-ongoingclasses/*"],
+        "services": ["analytics.ts"],
+        "types": ["analytics.types.ts"]
+      },
+      "crossDomainRisk": "Dashboard reads from all domains (sessions, enrollments, users)"
+    }
+  }
+}

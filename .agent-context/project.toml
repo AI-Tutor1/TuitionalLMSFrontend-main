@@ -1,0 +1,102 @@
+# .agent-context/project.toml
+# Project DNA — tech stack, conventions, boundaries
+# The agent reads this FIRST before any task.
+# Last updated: 2026-04-13
+
+[identity]
+name = "Tuitional LMS Frontend"
+description = "Learning Management System for tutoring education"
+repository = "TuitionalLMSFrontend-main"
+primary_domain = "lms.tuitionaledu.com"
+backend_url_var = "NEXT_PUBLIC_API_BASE_URL"
+currency = "AED"
+region = "UAE / Middle East"
+port = 3002
+
+[stack]
+framework = "Next.js 15.2.8"
+app_router = true
+language = "TypeScript 5.5.4"
+react = "18.3.1"
+ui_library = "MUI 6.4.6"
+state_global = "Redux Toolkit 2.2.7"
+state_persistence = "Redux Persist 6.0.0"
+state_server = "TanStack Query 5.51.23"
+realtime = "Socket.io Client 4.8.1"
+styling = ["CSS Modules", "Emotion", "Sass"]
+notifications = "Firebase 11.7.1"
+charts = ["Chart.js 4.4.8", "Recharts 2.15.2"]
+forms = "React Hook Form 7.61.1"
+http = "Axios 1.7.3"
+deployment = "Vercel"
+package_manager = "npm"
+font = "League Spartan (6 weights)"
+
+[routing]
+pattern = "/(protected)/[role]/{page}"
+roles = [
+  "superAdmin", "admin", "student", "parent", "teacher",
+  "counsellor", "hr", "manager", "qa"
+]
+auth_hoc = "src/utils/withAuth/withAuth.tsx"
+public_routes = [
+  "/signin",
+  "/forgot-password",
+  "/password-reset/[email]",
+  "/confirm-password/[email]",
+]
+
+[architecture]
+# The four-layer separation
+pages = "src/app/"
+screens = "src/screens/"
+components_global = "src/components/global/"
+components_ui = "src/components/ui/"
+services = "src/services/"
+api_urls = "src/api/"
+types = "src/types/"
+utils = "src/utils/"
+store = "src/lib/store/"
+constants = "src/const/"
+styles = "src/styles/"
+
+[architecture.flow]
+# How a request flows through the system:
+# 1. page.tsx imports screen, wraps with withAuth()
+# 2. screen manages state, queries, mutations, modals
+# 3. screen renders components (tables, cards, modals)
+# 4. components call nothing — they receive data via props
+# 5. mutations call service functions from src/services/
+# 6. service functions use AxiosGet/Post from src/utils/helpers/api-methods.ts
+# 7. API URL builders in src/api/ construct endpoint URLs with query params
+
+[data_hierarchy]
+# The core data model chain
+levels = [
+  "Users → Teachers, Students, Parents, Admin roles",
+  "Enrollments → 1 Teacher + 1+ Students + Subject + Curriculum/Board/Grade",
+  "Class Schedules → Recurring weekly slots or one-time extras per enrollment",
+  "Sessions → Actual conducted classes with attendance tracking",
+  "Transactions → Debits/Credits generated per session",
+  "Billing → Aggregated balance calculations from sessions + transactions",
+  "Invoices → Generated from billing for payment collection",
+]
+
+[redux_slices]
+# What each Redux slice stores
+user = "Auth token + user object (persisted)"
+resources = "Boards, grades, subjects, curricula — dropdown reference data (persisted)"
+roles = "System roles list (persisted)"
+usersByGroup = "Students and teachers lists grouped (persisted)"
+assignedPages = "Permitted routes for current user's role (persisted)"
+
+[modules]
+# All business modules in the system
+core = ["users", "enrollments", "sessions", "class-schedule", "billing", "invoices", "transactions"]
+communication = ["chat", "notifications"]
+analytics = ["dashboard", "session-feedbacks", "teachers-feedback-analytics", "students-feedback-analytics"]
+management = ["roles", "permissions", "pages", "resources", "policies"]
+scheduling = ["activities", "class-calendar", "reschedules", "cancelled-classes"]
+crm = ["demo", "churn", "churn-resources", "tickets", "tutor-requests", "counselling"]
+profiles = ["tutor-profile", "teacher-student-profile"]
+finance = ["payouts", "earnings", "billing-payments"]

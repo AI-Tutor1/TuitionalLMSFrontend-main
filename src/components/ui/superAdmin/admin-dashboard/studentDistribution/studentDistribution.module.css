@@ -1,0 +1,143 @@
+/* ==================== CHART WRAPPER ==================== */
+.chartWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+  flex: 1;
+
+  overflow: hidden;
+}
+
+/* ==================== PIE CHART SECTION ==================== */
+.chartSection {
+  flex: 0 0 45%;
+  height: 100%;
+}
+
+/* ==================== LEGEND SECTION ==================== */
+.legendSection {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.legendList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legendIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  flex: 1;
+}
+
+.legendLabel {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.legendValue {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+/* ==================== TOOLTIP STYLES ==================== */
+.tooltip {
+  display: grid;
+  gap: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--grey-color1);
+  background-color: var(--main-white-color);
+  padding: 10px;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  box-shadow: var(--cards-boxShadow-color);
+  width: max-content;
+}
+
+.tooltipLabel {
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--black-color);
+}
+
+.tooltipContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tooltipItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tooltipIndicator {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+}
+
+.tooltipName {
+  color: var(--text-grey);
+  flex: 1;
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.tooltipValue {
+  font-family: var(--leagueSpartan-medium-500);
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+
+/* Small screens - stack vertically */
+
+@media (max-width: 400px) {
+  .chartWrapper {
+    flex-direction: column;
+  }
+  .chartSection {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 160px;
+  }
+
+  .legendList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .legendItem {
+    flex: 0 0 calc(50% - 5px);
+  }
+}

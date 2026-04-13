@@ -1,0 +1,151 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  padding-right: 2.5px;
+  /* border: 1px solid red; */
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 1px;
+}
+
+.filtersBox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.section1 {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: max-content;
+}
+
+.cardsSection {
+  width: max-content;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 100%;
+  max-height: 100%;
+}
+
+.graphSection {
+  height: max-content;
+  width: max-content;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graphSection > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  align-self: flex-end;
+  height: max-content;
+}
+
+.graphSectionIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.icon > svg {
+  font-size: var(--regular18-) !important;
+  color: #1b2228;
+}
+
+.stats {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.stats > p {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5px;
+}
+
+.value {
+  display: flex;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--pure-black-color);
+}
+
+.stats > :nth-child(1) > span {
+  background-color: var(--main-blue-color);
+}
+
+.stats > :nth-child(2) > span {
+  background-color: var(--blue-color1);
+}
+
+.stats > :nth-child(3) > span {
+  background-color: var(--blue-color4);
+}
+
+@media screen and (max-width: 1000px) {
+  .section1 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .cardsSection {
+    width: 100%;
+  }
+}

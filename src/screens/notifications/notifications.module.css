@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+/* Search and Actions */
+.searchActionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Notification Card */
+.notificationCard {
+  display: flex;
+  align-items: center;
+  gap: 12.5px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  box-shadow: 0px -1px 10px 0px rgba(56, 182, 255, 0.35) inset;
+}
+
+.notificationCardUnread {
+  gap: 12.5px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  background-color: var(--white-color);
+}
+
+.iconBox {
+  padding: 5px 7.5px;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex: 1;
+}
+
+.notificationTitle {
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--foreground);
+  margin: 0;
+}
+
+.notificationsList {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notificationMessage {
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  color: var(--black-color);
+  margin: 0;
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.notificationMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+}
+
+.notificationMeta > p {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.timestamp {
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.clockIcon {
+  height: 0.65rem;
+  width: 0.65rem;
+}
+
+.actionsWrapper {
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Type Badge Classes */
+.typeAssignment {
+  background-color: rgb(239, 246, 255);
+  color: rgb(29, 78, 216);
+  border-color: rgb(191, 219, 254);
+}
+
+.typeSystem {
+  background-color: rgb(250, 245, 255);
+  color: rgb(109, 40, 217);
+  border-color: rgb(233, 213, 255);
+}
+
+.typeSubmission {
+  background-color: rgb(240, 253, 244);
+  color: rgb(21, 128, 61);
+  border-color: rgb(187, 247, 208);
+}
+
+.typeReport {
+  background-color: rgb(255, 251, 235);
+  color: rgb(180, 83, 9);
+  border-color: rgb(254, 215, 170);
+}
+
+.typeFeature {
+  background-color: rgb(238, 242, 255);
+  color: rgb(67, 56, 202);
+  border-color: rgb(199, 210, 254);
+}
+
+.typeDefault {
+  background-color: rgb(249, 250, 251);
+  color: rgb(55, 65, 81);
+  border-color: rgb(229, 231, 235);
+}
+
+/* Priority Badge Classes */
+.priorityHigh {
+  background-color: rgb(254, 242, 242);
+  color: rgb(185, 28, 28);
+  border-color: rgb(254, 202, 202);
+}
+
+.priorityMedium {
+  background-color: rgb(255, 251, 235);
+  color: rgb(180, 83, 9);
+  border-color: rgb(254, 215, 170);
+}
+
+.priorityLow {
+  background-color: rgb(240, 253, 244);
+  color: rgb(21, 128, 61);
+  border-color: rgb(187, 247, 208);
+}
+
+.priorityDefault {
+  background-color: rgb(249, 250, 251);
+  color: rgb(55, 65, 81);
+}
+
+.menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  left: -110px;
+  min-width: max-content;
+  z-index: 50;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menuItem:hover {
+  background-color: rgb(243, 244, 246);
+}
+
+.menuIcon {
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.deleteMenuItem {
+  color: var(--destructive);
+}
+
+.emptyLarge {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.emptyIconLarge {
+  height: 4rem;
+  width: 4rem;
+  margin: 0 auto 1rem;
+  color: rgba(var(--muted-foreground-rgb), 0.3);
+}
+
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: var(--muted-foreground);
+}

@@ -1,0 +1,145 @@
+.cardBox {
+  border-radius: 10px;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e4f5ff;
+  background-color: #e4f5ff;
+  overflow: hidden;
+  height: max-content;
+}
+
+.firstBox {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px;
+}
+
+.firstBox > p {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular-text-size-vh);
+  line-height: var(--regular-text-line-height);
+  text-align: center;
+}
+
+.rescheduled {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.firstBox > :nth-child(2) {
+  width: 100%;
+  color: var(--text-color);
+}
+
+.firstBox > :nth-child(3) {
+  width: 100%;
+  color: var(--black-color);
+}
+
+.secondBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  height: 100%;
+  background-color: #f1faff;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nameImageBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.nameImageBox > p {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular-text-size-vh);
+  margin: 0px !important;
+}
+
+.nameImageBox .imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 4vh;
+  width: 4vh;
+}
+
+.studentsBox {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 2.5vh;
+  width: 2.5vh;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--small-text-size-vh);
+}
+
+.bottomBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.bottomBox > * {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular-text-size-vh);
+  border-radius: 5px;
+  background-color: #e4f5ff;
+  padding: 10px;
+  margin: 0px !important;
+}
+
+.button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  background: var(--white-color);
+  color: var(--main-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  line-height: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  cursor: pointer;
+  text-decoration: none;
+}

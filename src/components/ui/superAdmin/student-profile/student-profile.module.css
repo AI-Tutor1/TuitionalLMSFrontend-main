@@ -1,0 +1,38 @@
+.studentsBox {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+  min-width: 0;
+}
+
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+.imagesBox > :nth-child(2) {
+  position: absolute;
+  left: 5px;
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  width: var(--medium24-);
+  height: var(--medium24-);
+}
+
+.ellipsisCol {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.studentsBox > :nth-child(3) {
+  color: var(--main-blue-color);
+}

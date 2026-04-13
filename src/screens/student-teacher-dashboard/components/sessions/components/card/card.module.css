@@ -1,0 +1,193 @@
+/* Base card styles */
+.cardBox {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 3px solid var(--main-blue-color);
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  padding: clamp(0.625rem, 0.5578rem + 0.3165vw, 0.9375rem);
+  height: max-content;
+}
+
+/* Common text variables - can be used with CSS custom properties if needed */
+
+/* Layout containers */
+.firstBox,
+.secondBox,
+.thirdBox,
+.fourthBox {
+  width: 25%;
+}
+
+.thirdBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Apply common text styles */
+.firstBox,
+.info,
+.secondBox,
+.thirdBox,
+.fourthBox,
+.fifthBox {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  margin: 0;
+}
+
+/* Student/Tutor specific styles */
+.studentsBox,
+.tutorBox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.parentInfoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+}
+
+.parentInfoBox {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.parentStudentsSection,
+.parentTutorSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sectionLabel {
+  color: var(--main-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  margin: 0;
+  min-width: 60px;
+}
+
+/* Image containers */
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: var(--medium26-);
+  width: var(--medium26-);
+  border: 2px solid var(--main-blue-color);
+}
+
+.imagesBox > :nth-child(2) {
+  position: absolute;
+  left: 7.5px;
+}
+
+/* Student names and additional count */
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  margin: 0;
+}
+
+.more {
+  color: var(--main-color);
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+  .cardBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .firstBox,
+  .info {
+    width: auto;
+  }
+
+  .secondBox,
+  .thirdBox,
+  .fourthBox,
+  .fifthBox {
+    width: auto;
+  }
+
+  .resFirstBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .resSecondBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 576px) {
+  .resSecondBox {
+    gap: 15px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .parentInfoBox {
+    gap: 15px;
+  }
+
+  .parentStudentsSection,
+  .parentTutorSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sectionLabel {
+    min-width: auto;
+  }
+}

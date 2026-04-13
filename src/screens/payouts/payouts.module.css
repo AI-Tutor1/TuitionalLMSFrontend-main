@@ -1,0 +1,54 @@
+.container {
+  background-color: var(--white-color);
+  border: 2px solid var(--color-dashboard-border);
+  background: var(--main-white-color);
+  opacity: 85%;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 5px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aside1 {
+  display: flex;
+  align-items: center;
+  height: max-content;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 5px 10px 0px 0px;
+  gap: 10px;
+}
+
+.filterBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 5px;
+  flex-shrink: 0;
+  border-radius: 100%;
+}
+
+.iconBox:hover {
+  transform: scale(1.3);
+}

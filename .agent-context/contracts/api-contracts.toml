@@ -1,0 +1,134 @@
+# .agent-context/contracts/api-contracts.toml
+# API shape contracts. All agents must respect these.
+# If an agent needs to deviate, it flags for human approval.
+# Last updated: 2026-04-13
+
+[config]
+base_url_var = "NEXT_PUBLIC_API_BASE_URL"
+default_base = "https://dev.tuitionaledu.com"
+auth_header_key = "Authorization"
+# NOTE: Current implementation sends raw token without "Bearer " prefix
+# Backend accepts this — do not change without backend coordination
+default_content_type = "application/json"
+multipart_content_type = "multipart/form-data"
+
+[pagination]
+# Standard pagination contract — all list endpoints follow this
+default_limit = 50
+sessions_limit = 15  # Sessions module uses 15 as default
+params = ["page", "limit"]
+
+[pagination.response]
+# Every paginated response returns this shape
+shape = """
+{
+  data: T[],
+  totalPages: number,
+  currentPage: number,
+  totalCount: number
+}
+"""
+
+[error.response]
+# Standard error response from backend
+shape = """
+{
+  message?: string,
+  error?: string,
+  statusCode?: number
+}
+"""
+
+# ─────────────────────────────────────────────
+# MODULE ENDPOINTS
+# ─────────────────────────────────────────────
+
+[endpoints.auth]
+sign_in = "POST /api/user/signIn"
+forgot_password = "POST /api/user/requestPasswordReset"
+verify_reset = "POST /api/user/verifyResetToken"
+change_password = "POST /api/user/changePassword"
+
+[endpoints.enrollment]
+list = "GET /api/enrollment/getAllEnrollment"
+list_data = "GET /api/enrollment/getEnrollmentData"
+create = "POST /api/enrollment"
+delete = "DELETE /api/enrollment/{id}"
+edit = "PUT /api/enrollment/{id}"
+break_status = "PUT /api/enrollment/{id}/break-new"
+by_group = "GET /api/enrollment/getEnrollmentByIdGrouped/{id}"
+logs = "GET /api/enrollment/getAllEnrollmentLogs"
+status_logs = "GET /api/enrollment/status-logs/{id}"
+export_logs = "GET /api/enrollment/exportEnrollmentLogs"
+filter_params = ["name", "startDate", "endDate", "limit", "page", "subjectId", "curriculumId", "boardId", "gradeId", "teacher_id", "student_id", "enrollment_id", "childrens", "on_break", "is_permanent"]
+
+[endpoints.sessions]
+list_v1 = "GET /api/v1/sessions/getAllSessionsWithGroupIds"
+list_legacy = "GET /api/sessions"
+by_id = "GET /api/sessions/{id}"
+create = "POST /api/sessions"
+update = "PUT /api/sessions/{id}"
+delete = "DELETE /api/sessions/{id}"
+recreate = "POST /api/sessions/recreate/{id}"
+tutor_duration = "PUT /api/sessions/{id}/tutor-time"
+review_status = "PUT /api/sessions/{id}/review-status"
+payment_status = "POST /api/session-payment-status"
+monthly_count_tutor = "GET /api/sessions/monthly-session-count/{tutor_id}"
+monthly_count_student = "GET /api/sessions/monthly-session-count-student/{student_id}"
+hourly_count = "GET /api/sessions/hourly-count"
+attendance_rate = "GET /api/sessions/attendance-rate-by-subject"
+grouped_by_date = "GET /api/sessions/grouped-by-date"
+export = "GET /api/sessions/getSessionData"
+filter_params = ["page", "limit", "student_ids", "student_name", "start_time", "end_time", "grade_id", "board_id", "curriculum_id", "subject_id", "tutor_id", "enrollment_id", "conclusion_type", "include_recording", "is_reviewed", "below_benchmark"]
+
+[endpoints.users]
+list = "GET /api/user/getAllUser"
+create = "POST /api/user"
+update = "PUT /api/user/{id}"
+delete = "DELETE /api/user/{id}"
+deactivate = "PUT /api/user/{id}/deactivate"
+
+[endpoints.billing]
+list = "GET /api/billing"
+create = "POST /api/billing"
+
+[endpoints.invoices]
+list = "GET /api/invoices"
+generate = "POST /api/invoices/generate"
+download = "GET /api/invoices/{id}/download"
+delete = "DELETE /api/invoices/{id}"
+
+[endpoints.transactions]
+list = "GET /api/transactions"
+delete = "DELETE /api/transactions/{id}"
+
+[endpoints.class_schedule]
+by_day = "GET /api/class-schedule/dayOfWeek"
+grouped = "GET /api/class-schedule/grouped-by-day"
+instant = "POST /api/class-schedule/instant"
+ongoing = "GET /api/class-schedule/ongoing"
+extend = "PUT /api/class-schedule/extend"
+
+[endpoints.roles]
+list = "GET /api/roles"
+create = "POST /api/roles"
+update = "PUT /api/roles/{id}"
+delete = "DELETE /api/roles/{id}"
+assigned_pages = "GET /api/roles/{roleId}/pages"
+assign_pages = "POST /api/roles/{roleId}/pages"
+
+[endpoints.resources]
+list = "GET /api/resources"
+create = "POST /api/resources"
+update = "PUT /api/resources/{id}"
+delete = "DELETE /api/resources/{id}"
+
+[endpoints.chat]
+rooms = "GET /api/chat-rooms"
+messages = "GET /api/chat-rooms/{roomId}/messages"
+send = "POST /api/chat-rooms/{roomId}/messages"
+upload = "POST /api/chat/upload"
+
+[endpoints.curriculum]
+all = "GET /api/curriculum/getAll"
+# Returns: { board, grades, subject, curriculum }

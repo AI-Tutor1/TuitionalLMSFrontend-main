@@ -1,0 +1,69 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+  width: 35%;
+  max-width: 35%;
+  /* border: 1px solid red; */
+}
+
+.headingBox {
+  padding: 15px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--normal-text-size-vh);
+  color: var(--black-color);
+  margin: 0 !important;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+  font-size: var(--medium-text-size-vh);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0 !important;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  /* border: 1px solid blue; */
+  /* height: 85%; */
+  /* overflow: hidden; */
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100% !important;
+
+  padding-right: 5px;
+  user-select: none;
+}
+
+.fields {
+  flex: 1 1 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* border: 4px solid purple; */
+}
+
+.fields > p {
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}

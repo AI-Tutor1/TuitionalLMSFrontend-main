@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* padding-inline: 20px; */
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header h1 {
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  font-family: var(--leagueSpartan-semiBold-600);
+  margin: 0 !important;
+  color: var(--black-color);
+}
+.header p {
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  font-family: var(--leagueSpartan-regular-400);
+  margin: 0 !important;
+  color: var(--text-grey);
+}
+
+.roleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.mainBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mainBoxHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--main-inner-boxShadow-color);
+  background-color: var(--main-white-color);
+  padding: var(--regular20-);
+  border-radius: 10px;
+}
+
+.mainBoxHeader h1 {
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  font-family: var(--leagueSpartan-semiBold-600);
+  margin: 0 !important;
+}
+.mainBoxHeader p {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+  margin: 0 !important;
+  color: var(--text-color);
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: var(--regular20-);
+  border-radius: 10px;
+  box-shadow: var(--main-inner-boxShadow-color);
+  background-color: var(--main-white-color);
+}
+
+.categoryBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 7.5px;
+  background: blur(0px, 0px, 0px, 0.1);
+  background-color: var(--main-white-color);
+  height: 400px;
+  padding: 15px;
+  flex: 1;
+  flex-basis: 32%;
+}
+
+.categoryBox > h2 {
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.categoryContent {
+  flex: 1;
+  overflow: auto;
+}
+
+.featuresList {
+  width: 100%;
+}
+
+.featuresList > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+}
+
+.saveButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

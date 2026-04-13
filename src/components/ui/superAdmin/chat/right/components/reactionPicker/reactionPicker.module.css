@@ -1,0 +1,177 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.reactionsPickerContainer {
+  width: 400px;
+  max-width: 90vw;
+  max-height: 600px;
+  border-radius: 12px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.reactionsPickerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #d4d4d4;
+  background-color: #ffffff;
+}
+
+.title {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #333;
+}
+
+.commonReactions {
+  padding: 1rem;
+  border-bottom: 1px solid #d4d4d4;
+  background-color: #ffffff;
+}
+
+.sectionTitle {
+  margin: 0 0 12px 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: #666;
+}
+
+.commonReactionsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.reactionButton {
+  background-color: #f5f7fb;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.reactionButton:hover {
+  background-color: #e3f2fd;
+  transform: scale(1.1);
+}
+
+.reactionButton:active {
+  transform: scale(0.95);
+}
+
+.emojiPickerWrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .reactionsPickerContainer {
+    width: 350px;
+    max-height: 80vh;
+  }
+
+  .reactionsPickerHeader {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1rem !important;
+  }
+
+  .commonReactions {
+    padding: 0.75rem;
+  }
+
+  .reactionButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reactionsPickerContainer {
+    width: 320px;
+    margin: 20px;
+  }
+
+  .commonReactionsGrid {
+    gap: 0.4rem;
+  }
+
+  .reactionButton {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}
+
+/* Smooth animations */
+.overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.reactionsPickerContainer {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus styles for accessibility */
+.reactionButton:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Custom styling for emoji picker container */
+.emojiPickerWrapper .EmojiPickerReact {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.emojiPickerWrapper .EmojiPickerReact .epr-body {
+  border-radius: 0 !important;
+}

@@ -1,0 +1,230 @@
+.churnItem {
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  display: flex;
+  flex-direction: column;
+  min-width: 310px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.churnItem:hover {
+  cursor: pointer;
+}
+.enrollmentInfo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 10px;
+}
+
+.enrollmentInfoFieldFeedBy {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.enrollmentInfoFieldFeedBy > span {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.churnId {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.feedbackBox {
+  flex: 1;
+  padding: 10px;
+  background-color: var(--main-white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+.feedbacksHighlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.churnInfoBox {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  margin: 0;
+  color: var(--black-color);
+}
+
+.churnInfoBox > span {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+}
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7.5px 5px;
+  border-radius: 7.5px;
+  transition: background-color 0.2s;
+  background-color: #dcf2ff;
+}
+
+.feedbackHeader.expand {
+  border-radius: 7.5px 7.5px 0px 0px;
+}
+
+.feedbackHeader:hover {
+  background-color: #c7eaff;
+}
+
+/* Chevron icon animation */
+.chevronIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.chevronExpanded {
+  transform: rotate(180deg);
+}
+
+/* Smooth expand/collapse animation */
+.reasonsQuestionBox {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease-in-out,
+    padding 0.4s ease-in-out;
+  padding: 0 clamp(0.313rem, 0.245rem + 0.316vw, 0.625rem);
+  background-color: var(--modal-background-color);
+}
+.reasonsQuestionBox.expanded {
+  max-height: 2000px; /* Large enough to accommodate content */
+  padding: clamp(0.313rem, 0.245rem + 0.316vw, 0.625rem);
+  border-bottom: 1.5px solid var(--color-dashboard-border);
+  border-left: 1.5px solid var(--color-dashboard-border);
+  border-right: 1.5px solid var(--color-dashboard-border);
+  border-radius: 0px 0px 5px 5px;
+}
+.reasonsQuestionBox.collapsed {
+  max-height: 0;
+  padding: 0 clamp(0.313rem, 0.245rem + 0.316vw, 0.625rem);
+}
+
+.reasonsQuestionBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.enrollmentInfoField {
+  margin: 0 !important;
+  font-family: var(--leagueSpartan-bold-700);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  max-width: calc(50% - 10px);
+  min-width: calc(50% - 10px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: var(--black-color);
+}
+.enrollmentInfoField > span {
+  margin: 0 !important;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+}
+.feebBackActions {
+  display: flex;
+  gap: 5px;
+}
+
+.reasonBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.reason,
+.question {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+.reason {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--text-grey);
+}
+
+.question {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+}
+
+.qnaBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.iconBox > svg {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.actionBox {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: flex-end;
+}

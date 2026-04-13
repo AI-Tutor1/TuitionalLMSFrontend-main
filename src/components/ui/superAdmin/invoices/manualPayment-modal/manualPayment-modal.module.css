@@ -1,0 +1,244 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+  width: 80%;
+  /* max-width: 60%; */
+  /* border: 1px solid red; */
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.headingBox {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  line-height: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+  font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.parentStudentBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fields {
+  /* flex: 1 1 47%; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 275px;
+}
+
+.fields > p {
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.addBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addBox > :first-child {
+  width: 70%;
+}
+
+.addButtonBox {
+  display: flex;
+  align-items: flex-end;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  padding: 1vh;
+  cursor: pointer;
+}
+
+.addButton > svg {
+  color: var(--white-color);
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  filter: drop-shadow(rgba(0, 0, 0, 0.08) 0px 1px 4px);
+  border-radius: 10px;
+}
+
+.todoListHead {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.5vh;
+  min-height: 45px;
+  max-height: 55px;
+  padding: 10px;
+}
+
+.todoListHeadColumn {
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+.todoBody {
+  height: max-content;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.todoListRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  height: max-content;
+  padding: 10px;
+}
+
+.todoListRowHeadColumn {
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.todoListEnrollmentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: max-content;
+  margin-bottom: 5px;
+  height: max-content;
+}
+
+.todoListRowColumn {
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--black-color);
+  margin: 0px !important;
+  width: 20%;
+}
+
+.iconBox {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dMain-color);
+  border-radius: 5px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.durationBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainBox {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .addBox > :nth-child(1) {
+    width: 100% !important;
+  }
+  .addBox > :nth-child(2) {
+    width: max-content !important;
+    flex: 1;
+  }
+  .addBox > :nth-child(3) {
+    width: max-content !important;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section2,
+  .headingBox {
+    padding: 10px;
+  }
+  .durationBox {
+    flex-direction: column;
+  }
+  .hyphen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .addBox {
+    justify-content: center;
+  }
+}

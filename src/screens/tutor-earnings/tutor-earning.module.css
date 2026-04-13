@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Stats Grid */
+.statsBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+  height: max-content;
+}
+
+/* History Grid */
+.historyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Summary Grid */
+.summaryGrid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,241 @@
+.classScheduleBox {
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.daysBox {
+  border-right: 1px dashed var(--grey-color1);
+  width: 100%;
+  padding: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  height: 100%;
+}
+
+.daysNameBox {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--cards-box-shadow-color);
+  padding: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.daysNameBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.daysNameBox > :nth-child(2) {
+  background-color: var(--blue-color4);
+  color: var(--main-blue-color);
+  border-radius: 100%;
+  width: var(--large36-);
+  height: var(--large36-);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slotsBox {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  align-items: center;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 3px;
+}
+
+.availableBox {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--green-background-color6);
+  padding: 5px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--pure-black-color);
+  transition: all 0.3 ease;
+}
+
+.availableBox > :nth-child(2),
+.availableBox > :nth-child(3) {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+}
+
+.availableBox:hover {
+  transform: scale(1.01);
+}
+
+.bookedBox {
+  border-radius: 10px;
+  border: 1px solid var(--main-blue-color);
+  background: var(--blue-color5);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  cursor: pointer !important;
+  transition: all 0.3 ease !important;
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.nullBox {
+  width: 100%;
+  border-radius: 10px;
+  background: var(--grey-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+}
+
+.nullBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  color: var(--pure-black-color);
+}
+
+.nullBox > :nth-child(2) {
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+}
+
+.timeBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timeBox :nth-child(1),
+.timeBox :nth-child(2) {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--pure-black-color);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  margin: 0 !important;
+}
+
+.facultyInfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+.imageNameBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--pure-black-color);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  /* border: 1px solid red; */
+}
+
+.imageNameBox > p {
+  width: 70%;
+}
+
+.imageNameBox > p > span {
+  color: var(--main-blue-color);
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  /* border: 1px solid blue; */
+}
+.imageContainer > :nth-child(2) {
+  position: absolute;
+  left: 6px;
+}
+
+.imageBox {
+  width: var(--regular18-);
+  height: var(--regular18-);
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  /* border: 1px solid var(--main-color); */
+}
+
+.emptyBox {
+  width: 100%;
+  border-radius: 10px;
+  background: var(--text-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--pure-black-color);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  font-family: var(--leagueSpartan-medium-500);
+  padding: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+}
+
+.emptyBox > p {
+  margin: 0;
+}
+
+.actionButtonsBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.iconBox:hover {
+  transform: scale(1.01);
+}
+.iconBox > svg {
+  font-size: var(--regular16-);
+  cursor: pointer;
+  color: var(--pure-black-color);
+}

@@ -1,0 +1,65 @@
+{
+  "lastUpdated": "2026-04-13T16:00:00Z",
+  "generatedBy": "manual-audit",
+  "summary": {
+    "components": { "total": 180, "global": 36, "ui_superAdmin": 120, "ui_teacher": 15, "ui_student": 5, "ui_shared": 4 },
+    "screens": { "total": 42 },
+    "services": { "total": 39 },
+    "apiBuilders": { "total": 28 },
+    "types": { "total": 37 },
+    "hooks": { "total": 7 },
+    "routes": { "protected": 46, "public": 4, "total": 51 },
+    "reduxSlices": { "total": 5 }
+  },
+  "domains": {
+    "enrollments": { "screens": 3, "components": 14, "services": 3 },
+    "sessions": { "screens": 2, "components": 10, "services": 2 },
+    "users": { "screens": 2, "components": 9, "services": 2 },
+    "billing": { "screens": 2, "components": 4, "services": 1 },
+    "invoices": { "screens": 1, "components": 10, "services": 1 },
+    "chat": { "screens": 1, "components": 14, "services": 3 },
+    "class-schedule": { "screens": 3, "components": 8, "services": 5 },
+    "dashboard": { "screens": 2, "components": 18, "services": 1 },
+    "roles": { "screens": 1, "components": 5, "services": 1 },
+    "resources": { "screens": 1, "components": 4, "services": 1 },
+    "permissions": { "screens": 1, "components": 1, "services": 1 },
+    "transactions": { "screens": 2, "components": 3, "services": 1 },
+    "feedbacks": { "screens": 3, "components": 4, "services": 1 },
+    "auth": { "screens": 4, "components": 2, "services": 1 },
+    "demo": { "screens": 1, "components": 10, "services": 1 },
+    "churn": { "screens": 2, "components": 6, "services": 2 },
+    "tickets": { "screens": 1, "components": 3, "services": 1 },
+    "policies": { "screens": 1, "components": 3, "services": 1 },
+    "notifications": { "screens": 1, "components": 2, "services": 1 },
+    "payouts": { "screens": 1, "components": 2, "services": 1 },
+    "curriculum": { "screens": 1, "components": 4, "services": 1 },
+    "shared": { "components": 36, "hooks": 4, "utils": 8 }
+  },
+  "godNodes": [
+    { "id": "button", "path": "src/components/global/button/button.tsx", "importedBy": 92, "blastRadius": "critical" },
+    { "id": "loading-box", "path": "src/components/global/loading-box/loading-box.tsx", "importedBy": 84, "blastRadius": "critical" },
+    { "id": "error-box", "path": "src/components/global/error-box/error-box.tsx", "importedBy": 69, "blastRadius": "critical" },
+    { "id": "withAuth", "path": "src/utils/withAuth/withAuth.tsx", "importedBy": 51, "blastRadius": "critical" },
+    { "id": "MyAxiosError", "path": "src/services/error.type.ts", "importedBy": 45, "blastRadius": "critical" },
+    { "id": "input-field", "path": "src/components/global/input-field/input-field.tsx", "importedBy": 38, "blastRadius": "high" },
+    { "id": "pagination", "path": "src/components/global/pagination/pagination.tsx", "importedBy": 26, "blastRadius": "high" },
+    { "id": "mobile-filter-button", "path": "src/components/global/mobile-filters-button/mobile.filters-button.tsx", "importedBy": 24, "blastRadius": "high" },
+    { "id": "multi-select-dropdown", "path": "src/components/global/multi-select-dropDown/multi-select-dropDown.tsx", "importedBy": 20, "blastRadius": "high" },
+    { "id": "filter-by-date", "path": "src/components/global/filter-by-date/filter-by-date.tsx", "importedBy": 19, "blastRadius": "high" }
+  ],
+  "fileStats": {
+    "totalFiles": 728,
+    "tsx": 321,
+    "ts": 151,
+    "jsx": 2,
+    "css": 253
+  },
+  "knownIssues": {
+    "anyTypes": 841,
+    "consoleLogs": 93,
+    "typosInPaths": 7,
+    "jsxFiles": 2,
+    "testFiles": 0,
+    "errorBoundaries": 0
+  }
+}

@@ -1,0 +1,114 @@
+.tableContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 0.8px;
+}
+
+.tableChild {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+/* Table Header - Fixed width to match body */
+.tableHead {
+  background-color: var(--cards-header-color);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  min-width: 1100px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+/* Shared Typography */
+.tableHeadCell {
+  padding: 10px 7.5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Table Body - Only vertical scroll */
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Only vertical scroll */
+  overflow-x: hidden; /* No horizontal scroll here */
+  min-height: 0;
+  flex: 1;
+  min-width: 1100px;
+}
+
+.tableBody > :last-child {
+  border-bottom: none !important;
+}
+
+.tableRow {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 2px solid var(--color-dashboard-border);
+  display: flex;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  box-sizing: border-box;
+  height: max-content;
+  min-width: max-content;
+}
+
+.tableCell {
+  padding: 10px 7.5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.ellipsisCol {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}

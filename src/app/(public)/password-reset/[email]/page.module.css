@@ -1,0 +1,76 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  padding: 5px;
+  border: none;
+  width: 100%;
+}
+
+.character {
+  background-color: var(--inputBackground-color);
+  box-shadow: 2px 2px 5px 0px var(--inputBackground-color);
+  width: 3vw;
+  height: 3vw;
+  border: 1px solid var(--inputBackground-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5vh;
+}
+
+.characterInactive {
+  background-color: var(--inputBackground-color);
+  color: var(--text-color);
+}
+
+.characterSelected {
+  background-color: var(--inputBackground-color);
+  outline: 2px solid var(--main-color);
+  box-shadow: 0px 4px 5px 2px var(--input-box-shadow-color);
+  color: var(--text-color);
+}
+
+.characterFilled {
+  background-color: var(--inputBackground-color);
+  color: var(--text-color);
+}
+
+.textLink {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--leagueSpartan-regular-400);
+  margin: auto;
+  color: var(--text-color);
+  font-size: var(--medium-text-size-vh);
+  line-height: var(--medium-text-size-vh);
+  text-decoration: none;
+  transition: text-decoration 1s ease;
+}
+
+.textLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.textLink > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textLink > :first-child > svg {
+  color: var(--icon-color);
+  font-size: var(--medium-text-size-vh);
+}

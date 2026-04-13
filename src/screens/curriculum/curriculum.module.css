@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mainContent {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  overflow-y: auto;
+  padding: 5px;
+}
+
+@media screen and (max-width: 830px) {
+  .main {
+    justify-content: center;
+  }
+  .filter {
+    justify-content: center;
+  }
+}

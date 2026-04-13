@@ -1,0 +1,355 @@
+/* Modal Container */
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 95%;
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  max-height: 95%;
+  height: 95%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  border-bottom: 1px solid var(--grey-color1);
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+}
+
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.mainContentBox {
+  padding: 10px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.modalTitle {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--medium24-);
+  line-height: var(--medium24-);
+  color: var(--black-color);
+  margin: 0;
+  width: max-content;
+}
+
+.modalSubtitle {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-grey);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--text-grey);
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: var(--text-grey);
+  background-color: var(--grey-color1);
+  border-radius: 20px;
+}
+
+/* Chart Section */
+.chartSection {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.chartContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chartWrapper {
+  width: 100%;
+  flex: 1;
+  /* height: 300px; */
+  background-color: var(--main-white-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: var(--cards--boxShadow-color);
+}
+
+/* Grid Styles */
+.grid {
+  stroke: var(--text-grey);
+}
+
+/* Axis Styles */
+.axis {
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.filterControls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+/* Legend Styles */
+.legendContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+}
+
+.legendCheckboxItem {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.legendCheckboxItem:hover {
+  opacity: 0.8;
+}
+
+.legendCheckbox {
+  display: none;
+}
+
+.customCheckbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+  transition: opacity 0.2s ease;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  background-color: var(--main-white-color);
+  border: 1px solid var(--grey-color1);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.tooltipLabel {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: 0.875rem;
+  color: var(--text-grey);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--grey-color1);
+}
+
+.tooltipContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tooltipItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltipIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tooltipName {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 0.75rem;
+  color: var(--text-grey);
+  flex: 1;
+}
+
+.tooltipValue {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: 0.75rem;
+  color: var(--text-grey);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mainBox {
+    width: 95%;
+    padding: 16px;
+    max-height: 85vh;
+  }
+
+  .modalHeader {
+    margin-bottom: 16px;
+  }
+
+  .chartSection {
+    min-height: 300px;
+  }
+
+  .chartWrapper {
+    height: 250px;
+  }
+
+  .legendContainer {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .customCheckbox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tooltip {
+    padding: 10px;
+    min-width: 130px;
+  }
+
+  .tooltipLabel {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+
+  .tooltipContent {
+    gap: 4px;
+  }
+
+  .tooltipIndicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .tooltipName,
+  .tooltipValue {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBox {
+    width: 98%;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .modalTitle {
+    font-size: 1rem;
+  }
+
+  .modalSubtitle {
+    font-size: 0.7rem;
+  }
+
+  .closeButton {
+    padding: 6px;
+  }
+
+  .closeButton svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .chartSection {
+    min-height: 280px;
+  }
+
+  .chartWrapper {
+    height: 220px;
+  }
+
+  .legendContainer {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .legendCheckboxItem {
+    gap: 6px;
+  }
+
+  .customCheckbox {
+    width: 14px;
+    height: 14px;
+  }
+
+  .customCheckbox svg {
+    width: 8px;
+    height: 6px;
+  }
+
+  .legendLabel {
+    font-size: 0.7rem;
+  }
+
+  .tooltip {
+    padding: 8px;
+    min-width: 100px;
+  }
+
+  .tooltipLabel {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+  }
+
+  .tooltipName,
+  .tooltipValue {
+    font-size: 0.65rem;
+  }
+
+  .tooltipIndicator {
+    width: 6px;
+    height: 6px;
+  }
+}

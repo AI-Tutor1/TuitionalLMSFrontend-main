@@ -1,0 +1,91 @@
+.imageBox {
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  width: var(--medium24-);
+  height: var(--medium24-);
+}
+
+.cellFlexCol {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tutorProfileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.studentsBox {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+  min-width: 0;
+}
+
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+.imagesBox > :nth-child(2) {
+  position: absolute;
+  left: 5px;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  overflow: hidden;
+}
+
+.studentsBox > :nth-child(3) {
+  color: var(--main-blue-color);
+  overflow: hidden;
+}
+
+.collapseWrapper {
+  width: 100%;
+  border-bottom: 2px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 160px;
+  padding: 10px;
+  width: max-content;
+}
+
+.detailValue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.detailLabel {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+}

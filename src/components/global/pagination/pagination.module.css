@@ -1,0 +1,125 @@
+.pagination {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+  padding-block: 5px;
+}
+
+.pagination > div {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  margin: 0 !important;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination > nav {
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  /* overflow: hidden; */
+}
+
+.pagination > nav > ul {
+  height: max-content;
+}
+
+.pagination > nav > ul > li {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > nav > ul > :first-child > button {
+  color: var(--main-blue-color);
+  border: none;
+}
+
+.pagination > nav > ul > :first-child > button:hover {
+  background: none;
+}
+
+.pagination > nav > ul > :last-child > button {
+  color: var(--main-blue-color);
+  border: none;
+  background: none;
+}
+
+.pagination > nav > ul > li > button > svg {
+  height: var(--regular18-);
+  width: var(--regular18-);
+}
+
+.pagination > nav > ul > li > button {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+  padding: 2.5px 10px !important;
+  color: var(--black-color);
+  border: 1.5px solid var(--color-dashboard-border);
+  height: max-content !important;
+}
+
+.pagination > nav > ul > li > div {
+  color: var(--black-color);
+}
+
+.pagination > nav > ul > li > button > svg {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.selectBox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.entries {
+  color: var(--main-blue-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.dropDownBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.dropDownBox > select {
+  cursor: pointer;
+  min-height: max-content;
+  min-width: max-content;
+  border: 1px solid var(--main-blue-color);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--black-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+@media screen and (max-width: 834px) {
+  .pagination {
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "lastUpdated": "2026-04-13T16:00:00Z",
+  "description": "Entities with the highest number of dependents. Before modifying any god node, check all usedBy references to assess blast radius. Inspired by Graphify's god_nodes analysis.",
+  "nodes": [
+    {
+      "id": "button",
+      "label": "Button",
+      "path": "src/components/global/button/button.tsx",
+      "importedBy": 92,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Most imported component. ANY prop change affects 92+ files. Changes require full regression."
+    },
+    {
+      "id": "loading-box",
+      "label": "LoadingBox",
+      "path": "src/components/global/loading-box/loading-box.tsx",
+      "importedBy": 84,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Loading state shown on every screen. Visual changes affect entire app perception."
+    },
+    {
+      "id": "error-box",
+      "label": "ErrorBox",
+      "path": "src/components/global/error-box/error-box.tsx",
+      "importedBy": 69,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Empty state shown when data array is empty. Paired with LoadingBox on every screen."
+    },
+    {
+      "id": "withAuth",
+      "label": "withAuth HOC",
+      "path": "src/utils/withAuth/withAuth.tsx",
+      "importedBy": 51,
+      "blastRadius": "critical",
+      "domain": "auth",
+      "confidence": "EXTRACTED",
+      "note": "Wraps EVERY protected page. Auth logic change = app-wide routing change. Currently .jsx — migration to .tsx is BUG-022."
+    },
+    {
+      "id": "error-type",
+      "label": "MyAxiosError",
+      "path": "src/services/error.type.ts",
+      "importedBy": 45,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Error type used in every mutation's onError handler. Type change cascades through all screens."
+    },
+    {
+      "id": "user-slice",
+      "label": "userSlice",
+      "path": "src/lib/store/slices/user-slice.ts",
+      "importedBy": 42,
+      "blastRadius": "critical",
+      "domain": "auth",
+      "confidence": "EXTRACTED",
+      "note": "Auth token + user object. Read by every screen via useAppSelector. Shape change breaks everything."
+    },
+    {
+      "id": "input-field",
+      "label": "InputField",
+      "path": "src/components/global/input-field/input-field.tsx",
+      "importedBy": 38,
+      "blastRadius": "high",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Used in all form modals (add, edit). Prop changes affect every modal."
+    },
+    {
+      "id": "pagination",
+      "label": "PaginationComponent",
+      "path": "src/components/global/pagination/pagination.tsx",
+      "importedBy": 26,
+      "blastRadius": "high",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Bottom of every data table. Interface change affects all table screens."
+    },
+    {
+      "id": "api-methods",
+      "label": "AxiosGet/Post/Put/Patch/Delete",
+      "path": "src/utils/helpers/api-methods.ts",
+      "importedBy": 39,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "Every API call flows through these functions. Signature change breaks all services."
+    },
+    {
+      "id": "config",
+      "label": "BASE_URL + REQUEST_CONFIG",
+      "path": "src/services/config.ts",
+      "importedBy": 28,
+      "blastRadius": "critical",
+      "domain": "shared",
+      "confidence": "EXTRACTED",
+      "note": "BASE_URL and auth header config. Used by every API URL builder."
+    }
+  ]
+}

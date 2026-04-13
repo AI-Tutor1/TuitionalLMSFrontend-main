@@ -1,0 +1,178 @@
+/* Original User Table Styles */
+
+.seudoNameClass {
+  color: var(--text-grey);
+  width: 100%;
+}
+
+.syncBadge {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.syncBadge[data-synced="true"] {
+  color: var(--green-text-color1);
+  background-color: var(--green-background-color1);
+}
+
+.syncBadge[data-synced="false"] {
+  color: var(--red-text-color2);
+  background-color: var(--red-background-color1);
+}
+
+.statusDot {
+  padding: 8px;
+  border-radius: 100%;
+  width: max-content;
+}
+
+.statusDot[data-status="true"] {
+  background-color: var(--green-color);
+}
+
+.statusDot[data-status="false"] {
+  background-color: var(--red-color1);
+}
+
+.roleBadge {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--red-color2);
+  background-color: var(--red-background-color2);
+}
+
+.roleBadge[data-role-id="3"] {
+  color: var(--green-text-color3);
+  background-color: var(--green-background-color4);
+}
+
+.roleBadge[data-role-id="4"] {
+  color: var(--red-color2);
+  background-color: var(--orange-background-color1);
+}
+
+.roleBadge[data-role-id="5"] {
+  color: var(--purple-text-color1);
+  background-color: var(--purple-background-color1);
+}
+
+/* Status Badge for Collapsible Content */
+.statusBadge {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.statusBadge[data-status="true"] {
+  color: var(--green-text-color1);
+  background-color: var(--green-background-color1);
+}
+
+.statusBadge[data-status="false"] {
+  color: var(--red-text-color2);
+  background-color: var(--red-background-color1);
+}
+
+/* Collapsible Styles */
+.collapsibleWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 7.5px;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.iconBox:hover {
+  transform: scale(1.09);
+}
+
+.iconBox > svg {
+  font-size: var(--regular16-);
+}
+
+.collapseWrapper {
+  width: 100%;
+  border-bottom: 2px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 160px;
+  padding: 10px;
+  flex: 1;
+}
+
+.detailLabel {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.detailValue {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+}
+
+/* Icons Container */
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .collapseWrapper {
+    gap: 16px;
+  }
+
+  .detailItem {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collapseWrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .detailItem {
+    width: 100%;
+  }
+}

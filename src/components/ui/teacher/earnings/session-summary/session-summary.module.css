@@ -1,0 +1,94 @@
+.summaryCard {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px -1px 10px 0px rgba(56, 182, 255, 0.2) inset;
+  height: 100%;
+  flex: 1;
+  min-width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 500px;
+  min-height: 550px;
+}
+
+.summaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+}
+
+.summaryTitle {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+  line-height: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+  color: var(--black-color);
+}
+
+.sessionTableHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  color: var(--text-color);
+}
+.sessionTableHeader > :nth-child(1) {
+  width: 40% !important;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.tableFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 20%;
+}
+
+.sessionRows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sessionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eff0f1;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.sessionRow > :nth-child(1) {
+  width: 40%;
+}
+
+.sessionCell {
+  width: 20%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  line-height: clamp(0.625rem, 0.55rem + 0.375vw, 1rem);
+  color: var(--black-color);
+}

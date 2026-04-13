@@ -1,0 +1,195 @@
+/* Container */
+.container {
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 5px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.totalCount {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  display: flex;
+  align-items: center;
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* Icons */
+.iconSmall {
+  width: var(--regular16-);
+  height: var(--regular16-);
+  margin-right: 0.25rem;
+  color: var(--black-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.iconSmall:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.iconTiny {
+  width: var(--regular16-);
+  height: var(--regular16-);
+  margin-right: 0.25rem;
+}
+
+.iconSpinning {
+  width: var(--regular16-);
+  height: var(--regular16-);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Policies List */
+.policiesList {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.75rem;
+  border-radius: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  padding: 20px;
+}
+
+/* Policy Card */
+.card {
+  border-left: 3px solid var(--main-blue-color);
+  border-right: 1px solid var(--color-dashboard-border);
+  border-bottom: 1px solid var(--color-dashboard-border);
+  border-top: 1px solid var(--color-dashboard-border);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardMainContent {
+  flex: 1;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-grey);
+}
+
+.badgeContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.capitalizeText {
+  text-transform: capitalize;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.cardDescription {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categoryBadge {
+  color: var(--main-blue-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.createdDate {
+  display: flex;
+  align-items: center;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardActions > div:hover {
+  cursor: pointer;
+}
+
+.actionButton {
+  cursor: pointer;
+}
+
+.policyContent {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.policyContent > * {
+  line-height: 1.4;
+  font-size: 0.875rem;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.emptyStateContent {
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .filtersGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

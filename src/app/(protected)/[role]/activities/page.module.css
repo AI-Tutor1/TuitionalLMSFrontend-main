@@ -1,0 +1,14 @@
+.sessionsContainer {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--main-inner-boxShadow-color);
+  /* background-color: var(--main-white-color); */
+  backdrop-filter: blur(20px);
+  overflow-y: auto;
+  opacity: 90%;
+}

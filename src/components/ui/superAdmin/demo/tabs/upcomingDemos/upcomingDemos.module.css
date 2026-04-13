@@ -1,0 +1,43 @@
+.container {
+  border: 1px solid #e4e4e7;
+  border-radius: 7.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fdfdfe;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header > div {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.header > div > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin: 0 !important;
+}
+
+.header > p {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--text-color);
+  margin: 0 !important;
+}
+
+.cardsDiv {
+  overflow-y: auto;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

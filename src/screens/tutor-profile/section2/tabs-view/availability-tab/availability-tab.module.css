@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: auto;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+}
+
+.scheduleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--sub-heading);
+  height: max-content;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  gap: 20px;
+}

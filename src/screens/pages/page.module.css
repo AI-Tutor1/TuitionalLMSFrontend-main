@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: flex-end;
+  height: max-content;
+}

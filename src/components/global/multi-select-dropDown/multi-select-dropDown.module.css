@@ -1,0 +1,18 @@
+.subWrapper {
+  border-radius: 10px;
+  height: 5.5vh;
+  max-height: 50px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--main-inner-boxShadow-color);
+  background: var(--main-white-color);
+}
+
+.imageBox {
+  position: relative;
+  height: var(--regular18-);
+  width: var(--regular18-);
+  margin-inline: 10px;
+  overflow: hidden;
+}

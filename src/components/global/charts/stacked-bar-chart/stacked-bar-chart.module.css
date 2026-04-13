@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px 10px 5px 15px;
+  width: 50%;
+  gap: 2.5px;
+}
+
+.heading {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+  margin: 0 !important;
+}

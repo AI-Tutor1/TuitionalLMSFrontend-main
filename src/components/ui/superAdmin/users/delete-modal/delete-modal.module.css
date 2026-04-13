@@ -1,0 +1,58 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: 30%;
+  min-width: 320px;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Header Section */
+.headingBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: 1;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-grey);
+  font-size: var(--regular20-);
+  line-height: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+
+.deleteLogoBox {
+  position: relative;
+  width: var(--xxxxLarge72-);
+  height: var(--xxxxLarge72-);
+}
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}

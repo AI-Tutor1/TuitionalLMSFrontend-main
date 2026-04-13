@@ -1,0 +1,65 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38vw;
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  fill: #f1f7fa;
+  filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05));
+  backdrop-filter: blur(5px);
+  outline: none;
+  height: max-content;
+}
+
+.headingBox {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 1.563vw;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--heading-size);
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+  padding: 1.563vw;
+}
+
+.contentBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8vw;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: wrap;
+  flex: 1 1 min(25% - 10px);
+  width: 100% !important;
+  /* border: 1px solid; */
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fields > p {
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}

@@ -1,0 +1,30 @@
+.container {
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contentBox {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: max-content;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.filtersContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

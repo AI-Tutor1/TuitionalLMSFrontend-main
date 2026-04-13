@@ -1,0 +1,105 @@
+.cardBox {
+  border-radius: 10px;
+  width: 49%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e4f5ff;
+  background-color: #e4f5ff;
+  overflow: hidden;
+  height: 100px;
+}
+
+.firstBox {
+  width: 20%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px;
+}
+
+.firstBox > p {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular-text-size-vh);
+  line-height: var(--regular-text-line-height);
+  text-align: center;
+  margin: 0 !important;
+}
+
+.firstBox > :nth-child(2) {
+  width: 100%;
+  color: var(--text-color);
+}
+
+.firstBox > :nth-child(3) {
+  width: 100%;
+  color: var(--text-color);
+}
+
+.secondBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+  background-color: #f1faff;
+  padding: 15px;
+}
+
+.nameImageSubjectBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nameImageSubjectBox p {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular-text-size-vh);
+  margin: 0px !important;
+}
+
+.nameImageBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.nameImageBox .imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 4vh;
+  width: 4vh;
+}
+
+.infoBox > p {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular-text-size-vh);
+}
+
+.actionsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  background: var(--white-color);
+  color: var(--main-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  line-height: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,0 +1,160 @@
+# .agent-context/rules.toml
+# Coding standards, patterns to follow, patterns to avoid.
+# The agent MUST follow these rules. No exceptions.
+# Last updated: 2026-04-13
+
+# ─────────────────────────────────────────────
+# PATTERNS TO FOLLOW
+# ─────────────────────────────────────────────
+
+[follow.styling]
+method = "CSS Modules"
+# Every component has a co-located .module.css file
+# Import as: import classes from './component.module.css'
+colors = "CSS variables from src/app/globals.css"
+# Never hardcode hex values in components
+# Use: var(--main-blue-color), var(--green-color), etc.
+responsive = "useMediaQuery from react-responsive"
+breakpoint_mobile = 1220  # pixels
+
+[follow.state]
+server_state = "TanStack Query (useQuery, useMutation)"
+global_state = "Redux Toolkit (useAppSelector, useAppDispatch)"
+local_state = "useState + useCallback + useMemo"
+# Server data = React Query (API responses, lists, details)
+# Global data = Redux (auth, roles, resources, assignedPages)
+# Local data  = useState (filters, modals, form state)
+
+[follow.api_layer]
+# Two-file pattern for each module:
+# 1. src/api/{module}.api.ts      → URL builders (functions returning endpoint strings)
+# 2. src/services/dashboard/...   → Service functions (call AxiosGet/Post with URL builders)
+url_builders = "src/api/"
+service_functions = "src/services/"
+http_methods = "src/utils/helpers/api-methods.ts"
+# AxiosGet, AxiosPost, AxiosPut, AxiosPatch, AxiosDelete
+
+[follow.components]
+memoization = "memo() wrapper on all exported components"
+props_memoization = "useMemo for all prop objects passed to child components"
+handler_memoization = "useCallback for all event handlers"
+# This is the existing pattern — maintain it even if aggressive
+
+[follow.modals]
+# Standard modal prop interface:
+standard_props = [
+  "modalOpen",      # boolean — controls visibility
+  "handleClose",    # () => void — close handler
+  "heading",        # string — modal title
+  "subHeading",     # string — modal description
+  "loading",        # boolean — submit button loading state
+]
+# Delete modals add: handleDelete, buttonText
+# Add/Edit modals add: handleAdd/handleEdit, subject, curriculum, board, grades, students, teachers
+
+[follow.pages]
+# Every page.tsx follows this exact pattern:
+# "use client";
+# import Screen from "@/screens/{module}/{module}";
+# import { withAuth } from "@/utils/withAuth/withAuth";
+# const Page = () => <Screen />;
+# export default withAuth(Page);
+
+[follow.mutations]
+# After successful mutation:
+# 1. Show toast.success()
+# 2. Invalidate relevant query keys
+# 3. Close modal
+# After failed mutation:
+# 1. Extract error message from axios response
+# 2. Show toast.error()
+# USE: handleMutationError() from src/utils/helpers/mutation-utils.ts (for new code)
+
+[follow.query_keys]
+# Hierarchical, scoped query keys:
+# ["resource", "scope", ...filterDeps]
+# Example: ["enrollments", "list", page, limit, dateFilter, ...]
+# Example: ["sessions", "detail", sessionId]
+# NEVER use bare strings like ["getAllEnrollments"]
+
+[follow.toasts]
+library = "react-toastify"
+position = "top-center"
+auto_close = 2000
+success_for = "CRUD operations"
+error_for = "API failures, access denied"
+
+[follow.git]
+branch_format = "fix/{tier}-{description} or feat/{feature-name}"
+commit_format = "fix(BUG-XXX): description or feat(MODULE): description"
+one_commit_per_bug = true
+never_push_to_main = true
+
+# ─────────────────────────────────────────────
+# PATTERNS TO AVOID
+# ─────────────────────────────────────────────
+
+[avoid]
+no_tailwind = "Do not add Tailwind — project uses CSS Modules"
+no_new_styled_components = "styled-components is legacy only — use CSS Modules"
+no_any_types = "Never add new 'any' annotations — type properly or use 'unknown'"
+no_console_in_components = "No console.log in component/screen code (api-methods.ts is exempt)"
+no_direct_localstorage = "Use Redux Persist — never access localStorage directly"
+no_hardcoded_urls = "All URLs via process.env or src/services/config.ts"
+no_hardcoded_secrets = "All keys/tokens via .env.local"
+no_dangerouslySetInnerHTML_without_sanitize = "Always wrap with sanitizeHTML() from src/utils/helpers/sanitize-html.ts"
+no_bare_query_keys = "Never use ['getAllX'] — use hierarchical keys"
+no_duplicate_error_handlers = "Use handleMutationError() — don't copy-paste onError blocks"
+no_file_creation_without_justification = "Check if something similar exists first"
+no_refactoring_during_bugfix = "Fix only what the task describes"
+
+# ─────────────────────────────────────────────
+# SHARED UTILITIES
+# ─────────────────────────────────────────────
+
+[utilities]
+# Utilities the agent should use instead of writing inline code
+error_handler = "src/utils/helpers/mutation-utils.ts → handleMutationError()"
+mutation_factory = "src/utils/helpers/mutation-utils.ts → createMutationHandlers()"
+query_params = "src/utils/helpers/query-params.ts → buildQueryParams(), buildApiUrl()"
+html_sanitizer = "src/utils/helpers/sanitize-html.ts → sanitizeHTML()"
+debounce = "src/utils/helpers/useDebounce.ts → useDebounce()"
+api_methods = "src/utils/helpers/api-methods.ts → AxiosGet/Post/Put/Patch/Delete"
+payload_conversion = "src/utils/helpers/payload-conversion.ts → ConvertObjectToFormData/Json"
+axios_interceptor = "src/utils/helpers/axios-interceptor.ts → setupAxiosInterceptors()"
+
+# ─────────────────────────────────────────────
+# NAMING CONVENTIONS
+# ─────────────────────────────────────────────
+
+[naming.files]
+components = "kebab-case directory, matching filename"
+screens = "kebab-case directory and filename"
+css_modules = "matches component name with .module.css suffix"
+services = "kebab-case with module name"
+api_builders = "kebab-case with .api.ts suffix"
+type_files = "kebab-case with .types.ts suffix"
+redux_slices = "kebab-case with -slice.ts suffix"
+hooks = "camelCase with use prefix"
+
+[naming.code]
+props_interfaces = "{ComponentName}Props"
+event_handlers = "handle{Action} — handleDelete, handleAdd, handleClose"
+modal_state = "modals.{name} — modals.add, modals.delete, modals.edit"
+filter_state = "filters.{name} — filters.currentPage, filters.dateFilter"
+mutation_vars = "handle{Action} = useMutation({...})"
+query_vars = "{ data, error, isLoading } = useQuery({...})"
+
+# ─────────────────────────────────────────────
+# VALIDATION COMMANDS
+# ─────────────────────────────────────────────
+
+[validate]
+# Run these after every change
+typescript = "npx tsc --noEmit"
+lint = "npm run lint"
+build = "npm run build"
+no_secrets = "grep -rn 'AIzaSy\\|BMg4cJ6' src/"
+no_double_braces = "grep -rn '}}' src/api/ --include='*.ts'"
+no_unsanitized_html = "grep -rn 'dangerouslySetInnerHTML' src/ --include='*.tsx' | grep -v sanitizeHTML"
+no_jsx_files = "find src -name '*.jsx'"

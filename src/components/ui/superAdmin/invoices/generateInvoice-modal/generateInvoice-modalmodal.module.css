@@ -1,0 +1,223 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  max-height: 90%;
+}
+
+.headingBox {
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: 1;
+  color: var(--black-color);
+  margin: 0;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-grey);
+  font-size: var(--regular20-);
+  line-height: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 275px;
+}
+
+.fields > p {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.addBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addBox > :first-child {
+  width: 70%;
+}
+
+.addButtonBox {
+  display: flex;
+  align-items: flex-end;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--main-blue-color);
+  padding: 1vh;
+  cursor: pointer;
+}
+
+.addButton > svg {
+  color: var(--white-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-white-color);
+  box-shadow: var(--cards--boxShadow-color);
+  border-radius: 10px;
+}
+
+.todoListHead {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.5vh;
+  min-height: 45px;
+  max-height: 55px;
+  padding: 10px;
+}
+
+.todoListHeadColumn {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.todoBody {
+  /* border: 1px solid red; */
+  max-height: 20vh;
+  overflow: auto;
+}
+
+.todoListRow {
+  height: 5.5vh;
+  min-height: 45px;
+  max-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.todoListRowColumn {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--black-color);
+  margin: 0px !important;
+  width: 20%;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 7.5px;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.durationBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hyphen {
+  color: var(--black-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .mainBox {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .addBox > :nth-child(1) {
+    width: 100% !important;
+  }
+  .addBox > :nth-child(2) {
+    width: max-content !important;
+    flex: 1;
+  }
+  .addBox > :nth-child(3) {
+    width: max-content !important;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .durationBox {
+    flex-direction: column;
+  }
+  .hyphen {
+    display: none;
+  }
+  .section2 {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .addBox {
+    justify-content: center;
+  }
+}

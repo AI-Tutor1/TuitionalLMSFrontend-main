@@ -1,0 +1,130 @@
+/* Chart Wrapper */
+.chartWrapper {
+  width: 100%;
+  flex: 1;
+}
+
+/* Grid Styles */
+.grid {
+  stroke: var(--grey-color1);
+}
+
+/* Axis Styles */
+.axis {
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* Tooltip Styles */
+.tooltip {
+  background-color: var(--main-white-color);
+  border: 1px solid var(--color-dashboard-border);
+  border-radius: 8px;
+  box-shadow: var(--cards--boxShadow-color);
+  min-width: 150px;
+}
+
+.tooltipLabel {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 10px;
+}
+
+.tooltipContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.tooltipItem {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.tooltipIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tooltipName {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regula18r-);
+  color: var(--text-grey);
+  flex: 1;
+}
+
+.tooltipValue {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular16-);
+  line-height: var(--regula18r-);
+  color: var(--black-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .chartWrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chartWrapper {
+    height: 160px;
+  }
+
+  .tooltip {
+    padding: 10px;
+    min-width: 130px;
+  }
+
+  .tooltipLabel {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+
+  .tooltipContent {
+    gap: 4px;
+  }
+
+  .tooltipIndicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  .tooltipName,
+  .tooltipValue {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartWrapper {
+    height: 140px;
+  }
+
+  .tooltip {
+    padding: 8px;
+    min-width: 110px;
+  }
+
+  .tooltipLabel {
+    font-size: 0.75rem;
+  }
+
+  .tooltipName,
+  .tooltipValue {
+    font-size: 0.65rem;
+  }
+
+  .tooltipIndicator {
+    width: 6px;
+    height: 6px;
+  }
+}

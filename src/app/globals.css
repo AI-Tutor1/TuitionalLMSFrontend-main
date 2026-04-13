@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "League Spartan Medium";
+  src: url("/fonts/league-spartan/LeagueSpartan-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan Thin";
+  src: url("/fonts/league-spartan/LeagueSpartan-Thin.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan Light";
+  src: url("/fonts/league-spartan/LeagueSpartan-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan Regular";
+  src: url("/fonts/league-spartan/LeagueSpartan-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan SemiBold";
+  src: url("/fonts/league-spartan/LeagueSpartan-SemiBold.ttf")
+    format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "League Spartan Bold";
+  src: url("/fonts/league-spartan/LeagueSpartan-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+:root {
+  /* protected screen colors */
+  --background-radialgradient: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--blue-color1) -150%,
+    var(--iconBox-background-color) 100%
+  );
+  --transparent-blur-color: rgba(0, 0, 0, 0.5);
+  --sidebar-border-color: #a0afb8;
+  --sidebar-background-color: #ecf8ff;
+  --modal-background-color: #ecf8ff;
+  --toggle-highlight-color: #ecf8ff;
+  --icon-filter: brightness(1) invert(0);
+  --main-white-color: #ffffffff;
+  --pure-white-color: #ffffffff;
+  --black-color: #2d2d2d;
+  --pure-black-color: #2d2d2d;
+  --main-inner-boxShadow-color: 0px -1px 10px 0px var(--blue-color1) inset;
+  --line-background-gradient-color: linear-gradient(
+    180deg,
+    var(--main-white-color) 0%,
+    #38b6ff 50%,
+    var(--main-white-color) 100%
+  );
+  --main-profileImage-boxShadow-color:
+    -17px 27px 9px 0px rgba(0, 0, 0, 0), -11px 17px 8px 0px rgba(0, 0, 0, 0.01),
+    -6px 10px 7px 0px rgba(0, 0, 0, 0.05), -3px 4px 5px 0px rgba(0, 0, 0, 0.09),
+    -1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  --cards--background-color: #f1faff;
+  --color-dashboard-border: #ebebeb;
+  --cards--boxShadow-color: 0 0px 7px rgba(0, 0, 0, 0.1);
+  --cards-header-color: #afe2ff;
+  --iconBox-inner-boxShadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.3) inset;
+  --iconBox-background-color: rgba(255, 255, 255, 0.5);
+  /* green shades */
+  --green-color: rgb(40, 167, 69);
+  --green-text-color1: rgb(15, 81, 50);
+  --green-background-color1: rgb(209, 231, 221);
+  --green-text-color2: rgb(40, 99, 32);
+  --green-background-color2: rgb(150, 239, 207);
+  --green-text-color3: rgb(26, 71, 42);
+  --green-background-color3: rgb(212, 237, 218);
+  --green-background-color4: rgb(160, 255, 192);
+  --green-background-color5: rgb(180, 255, 224);
+  --green-background-color6: #dafff0;
+
+  /* red */
+  --red-color: rgb(255, 68, 68);
+  --red-text-color1: rgb(132, 32, 41);
+  --red-background-color1: rgb(248, 215, 218);
+  --red-color1: #d32121;
+  --red-color2: #653838;
+  --red-background-color2: #ffacac;
+  --red-text-color2: #842029;
+  /* purple */
+  --purple-text-color1: rgb(47, 50, 130);
+  --purple-background-color1: rgb(219, 220, 255);
+  /* blue */
+  --main-blue-color: #38b6ff;
+  --blue-text-color1: rgb(5, 68, 94);
+  --blue-background-color1: rgb(133, 221, 238);
+  --blue-color1: #afe2ff;
+  --blue-color2: rgb(4, 140, 219);
+  --blue-color3: #004687;
+  --blue-color4: #c7eaff;
+  --blue-color5: #e4f5ff;
+  /* orange */
+  --orange-color: rgb(255, 165, 0);
+  --orange-text-color1: rgb(204, 85, 0);
+  --orange-background-color1: rgb(249, 231, 159);
+  /* dark grey */
+  --darkGrey-color: #666;
+  --text-grey: #8d8d8d;
+  --grey-color1: #ebebeb;
+
+  /* font sizes */
+  /* regular */
+  --regular14-: clamp(0.625rem, 0.5712rem + 0.2532vw, 0.875rem);
+  --regular16-: clamp(0.75rem, 0.6962rem + 0.2532vw, 1rem);
+  --regular18-: clamp(0.875rem, 0.8212rem + 0.2532vw, 1.125rem);
+  --regular20-: clamp(1rem, 0.9462rem + 0.2532vw, 1.25rem);
+  --regular22-: clamp(1.125rem, 1.0712rem + 0.2532vw, 1.375rem);
+  /* medium */
+  --medium24-: clamp(1.25rem, 1.225rem + 0.125vw, 1.5rem);
+  --medium26-: clamp(1.375rem, 1.35rem + 0.125vw, 1.625rem);
+  --medium28-: clamp(1.5rem, 1.475rem + 0.125vw, 1.75rem);
+  --medium30-: clamp(1.625rem, 1.6rem + 0.125vw, 1.875rem);
+  /* large */
+  --large32-: clamp(1.75rem, 1.725rem + 0.125vw, 2rem);
+  --large34-: clamp(1.875rem, 1.85rem + 0.125vw, 2.125rem);
+  --large36-: clamp(2rem, 1.975rem + 0.125vw, 2.25rem);
+  --large38-: clamp(2.125rem, 2.1rem + 0.125vw, 2.375rem);
+  /* x-large */
+  --xLarge40-: clamp(2.25rem, 2.225rem + 0.125vw, 2.5rem);
+  --xLarge42-: clamp(2.375rem, 2.35rem + 0.125vw, 2.625rem);
+  --xLarge44-: clamp(2.5rem, 2.475rem + 0.125vw, 2.75rem);
+  --xLarge46-: clamp(2.625rem, 2.6rem + 0.125vw, 2.875rem);
+  /* xx-large*/
+  --xxLarge48-: clamp(2.75rem, 2.725rem + 0.125vw, 3rem);
+  --xxLarge50-: clamp(2.875rem, 2.85rem + 0.125vw, 3.125rem);
+  --xxLarge52-: clamp(3rem, 2.975rem + 0.125vw, 3.25rem);
+  --xxLarge54-: clamp(3.125rem, 3rem + 0.125vw, 3.375rem);
+  /* xxx-large*/
+  --xxxLarge56-: clamp(3.25rem, 3.225rem + 0.125vw, 3.5rem);
+  --xxxLarge58-: clamp(3.375rem, 3.35rem + 0.125vw, 3.75rem);
+  --xxxLarge60-: clamp(3.5rem, 3.475rem + 0.125vw, 4rem);
+  --xxxLarge62-: clamp(3.625rem, 3.6rem + 0.125vw, 4.125rem);
+
+  /* xxxx-large*/
+  --xxxxLarge64-: clamp(3.75rem, 3.725rem + 0.125vw, 4.5rem);
+  --xxxxLarge66-: clamp(3.875rem, 3.85rem + 0.125vw, 4.625rem);
+  --xxxxLarge68-: clamp(4rem, 3.975rem + 0.125vw, 4.75rem);
+  --xxxxLarge70-: clamp(4.125rem, 4rem + 0.125vw, 4.875rem);
+  --xxxxLarge72-: clamp(4.25rem, 4.125rem + 0.125vw, 5rem);
+
+  --main-color: #38b6ff;
+  --light-blue: #afe2ff;
+
+  --secondary-color: #565656;
+  --inputBackground-color: #eeeeee;
+  --icon-color: #9b9b9b;
+  --text-color: #8d8d8d;
+  --input-box-shadow-color: #cfcfcf;
+  --icons-color: #444444;
+  --white-color: #fff;
+  --transparent-blur-color: rgba(255, 255, 255, 0.2);
+
+  /* dashboard colors */
+  --dMain-color: #ecf8ff;
+
+  /* font families */
+  --leagueSpartan-thin-100: "League Spartan Thin", sans-serif;
+  --leagueSpartan-light-300: "League Spartan Light", sans-serif;
+  --leagueSpartan-regular-400: "League Spartan Regular", sans-serif;
+  --leagueSpartan-medium-500: "League Spartan Medium", sans-serif;
+  --leagueSpartan-semiBold-600: "League Spartan SemiBold", sans-serif;
+  --leagueSpartan-bold-700: "League Spartan Bold", sans-serif;
+}
+
+.dark {
+  --main-white-color: rgba(13, 16, 18, 1);
+  --black-color: #ffffff;
+  --background-radialgradient: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--main-blue-color) -200%,
+    var(--main-white-color) 100%
+  );
+  --main-inner-boxShadow-color: 0px -1px 10px 0px var(--main-blue-color) inset;
+  --color-dashboard-border: var(--darkGrey-color);
+  --sidebar-background-color: tranparent;
+  --icon-filter: brightness(0) invert(1);
+  --iconBox-inner-boxShadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.3) inset;
+  --cards--background-color: transparent;
+  --cards-header-color: #38b6ff;
+  --cards--boxShadow-color: 0 0px 7px var(--darkGrey-color);
+  --grey-color1: #f4f4f4;
+  --modal-background-color: rgba(13, 16, 18, 1);
+  --orange-background-color1: var(--orange-color);
+  --dark-opacity-: 90%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.8px;
+}
+
+*::-webkit-scrollbar {
+  width: 3.5px !important;
+  height: 4px !important;
+  position: relative !important;
+  margin-left: 5px !important;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dashboard-border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dashboard-border);
+  cursor: pointer;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.toast {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular-18-);
+}

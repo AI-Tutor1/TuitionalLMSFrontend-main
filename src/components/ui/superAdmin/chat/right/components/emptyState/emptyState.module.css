@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 2rem;
+}
+
+.container > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  margin: 0;
+  color: var(--black-color);
+}
+
+.imageBox {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}

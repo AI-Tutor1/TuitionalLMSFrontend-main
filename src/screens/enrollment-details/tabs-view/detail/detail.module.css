@@ -1,0 +1,263 @@
+.detailContainer {
+  padding: 0;
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow-y: auto;
+  min-width: 320px;
+}
+
+.smallLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.smallLoader > span > svg {
+  color: var(--main-blue-color);
+}
+
+.errorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 79%;
+  width: 100%;
+}
+
+.errorBox > h1 {
+  font-size: 2.2vw;
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.section1 {
+  flex: 1;
+  width: calc(50% - 10px);
+  border-radius: 10px;
+  backdrop-filter: blur(200px);
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  height: max-content;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--grey-color1);
+}
+
+.header > :nth-child(1),
+.header > :nth-child(2) {
+  margin: 0px !important;
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+}
+
+.header > :nth-child(1) {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.header > :nth-child(2) {
+  color: var(--text-color);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.body {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.child {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--grey-color1);
+}
+
+.child div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.child div > p {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+  border: 100%;
+  width: var(--medium28-);
+  height: var(--medium28-);
+}
+
+.section2 {
+  height: 100%;
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.section2Childs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: max-content;
+}
+
+.section2Childs > p {
+  margin: 0 !important;
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.componentsBox {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.components {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 250px;
+  flex: 1;
+}
+
+.components > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.components > div > p {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--main-blue-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.components > div > div {
+  background-color: var(--toggle-highlight-color);
+  border-radius: 100%;
+  width: var(--medium30-);
+  height: var(--medium30-);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.components > p {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.logBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logBox > p {
+  margin: 0 !important;
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.logBoxContent {
+  flex: 1;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: max-content;
+  gap: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 250px;
+}
+
+.logItem {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: var(--blue-color5);
+  box-shadow: var(--cards-boxSahdow-color);
+  border-left: 3px solid var(--main-blue-color);
+  padding: 10px;
+  border-radius: 7.5px;
+  gap: 10px;
+}
+
+.logItem > p {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--pure-black-color);
+  margin: 0 !important;
+  min-width: 160px;
+}
+
+.logItemStatus {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .detailContainer {
+    flex-direction: column-reverse;
+    overflow: auto;
+    height: max-content;
+  }
+  .section1 {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+  .section2 {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+}

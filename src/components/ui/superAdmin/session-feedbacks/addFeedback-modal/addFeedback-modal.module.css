@@ -1,0 +1,216 @@
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: max-content;
+  max-width: 90%;
+  /* min-width: 330px; */
+  max-height: 97%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.headingBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: clamp(0.625rem, 0.4905rem + 0.6329vw, 1.25rem);
+  align-items: center;
+  border-bottom: 1px solid var(--color-dashboard-border);
+}
+
+.headingBoxContent {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.headingBoxContent > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sessionDataLength {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--pure-white-color);
+  background-color: var(--main-blue-color);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  width: max-content;
+}
+
+.feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: clamp(0.625rem, 0.4905rem + 0.6329vw, 1.25rem);
+}
+
+.feedbackFormFields {
+  flex: 1;
+  overflow: auto;
+}
+
+.feedbackFormFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ratingSection,
+.emojiSection,
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sectionLabel {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular18-);
+  letter-spacing: 0.5px;
+}
+
+/* Star Rating Styles */
+.starRating {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: var(--medium28-);
+  color: var(--pure-white-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.star:hover,
+.star.active {
+  color: var(--orange-color);
+  transform: scale(1.1);
+}
+
+.ratingText {
+  text-align: center;
+  font-size: var(--regular-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-grey);
+  margin: 4px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+/* Emoji Styles */
+.emojiContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.emojiButton {
+  background: var(--blue-color1);
+  border: 3px solid transparent;
+  border-radius: 12px;
+  font-size: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emojiButton:hover {
+  background: var(--main-color);
+  transform: scale(1.05);
+}
+
+.emojiButton.selected {
+  background: var(--main-white-color);
+  border-color: var(--main-color);
+  transform: scale(1.1);
+  box-shadow: var(--cards--boxShadow-color);
+}
+
+/* Comment Section Styles */
+.commentTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--grey-color1);
+  border-radius: 8px;
+  font-size: var(--regular-);
+  font-family: var(--leagueSpartan-regular-400);
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.commentTextarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+.sessionInfoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 130px;
+  white-space: nowrap;
+}
+
+.value {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 516px) {
+  .headingBox {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+}

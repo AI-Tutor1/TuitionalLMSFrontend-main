@@ -1,0 +1,72 @@
+.historyCard {
+  flex: 1;
+  width: 100%;
+  border-radius: 10px;
+  padding: clamp(0.625rem, 0.4905rem + 0.6329vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  min-height: 320px;
+}
+
+.historyTitle {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+}
+
+.mainBox {
+  display: flex;
+  flex: 1;
+}
+
+.chartWrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sessionStats {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: max-content;
+}
+
+.sessionCount {
+  font-family: var(--leagueSpartan-bold-700);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  letter-spacing: -0.085px;
+}
+
+.sessionPeriod {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--main-color);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.chartContainer {
+  width: 100%;
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .ongoingClassBox {
+    max-height: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .historyCard {
+    height: 300px;
+  }
+}

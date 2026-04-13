@@ -1,0 +1,84 @@
+/* ThemeToggle.module.css */
+.themeToggleContainer {
+  width: max-content;
+  flex-shrink: 0;
+  border-radius: 50px;
+  background: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated background slider */
+.themeToggleContainer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background: var(--toggle-highlight-color);
+  border-radius: 100%;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 0.2);
+  z-index: 0;
+  height: var(--xxLarge48-);
+  width: var(--xxLarge48-);
+}
+
+/* Move background to right when dark mode is active */
+:global(.dark) .themeToggleContainer::before {
+  transform: translateX(100%);
+}
+
+.themeButton {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: max-content;
+  background: transparent;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: var(--xxLarge48-);
+  width: var(--xxLarge48-);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.icon {
+  width: 55% !important;
+  height: 55% !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--main-blue-color);
+}
+
+/* Active state icon color */
+.themeButton[aria-label="Light mode"] .icon {
+  color: var(--main-blue-color);
+}
+
+.themeButton[aria-label="Dark mode"] .icon {
+  color: var(--main-blue-color);
+}
+
+/* Hover effects */
+.themeButton:hover .icon {
+  transform: rotate(12deg);
+}
+
+/* Click animation */
+.themeButton:active .icon {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 480px) {
+  .themeToggleContainer::before,
+  .themeButton {
+    height: var(--large38-);
+    width: var(--large38-);
+  }
+}

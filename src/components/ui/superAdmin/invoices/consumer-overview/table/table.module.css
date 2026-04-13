@@ -1,0 +1,109 @@
+.table {
+  flex: 1 1 calc(100% - 10px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Ensure the container doesn't overflow */
+  width: 100%;
+  overflow: hidden;
+}
+
+.tableChild {
+  flex: 1 1 calc(100% - 10px);
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  height: max-content;
+}
+
+.tableHeadCell {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-style: normal;
+  color: var(--text-grey);
+  padding: 10px 0px; /* Add padding between columns */
+  display: flex;
+  align-items: center;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  /* Ensure minimum width for the body */
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dashboard-border);
+  height: max-content;
+  padding-block: 5px;
+  /* Ensure rows don't shrink below minimum width */
+}
+
+.tableColumn {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-) !important;
+  line-height: var(--regular16-) !important;
+  color: var(--black-color);
+  height: max-content;
+  min-height: max-content;
+  padding-right: 15px; /* Add padding between columns */
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.paymentLinkContainer:hover {
+  cursor: pointer;
+}
+
+/* Optional: Add hover effect for rows */
+.tableRow:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Optional: Loading state */
+.tableBody.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Ensure proper spacing for AED currency values */
+.tableColumn:has-text("AED") {
+  white-space: nowrap;
+}
+
+.paymentLinkBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

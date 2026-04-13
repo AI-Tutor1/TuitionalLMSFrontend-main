@@ -1,0 +1,132 @@
+.container {
+  border: 1px solid #e4e4e7;
+  border-radius: 7.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fdfdfe;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header > div {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.header > div > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin: 0 !important;
+}
+
+.header > p {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--text-color);
+  margin: 0 !important;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 500px;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.tableHeader > p {
+  margin: 0px !important;
+  padding: 10px;
+  width: 8.3%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: var(--text-color);
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.tableRow > P {
+  margin: 0px !important;
+  width: 8.3%;
+  padding: 10px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.performance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.performance > p {
+  margin: 0px !important;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.status {
+  border-radius: 20px;
+  width: max-content;
+  padding: 5px 10px;
+}
+
+.sideActions {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e4e4e7;
+  border-radius: 5px;
+  width: max-content;
+  padding: 5px 10px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.action:hover {
+  cursor: pointer;
+}

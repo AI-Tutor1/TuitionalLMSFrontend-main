@@ -1,0 +1,118 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: max-content;
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+  /* border: 1px solid red; */
+}
+
+.headingBox {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--normal-text-size-vh);
+  color: var(--black-color);
+  margin: 0 !important;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+  font-size: var(--medium-text-size-vh);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0 !important;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+  padding: 15px;
+  /* border: 1px solid blue; */
+  /* height: 87%; */
+  overflow: hidden;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+.uploaderBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 30%;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100% !important;
+  /* border: 4px solid green; */
+}
+
+.fields {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fields {
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* phoneInput.css */
+.phoneInput {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+  padding-left: 10px;
+  background-color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1vh;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  color: rgba(0, 0, 0, 0.77);
+  border-radius: 10px;
+  height: 5.5vh;
+  font-size: 1.7vh;
+  font-weight: 400;
+  min-height: 50px;
+}
+
+.phoneInput:focus-visible {
+  outline: none;
+}
+
+.wrapper2 {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 100%;
+  height: 90%;
+  box-shadow: none;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}

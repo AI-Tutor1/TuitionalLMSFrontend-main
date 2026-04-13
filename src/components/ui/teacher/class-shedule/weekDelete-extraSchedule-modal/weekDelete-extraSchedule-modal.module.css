@@ -1,0 +1,86 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: max-content;
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  fill: #f1f7fa;
+  backdrop-filter: blur(1px);
+  padding: 25px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.deleteLogoBox {
+  position: relative;
+  width: 15vh;
+  height: 15vh;
+}
+
+.headingBox {
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headingBox > :nth-child(1) {
+  text-align: center;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--sub-medium-heading-vh);
+  line-height: var(--sub-medium-heading-vh);
+  margin: 0px !important;
+}
+
+.headingBox > :nth-child(2) {
+  text-align: center;
+  font-family: var(--leagueSpartan-light-300) !important;
+  font-size: var(--normal-text-size-vh);
+  line-height: var(--normal-text-size-vh);
+  color: var(--text-color);
+  margin: 0px !important;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.fields {
+  flex: 0 1 calc(50% - 15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--medium-text-size-vh);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.multipleFields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  /* border: 1px solid blue; */
+}

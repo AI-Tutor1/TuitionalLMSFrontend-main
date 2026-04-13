@@ -1,0 +1,152 @@
+/* Main container with flex column layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Box layouts */
+.box1,
+.box1_inner,
+.buttonBox {
+  display: flex;
+  align-items: center;
+}
+
+.box1 {
+  justify-content: space-between;
+  height: max-content;
+}
+
+.box1_inner {
+  gap: 10px;
+}
+
+/* Profile image styling */
+.imageBox {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+  overflow: hidden;
+}
+
+/* Text container */
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: max-content;
+}
+
+.textBox > * {
+  margin: 0 !important;
+}
+
+/* Typography system - more efficient with shared properties */
+.name,
+.email,
+.status,
+.iconBox {
+  line-height: 1.2;
+}
+
+.name {
+  font-size: clamp(1.25rem, 1.071rem + 0.476vw, 1.5rem);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.email,
+.status,
+.iconBox {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+.email,
+.status {
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.iconBox {
+  font-family: var(--leagueSpartan-regular-400);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBox > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+/* Content area */
+.box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  height: calc(100% - 40px);
+}
+
+.heading {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: var(--leagueSpartan-medium-500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Scrollable content area */
+.subjectsBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Button containers */
+.buttonBox {
+  gap: 15px;
+  height: max-content;
+}
+
+.actionButtonBox {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: calc(10px / 1.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Link styling */
+.meetLinkButton,
+.meetLinkButton:visited,
+.meetLinkButton:active {
+  color: var(--main-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  transition: var(--transition);
+}
+
+.meetLinkButton:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+/* Responsive styles */
+@media (max-width: 880px) {
+  .subjectsBox {
+    max-height: 250px;
+  }
+}

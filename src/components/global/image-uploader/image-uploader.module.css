@@ -1,0 +1,58 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: max-content;
+}
+
+.buttonImageBox {
+  padding: 4px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  cursor: pointer;
+  width: var(--large32-);
+  height: var(--large32-);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+}
+
+.imageParent {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.imageParent > img {
+  user-select: none;
+}
+
+.picBox {
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  user-select: none;
+  width: var(--xxxxLarge70-);
+  height: var(--xxxxLarge70-);
+}
+
+.imageItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}

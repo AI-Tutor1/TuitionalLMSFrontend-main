@@ -1,0 +1,45 @@
+.ongoingClassBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(318px, calc(50% - 10px)));
+  gap: 15px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.innerBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 95%;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  height: 98%;
+  width: 50%;
+}
+
+.errorBox > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+}
+
+@media (max-width: 576px) {
+  .ongoingClassBox {
+    grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+  }
+}

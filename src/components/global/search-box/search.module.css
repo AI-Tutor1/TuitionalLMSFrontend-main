@@ -1,0 +1,46 @@
+.container {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  height: 5.5vh;
+  min-height: 45px;
+  max-height: 50px;
+  /* border: 1px solid red; */
+}
+
+.iconBox {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.iconBox > svg {
+  color: var(--main-color);
+  font-size: var(--regular18-);
+}
+
+.container > input {
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  height: 100%;
+  background-color: transparent;
+  width: 100%;
+}
+
+.container > input::placeholder {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+}

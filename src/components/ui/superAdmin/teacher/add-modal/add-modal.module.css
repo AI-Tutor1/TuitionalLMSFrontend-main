@@ -1,0 +1,181 @@
+.mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  border: 1px solid var(--dMain-color);
+  border-radius: 10px;
+  background-color: var(--dMain-color);
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+  height: 90%;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
+
+.headingBox {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px 15px;
+  /* border: 1px solid red; */
+  height: 13%;
+  overflow: hidden;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--sub-heading);
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  /* border: 1px solid blue; */
+  height: 87%;
+  overflow: hidden;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: 10px solid blue; */
+  height: 89%;
+  /* overflow-y: auto; */
+  /* border: 4px solid green; */
+  /* overflow-x: hidden; */
+  padding-right: 5px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.contentBox::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.contentBox::-webkit-scrollbar-track {
+  display: none;
+  border-radius: 10px;
+}
+
+.contentBox::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #f1f7fa; /* Adds space around the thumb */
+}
+
+.contentBox::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.uploaderBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 30%;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100% !important;
+  /* border: 4px solid green; */
+}
+
+.fields {
+  flex: 1 1 47%;
+  /* border: 4px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fields {
+  font-size: var(--text-size);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+/* phoneInput.css */
+.phoneInput {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+  padding-left: 10px;
+  background-color: white;
+  margin-top: 1.5vh;
+  margin-bottom: 1vh;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  color: rgba(0, 0, 0, 0.77);
+  border-radius: 10px;
+  height: 5.5vh;
+  font-size: 1.7vh;
+  font-weight: 400;
+  min-height: 50px;
+}
+
+.phoneInput:focus-visible {
+  outline: none;
+}
+
+.wrapper2 {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 100%;
+  height: 90%;
+  box-shadow: none;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+}
+
+.wrapper3 {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  box-shadow: none;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  /* border: 1px solid red; */
+}
+
+.parentWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addModal {
+  width: max-content;
+  border-radius: 100%;
+  width: 2vw;
+  height: 2vw;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.addModal > svg {
+  color: #2d2d2d;
+  width: 70%;
+  height: 70%;
+}

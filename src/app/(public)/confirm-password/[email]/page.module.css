@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.textLink {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--leagueSpartan-regular-400);
+  margin: auto;
+  color: var(--text-color);
+  font-size: var(--medium-text-size-vh);
+  line-height: var(--medium-text-size-vh);
+  text-decoration: none;
+  transition: text-decoration 1s ease;
+}
+
+.textLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.textLink > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textLink > :first-child > svg {
+  color: var(--icon-color);
+  font-size: var(--medium-text-size-vh);
+}

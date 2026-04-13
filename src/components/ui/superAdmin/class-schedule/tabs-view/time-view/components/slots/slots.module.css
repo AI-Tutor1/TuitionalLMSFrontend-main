@@ -1,0 +1,147 @@
+.bookedBox {
+  border-radius: 10px;
+  border: 1px solid #38b6ff;
+  background: #b8e5ff;
+  box-shadow: 0px 0px 5px 0px rgba(56, 182, 255, 0.6);
+  width: calc(25% - 15px);
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer !important;
+}
+
+.bookedBox:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.bookedBox > p {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  background-color: var(--main-color);
+  padding-block: 2.5px;
+  border-radius: 5px;
+  margin: auto;
+  user-select: none;
+}
+
+.timeBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timeBox :nth-child(1) {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  margin: 0 !important;
+}
+
+.timeBox :nth-child(2) {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  margin: 0 !important;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facultyInfoBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.facultyInfoBox > p {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+}
+
+.imageBox {
+  width: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  /* border: 1px solid var(--main-color); */
+}
+
+.imageNameBox > p {
+  width: 70%;
+}
+
+.imageNameBox > p > span {
+  color: var(--main-color);
+}
+
+.studentsInfoBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.studentsInfoBox > :nth-child(2) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.studentsInfoBox > :nth-child(2) > p {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+}
+
+.studentsInfoBox > :nth-child(2) > span {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+}
+
+.imagesContainer {
+  position: relative;
+  display: flex;
+  width: max-content;
+}
+
+.curriculumBox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.curriculumBox > p {
+  margin: 0;
+  border-radius: 5px;
+  background: #fff;
+  padding: 5px 7.5px;
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--black-color);
+  font-size: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  line-height: clamp(0.625rem, 0.544rem + 0.38vw, 1rem);
+  width: max-content;
+  text-align: center;
+}

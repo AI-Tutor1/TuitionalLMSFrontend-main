@@ -1,0 +1,11 @@
+.mainContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,8 @@
+.messagesContainer {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}

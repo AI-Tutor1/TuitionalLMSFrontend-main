@@ -1,0 +1,13 @@
+export const BASE_URL = "https://dev.tuitionaledu.com";
+// export const BASE_URL = "http://localhost:4000";
+export type configDataType = {
+  token?: string;
+  contentType?: "application/json" | "multipart/form-data";
+};
+
+export const REQUEST_CONFIG = (configData: configDataType) => ({
+  headers: {
+    Authorization: configData.token ? configData.token : "",
+    "Content-Type": configData.contentType || "application/json",
+  },
+});

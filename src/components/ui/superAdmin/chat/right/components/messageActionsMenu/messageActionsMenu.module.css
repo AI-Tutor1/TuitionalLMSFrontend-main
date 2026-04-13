@@ -1,0 +1,12 @@
+.dangerMenuItem {
+  color: #f44336 !important;
+}
+
+.dangerMenuItem .MuiListItemIcon-root {
+  color: #f44336 !important;
+}
+
+/* Optional: Custom hover effects */
+.dangerMenuItem:hover {
+  background-color: rgba(244, 67, 54, 0.04) !important;
+}

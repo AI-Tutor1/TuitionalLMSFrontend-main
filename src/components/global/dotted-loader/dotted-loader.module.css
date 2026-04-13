@@ -1,0 +1,28 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  display: inline-block; /* <-- must NOT be `inline` */
+  border-radius: 50%;
+  opacity: 0.3;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background-color: var(--main-blue-color);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: var(--dot-active-color, inherit);
+  }
+}

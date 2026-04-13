@@ -1,0 +1,98 @@
+.quillWrapper {
+  background: var(--main-white-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--main-inner-boxShadow-color);
+}
+
+.quillWrapper :global(.ql-toolbar) {
+  border: none !important;
+  border-bottom: 1px solid var(--color-dashboard-border) !important;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.quillWrapper :global(.ql-container) {
+  border: none !important;
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.quillWrapper :global(.ql-editor) {
+  min-height: 300px;
+  padding: 10px;
+  line-height: 1.6;
+  border: none !important;
+  outline: none !important;
+}
+
+.quillWrapper :global(.ql-editor.ql-blank::before) {
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  left: 16px;
+}
+
+.quillWrapper :global(.ql-snow .ql-picker) {
+  color: var(--black-color);
+  border: none !important;
+}
+
+.quillWrapper :global(.ql-snow .ql-stroke) {
+  stroke: var(--black-color);
+}
+
+.quillWrapper :global(.ql-snow .ql-fill) {
+  fill: var(--black-color);
+}
+
+.quillWrapper :global(.ql-snow .ql-picker-options) {
+  background: var(--main-white-color);
+  border: none !important;
+  border-radius: 4px;
+}
+
+.quillWrapper :global(.ql-toolbar button) {
+  border: none !important;
+  outline: none !important;
+}
+
+.quillWrapper :global(.ql-toolbar button:hover),
+.quillWrapper :global(.ql-toolbar button:focus),
+.quillWrapper :global(.ql-toolbar button.ql-active) {
+  color: var(--main-blue-color);
+  border: none !important;
+  outline: none !important;
+}
+
+.quillWrapper :global(.ql-toolbar button:hover .ql-stroke),
+.quillWrapper :global(.ql-toolbar button:focus .ql-stroke),
+.quillWrapper :global(.ql-toolbar button.ql-active .ql-stroke) {
+  stroke: var(--main-blue-color);
+}
+
+.quillWrapper :global(.ql-toolbar button:hover .ql-fill),
+.quillWrapper :global(.ql-toolbar button:focus .ql-fill),
+.quillWrapper :global(.ql-toolbar button.ql-active .ql-fill) {
+  fill: var(--main-blue-color);
+}
+
+.quillWrapper :global(.ql-snow a) {
+  color: var(--main-blue-color);
+}
+
+.quillWrapper :global(.ql-snow.ql-toolbar),
+.quillWrapper :global(.ql-snow .ql-toolbar) {
+  border-bottom: 1px solid var(--color-dashboard-border) !important;
+}
+
+.quillWrapper :global(.ql-snow.ql-container) {
+  border: none !important;
+}
+
+.quillWrapper :global(.ql-formats) {
+  border: none !important;
+}

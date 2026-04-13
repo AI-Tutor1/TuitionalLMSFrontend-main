@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: max-content;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  position: relative;
+}
+
+.container:hover {
+  background-color: var(--cards-header-color);
+  cursor: pointer;
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+  width: var(--medium28-);
+  height: var(--medium28-);
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: calc(100% - 5vh);
+}
+
+.contentBox > :nth-child(1),
+.contentBox > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contentBox > :nth-child(1) > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  margin: 0;
+  width: fit-content;
+}
+
+.contentBox > :nth-child(2) > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular14-);
+  line-height: var(--regular14-);
+  margin: 0;
+  width: max-content;
+}
+
+.contentBox > :nth-child(1) > :nth-child(2) {
+  color: var(--text-color);
+}
+
+.contentBox > :nth-child(2) > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-color);
+  margin: 0;
+  width: max-content;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.messagePreview {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-color);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.newChatSign {
+  width: 1.5vh;
+  height: 1.5vh;
+  background-color: var(--main-color);
+  border-radius: 100%;
+}
+
+.deleteBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.container:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  background-color: #ff000021;
+  color: #ff0000;
+}

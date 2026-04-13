@@ -1,0 +1,77 @@
+.container {
+  border-radius: 10.377px;
+  border: 1px solid #dfdfdf;
+  background: linear-gradient(0deg, #fff 0%, #fff 100%), #a573d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.box1 > div > * {
+  margin: 0 !important;
+}
+
+.box1 > div > :nth-child(1) {
+  font-size: clamp(1.25rem, 1.071rem + 0.476vw, 1.5rem);
+  line-height: clamp(1.25rem, 1.071rem + 0.476vw, 1.5rem);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.box1 > div > :nth-child(1) > span,
+.box1 > div > :nth-child(2) {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  line-height: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-color);
+}
+
+.box2 {
+  display: flex;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  line-height: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-family: var(--leagueSpartan-medium-500);
+  gap: 5px;
+}
+
+.box2 > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.box2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  line-height: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-color);
+}
+
+.box2 > span > svg {
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+
+.box2 > span > svg:hover {
+  cursor: pointer;
+}
+
+.placeholderStyle::placeholder {
+  font-family: var(--leagueSpartan-semiBold-500);
+  color: #9a9a9a;
+  font-size: 0.625vw;
+}

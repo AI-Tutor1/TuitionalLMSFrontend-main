@@ -1,0 +1,189 @@
+/* Base styles */
+.statsCard {
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  box-shadow: var(--card-boxShadow);
+  font-family: var(--leagueSpartan-medium-500);
+  background-color: var(--main-white-color);
+  letter-spacing: 0.8px;
+  flex: 1;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  min-width: 300px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Content layout */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Text container */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textContainerDefault {
+  gap: 5px;
+}
+
+.textContainerCompact {
+  gap: 5px;
+}
+
+/* Text styling */
+.statsLabel {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.valueDefault {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--black-color);
+}
+
+.valueCompact {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--black-color);
+}
+
+/* Icon styling */
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: var(--large32-);
+  height: var(--large32-);
+  border: 1px solid var(--main-blue-color);
+  background-color: var(--blue-color5);
+}
+
+.iconDefault {
+  background-color: var(--sidebar-background-color);
+  color: var(--main-blue-color);
+}
+
+.iconBlue {
+  background-color: var(--blue-color1);
+  color: var(--main-blue-color);
+}
+
+.iconGreen {
+  background-color: var(--green-background-color4);
+  color: var(--green-text-color4);
+}
+
+.iconAmber {
+  background-color: var(--orange-background-color1);
+  color: var(--orange-color);
+}
+
+.iconRed {
+  background-color: var(--red-background-color1);
+  color: var(--red-color1);
+}
+
+.iconPurple {
+  background-color: var(--purple-background-color1);
+  color: var(--purple-text-color1);
+}
+
+/* Trend styling */
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.trendPositive {
+  color: var(--main-blue-color);
+}
+
+.trendNegative {
+  color: var(--red-color);
+}
+
+.description {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Skeleton loader styles */
+.loading .skeletonTitle,
+.loading .skeletonValue,
+.loading .skeletonTrend,
+.loading .skeletonIcon {
+  background-color: var(--text-grey); /* Light gray */
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeletonTitle {
+  width: 60%;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeletonValue {
+  width: 40%;
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+.skeletonTrend {
+  width: 50%;
+  height: 14px;
+}
+
+.skeletonIcon {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-color: var(--text-grey);
+  }
+  50% {
+    background-color: var(--text-grey1);
+  }
+  100% {
+    background-color: var(--text-grey1);
+  }
+}

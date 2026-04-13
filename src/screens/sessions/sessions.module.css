@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  height: max-content;
+}
+
+.studentTeacherCardSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.adminFiltersBox,
+.filtersBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 7.5px;
+  /* border: 1px solid red; */
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7.5px;
+  margin-top: 2.5px;
+}
+
+.studentTeacherSection1 {
+  display: flex;
+  gap: 10px;
+  height: max-content;
+  width: 100%;
+}

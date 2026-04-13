@@ -1,0 +1,262 @@
+.cardBox {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  overflow: hidden;
+  min-width: 320px;
+  box-shadow: var(--main-inner-boxShadow-color);
+  background-color: var(--main-white-color);
+  padding: 15px 10px;
+  gap: 10px;
+}
+
+.firstBox {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5px 10px;
+  background-color: transparent;
+}
+
+.firstBox > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  text-align: center;
+  margin: 0 !important;
+  color: var(--black-color);
+  padding: 5px 10px;
+}
+
+.rescheduled {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--main-blue-color);
+  color: var(--pure-white-color) !important;
+  border: 1px solid var(--pure-white-color);
+}
+
+.firstBox > :nth-child(3) {
+  width: 100%;
+  color: var(--black-color);
+}
+
+.secondBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  /* padding: clamp(0.625rem, 0.563rem + 0.313vw, 0.938rem); */
+  height: max-content;
+  width: 100%;
+  opacity: var(--dark-opacity-);
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+
+.enrollIdBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+.enrollIdBox > * {
+  margin: 0;
+}
+
+.nameImageSubjectBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  /* border: 1px solid red; */
+}
+
+.nameImageSubjectBox p {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  margin: 0px !important;
+}
+
+.line {
+  width: 1px;
+  height: 2.2vh;
+  background: var(--line-background-gradient-color);
+}
+
+.nameImageBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.nameImageBox .imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: var(--regular22-);
+  width: var(--regular22-);
+}
+
+.infoBox > p {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.studentsBox {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.imagesBox {
+  display: flex;
+  position: relative;
+}
+
+.imageBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  height: var(--regular22-);
+  width: var(--regular22-);
+}
+.imageBox > svg {
+  color: var(--black-color);
+}
+
+.imagesBox > :nth-child(2) {
+  position: absolute;
+  left: 10px;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+}
+
+.studentsBox > p > p {
+  color: var(--main-blue-color);
+}
+
+.bottomBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottomBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bottomBox > * {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  border-radius: 5px;
+  background-color: var(--cards-header-color);
+  padding: 5px 10px;
+  margin: 0px !important;
+}
+
+.actionsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.quickActionsBox {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+.button {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--main-blue-color);
+  background: var(--main-white-color);
+  color: var(--main-blue-color);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  cursor: pointer;
+  text-decoration: none;
+  height: max-content;
+  min-height: max-content;
+  max-height: 50px;
+}
+
+.button:hover {
+  text-decoration: underline;
+  color: var(--main-blue-color);
+}
+
+.ticketBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+  flex-shrink: 0;
+}
+
+.ticketBox:hover {
+  transform: scale(1.09);
+}
+
+@media (max-width: 576px) {
+  .cardBox {
+    flex-direction: column;
+  }
+  .secondBox {
+    width: 100%;
+    border-radius: 0px;
+  }
+  /* .actionsBox {
+    flex-direction: row;
+  } */
+}
+
+@media (max-width: 440px) {
+  .secondBox {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .actionsBox {
+    flex-direction: row;
+  }
+}

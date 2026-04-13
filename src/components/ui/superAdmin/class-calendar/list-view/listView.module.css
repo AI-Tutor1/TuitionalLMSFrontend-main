@@ -1,0 +1,155 @@
+.tableBox {
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1%;
+  position: relative;
+  z-index: 0;
+  /* border: 1px solid blue; */
+}
+
+.tableHead {
+  background-color: #afe2ff !important;
+  border: 1px solid #a0afb8;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  display: flex;
+  align-items: center;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--medium-text-size-vh);
+  height: max-content;
+  margin-left: 10px;
+  margin-right: 15px;
+  padding: 10px 0px;
+}
+
+.tableHeadCell {
+  padding-left: 15px;
+}
+
+.tableBody > tr {
+  width: 100%;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  border-bottom: 1px solid #d4d4d4 !important;
+  display: flex;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  /* border: 1px solid red !important; */
+}
+
+.tableBody > tr:hover {
+  outline: none !important;
+  cursor: pointer;
+  background-color: var(--dMain-color) !important;
+  border: 1px solid var(--main-color) !important;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px #38b6ff;
+  transform: scale(1.008);
+  z-index: 2;
+}
+.tableBody > :last-child {
+  border: none !important;
+}
+
+.tableBody > tr > td {
+  padding: 10px;
+  font-family: var(--leagueSpartan-regular-400) !important;
+  font-size: var(--medium-text-size-vh) !important;
+  line-height: var(--medium-text-size-vh) !important;
+  text-align: left;
+  /* border: none !important; */
+  display: flex;
+  align-items: center;
+  user-select: text;
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+  border: 100%;
+  width: 4vh;
+  height: 4vh;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.studentsBox {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.imagesBox {
+  display: flex;
+  position: relative;
+  width: max-content;
+}
+
+.imagesBox > :nth-child(2) {
+  position: absolute;
+  left: 10px;
+}
+
+.studentsBox > p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--leagueSpartan-regular-400) !important;
+  font-size: var(--medium-text-size-vh) !important;
+  line-height: var(--medium-text-size-vh);
+}
+
+.studentsBox > :nth-child(3) {
+  color: var(--main-color);
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dMain-color);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.2) inset;
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox > svg {
+  font-size: var(--medium-text-size-vh);
+}
+
+.iconBox:hover {
+  transform: scale(1.3);
+}
+
+.smallLoader {
+  /* border: 1px solid red; */
+  height: max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smallLoaderChild {
+  width: 3vh !important;
+  height: 3vh !important;
+}
+
+.smallLoaderChild > svg {
+  color: var(--main-color);
+}

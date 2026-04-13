@@ -1,0 +1,63 @@
+.container {
+  padding-top: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+.filtersBox {
+  width: 100%;
+  display: flex;
+  gap: 7.5px;
+  flex-wrap: wrap;
+}
+
+.chartBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.contentBox {
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.churnItemsBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  padding: 15px 15px 5px 15px;
+  border-radius: 10px;
+}
+.mainContentBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: 5px;
+  max-height: 450px;
+}
+
+.statsBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  max-height: 400px;
+}
+
+@media screen and (max-width: 576px) {
+  .mainContentBox {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  }
+}

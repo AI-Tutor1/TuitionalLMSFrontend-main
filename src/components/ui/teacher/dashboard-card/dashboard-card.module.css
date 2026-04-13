@@ -1,0 +1,52 @@
+.box {
+  border-radius: 10px;
+  width: calc(60% - 10px);
+  height: max-content;
+  padding: 10px;
+  background: url("/assets/svgs/texture_background.svg") var(--main-white-color)
+    10% / cover no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: var(--cards--boxShadow-color);
+}
+
+.mainText {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+}
+
+.bottomBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.number {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--main-color);
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+}
+
+.logoBox {
+  width: var(--medium24-);
+  height: var(--medium24-);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-blue-color);
+  border-radius: 50%;
+  box-shadow: var(--cards--boxShadow-color);
+}

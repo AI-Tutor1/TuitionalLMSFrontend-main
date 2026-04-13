@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  padding: 7.5px 20px;
+  border-radius: 15px;
+  /* box-shadow: var(--main-inner-boxShadow-color); */
+  box-shadow: var(--main-inner-boxShadow-color);
+}
+
+.aside1 {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-family: var(--leagueSpartan-bold-700);
+  font-size: var(--medium28-);
+  line-height: var(--medium28-);
+  color: var(--black-color);
+  margin: 0 !important;
+}
+
+.aside2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  width: max-content;
+}
+
+.backButton > svg {
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+.line {
+  height: 100%;
+  width: 1px;
+  background: var(--line-background-gradient-color);
+}
+
+.picContainer {
+  display: flex;
+  align-items: center;
+}
+
+.picBox {
+  position: relative;
+  height: var(--xxLarge48-);
+  width: var(--xxLarge48-);
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: var(--main-profileImage-boxShadow-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .aside1,
+  .aside2 {
+    width: 100%;
+  }
+
+  .heading {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .picBox {
+    height: var(--large38-);
+    width: var(--large38-);
+  }
+}

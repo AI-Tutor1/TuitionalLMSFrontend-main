@@ -1,0 +1,223 @@
+.mobileViewContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  gap: 10px;
+  overflow-x: hidden;
+  /* min-width: 330px; */
+  height: max-content;
+}
+
+.scrollBox {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  width: 100%;
+  gap: 10px;
+}
+
+.container {
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: var(--cards--boxShadow-color);
+  background-color: var(--modal-background-color);
+  border: 1px solid var(--color-dashboard-border);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: var(--dark-opacity-);
+  /* min-width: 320px; */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--cards-header-color);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+}
+
+.profileSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  background-color: var(--modal-background-color);
+}
+
+.feedbacksContainer,
+.enrollmentSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7.5px;
+  width: 100%;
+}
+.feedbacksContainerTitle,
+.enrollmentSectionTitle {
+  width: 100%;
+  margin: 0;
+  font-family: var(--leagueSpartan-bold-700);
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+  letter-spacing: 1px;
+}
+
+.feedbackContent {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-white-color);
+  /* box-shadow: var(--main-inner-boxShadow-color); */
+  border: 1px solid var(--color-dashboard-border);
+  box-shadow: var(--cards--boxShadow-color);
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 7.5px;
+}
+
+.feedbackItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
+  min-width: calc(50% - 10px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.label {
+  margin-bottom: 0;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+  letter-spacing: 1px;
+}
+
+.value {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.commentValue {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: normal !important;
+  word-wrap: break-word;
+  letter-spacing: 1.7px;
+}
+
+.concernsList {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.concernsList li {
+  margin: 4px 0;
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.starFilled {
+  color: #ffc107;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.starEmpty {
+  color: var(--text-grey);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.ratingValue {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--text-grey);
+  margin-left: 5px;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  padding: 0px 10px 10px 10px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.3);
+}
+
+@media (max-width: 406px) {
+  .container:nth-child(1) {
+    min-width: calc(100% - 10px);
+  }
+}

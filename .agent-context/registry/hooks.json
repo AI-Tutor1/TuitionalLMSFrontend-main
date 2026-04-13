@@ -1,0 +1,68 @@
+{
+  "lastUpdated": "2026-04-13T16:00:00Z",
+  "hooks": [
+    {
+      "id": "useDebounce",
+      "name": "useDebounce",
+      "path": "src/utils/helpers/useDebounce.ts",
+      "signature": "useDebounce<T>(value: T, delay: number): T",
+      "domain": "shared",
+      "usedBy": ["enrollments", "sessions", "users", "billing", "invoices", "tickets", "churn"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useChat",
+      "name": "useChat",
+      "path": "src/utils/hooks/useChat.ts",
+      "signature": "useChat(roomId, userId, token)",
+      "domain": "chat",
+      "usedBy": ["chat"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useSocket",
+      "name": "useSocket",
+      "path": "src/utils/hooks/useSocket.ts",
+      "signature": "useSocket(userId, token)",
+      "domain": "chat",
+      "usedBy": ["chat"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useFileUpload",
+      "name": "useFileUpload",
+      "path": "src/utils/hooks/useFileUpload.ts",
+      "signature": "useFileUpload(config)",
+      "domain": "chat",
+      "usedBy": ["chat"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useRecording",
+      "name": "useRecording",
+      "path": "src/utils/hooks/useRecording.ts",
+      "signature": "useRecording()",
+      "domain": "chat",
+      "usedBy": ["chat"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useFCMToken",
+      "name": "useFCMToken",
+      "path": "src/lib/firebase/hooks/useFCMToken.ts",
+      "signature": "useFCMToken(): string | null",
+      "domain": "notifications",
+      "usedBy": ["fcm-handler"],
+      "confidence": "EXTRACTED"
+    },
+    {
+      "id": "useNotificationPermission",
+      "name": "useNotificationPermission",
+      "path": "src/lib/firebase/hooks/useNotificationPermission.ts",
+      "signature": "useNotificationPermission(): NotificationPermission",
+      "domain": "notifications",
+      "usedBy": ["fcm-handler"],
+      "confidence": "EXTRACTED"
+    }
+  ]
+}

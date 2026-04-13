@@ -1,0 +1,66 @@
+/* Container styling */
+.container {
+  height: 400px;
+  background-color: var(--main-white-color);
+  border-radius: 0.75rem;
+  padding: 12.5px;
+  border: 1px solid var(--color-dashboard-border);
+  box-shadow: var(--cards--boxShadow-color);
+  font-family: var(--leagueSpartan-medium-500);
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-size: var(--regular20-);
+  line-height: var(--regular20-);
+  color: var(--black-color);
+}
+
+.subtitle {
+  color: var(--text-grey);
+  margin: 0;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  letter-spacing: 1px;
+}
+
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  padding: 5px;
+  flex-shrink: 0;
+  width: max-content;
+  height: max-content;
+}
+
+.iconBox:hover {
+  transform: scale(1.09);
+}
+
+.iconBox > svg {
+  font-size: clamp(0.875rem, 0.804rem + 0.357vw, 1.125rem);
+}

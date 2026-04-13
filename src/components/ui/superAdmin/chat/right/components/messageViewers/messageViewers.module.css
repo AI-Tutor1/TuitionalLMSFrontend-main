@@ -1,0 +1,166 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.viewersContainer {
+  width: 400px;
+  max-width: 90vw;
+  max-height: 500px;
+  border-radius: 12px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #d4d4d4;
+  background-color: #ffffff;
+}
+
+.title {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #333;
+}
+
+.viewersContent {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewersList {
+  padding: 0 !important;
+  overflow-y: auto;
+  max-height: 350px;
+  flex: 1;
+}
+
+.viewerItem {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background-color 0.2s ease;
+}
+
+.viewerItem:hover {
+  background-color: #f8f9fa;
+}
+
+.viewerItem:last-child {
+  border-bottom: none;
+}
+
+.viewerAvatar {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.viewerName {
+  font-weight: 500 !important;
+  color: #333 !important;
+  font-size: 0.95rem !important;
+}
+
+.viewTime {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+  margin-top: 2px !important;
+}
+
+.noViewers {
+  text-align: center;
+  color: #999;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .viewersContainer {
+    width: 350px;
+    max-height: 80vh;
+  }
+
+  .viewersHeader {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1rem !important;
+  }
+
+  .viewerItem {
+    padding: 10px 12px !important;
+  }
+
+  .viewerAvatar {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .viewerName {
+    font-size: 0.9rem !important;
+  }
+
+  .viewTime {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .viewersContainer {
+    width: 320px;
+    margin: 20px;
+  }
+
+  .noViewers {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Smooth animations */
+.overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.viewersContainer {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

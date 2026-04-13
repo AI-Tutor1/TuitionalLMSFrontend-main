@@ -1,0 +1,95 @@
+.container {
+  border-radius: 10px;
+  padding: var(--regular16-);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: max-content;
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  box-shadow: var(--main-inner-boxShadow-color);
+  background-color: var(--main-white-color);
+  letter-spacing: 1px;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.heading {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--black-color);
+}
+
+.textIconBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--pure-white-color);
+  box-shadow: var(--iconBox-inner-boxShadow);
+  cursor: pointer;
+  transition: all transform 0.4s ease;
+  height: max-content;
+  padding: 5px;
+  width: max-content;
+  flex-shrink: 0;
+}
+
+.iconBox > svg {
+  font-size: var(--regular18-);
+}
+
+.iconBox:hover {
+  transform: scale(1.1);
+}
+
+.subText {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.dateBox {
+  border-radius: 5px;
+  /* background-color: var(--cards--background-color); */
+  display: flex;
+  justify-content: space-around;
+  gap: 22px;
+  padding: 10px 15px;
+  border: 1px solid var(--color-dashboard-border);
+}
+
+.dateBox > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateBox > div > span:nth-child(1) {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--text-color);
+}
+
+.dateBox > div > span:nth-child(2) {
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-semiBold-600);
+  color: var(--black-color);
+}

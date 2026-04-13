@@ -1,0 +1,74 @@
+.countBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-top: 1px solid var(--color-dashboard-border);
+  padding: 5px 10px;
+}
+
+.countItem {
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.countLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: max-content;
+  letter-spacing: 1px;
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  font-family: var(--leagueSpartan-medium-500);
+}
+
+.cellDateColumn {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 5px !important;
+}
+
+.collapsibleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapseWrapper {
+  width: 100%;
+  border-bottom: 2px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 160px;
+  padding: 10px;
+  width: max-content;
+}
+
+.detailValue {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.detailLabel {
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

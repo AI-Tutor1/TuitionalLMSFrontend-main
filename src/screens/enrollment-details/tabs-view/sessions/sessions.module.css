@@ -1,0 +1,123 @@
+.sessionsContainer {
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxShadow-color);
+  backdrop-filter: blur(50px);
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: max-content;
+  align-content: start;
+  gap: clamp(0.3125rem, 0.25rem + 0.3125vw, 0.625rem);
+  width: 100%;
+  overflow-y: auto;
+  /* display: flex; */
+}
+
+.sessionsBox {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--blue-color5);
+  box-shadow: var(--cards-boxSahdow-color);
+  border-left: 3px solid var(--main-blue-color);
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.child1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.child1 > :nth-child(2) {
+  color: var(--pure-black-color);
+  margin: 0 !important;
+}
+
+.child1 > :nth-child(3) {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.child1 > :nth-child(3) > div {
+  position: relative;
+  width: var(--regular22-);
+  height: var(--regular22-);
+  overflow: hidden;
+  border-radius: 100%;
+  border: 1px solid var(--main-blue-color);
+}
+
+.child1 > :nth-child(3) > p {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--pure-black-color);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+}
+
+.child2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--text-grey);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.child3 {
+  padding: 10px;
+  border-radius: 7.5px;
+  background: var(--blue-color4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.child3 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.child3 div > :first-child {
+  font-family: var(--leagueSpartan-regular-400);
+  color: var(--text-color);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  text-align: center;
+}
+
+.child3 div > :nth-child(2) {
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--pure-black-color);
+  font-size: var(--regular16-);
+  line-height: var(--regular16-);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sessionsContainer {
+    grid-template-columns: 1;
+  }
+}

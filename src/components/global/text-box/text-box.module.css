@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.label {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+}
+
+.required {
+  color: var(--orange-text-color1);
+  margin-left: 2px;
+}
+
+.textareaWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 16px;
+  /* border: 1px solid var(--color-dashboard-border); */
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main-white-color);
+  box-shadow: var(--main-inner-boxSahdow-color);
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.textarea::placeholder {
+  color: var(--text-grey);
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.textarea:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+.error {
+  border-color: var(--orange-text-color1) !important;
+}
+
+.error:focus {
+  box-shadow: var(--cards--boxShadow-color) !important;
+}
+
+.disabled {
+  background-color: var(--main-white-color);
+  color: var(--text-grey);
+  cursor: not-allowed;
+}
+
+.disabled::placeholder {
+  color: var(--text-grey);
+}
+
+.characterCount {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.75rem;
+  color: var(--text-grey);
+  background-color: var(--main-white-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--leagueSpartan-regular-400);
+}
+
+.helperText {
+  font-family: var(--leagueSpartan-regular-400);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+  margin-top: 4px;
+}
+
+.errorText {
+  color: var(--orange-text-color1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .textarea {
+    padding: 10px 12px;
+    min-height: 80px;
+  }
+
+  .characterCount {
+    padding: 1px 4px;
+  }
+}

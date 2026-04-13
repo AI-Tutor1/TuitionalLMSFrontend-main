@@ -1,0 +1,183 @@
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid var(--color-dashboard-border);
+  background-color: var(--modal-background-color);
+  box-shadow: var(--cards--boxShadow-color);
+  outline: none;
+  width: 80%;
+  max-width: 80%;
+  min-width: 330px;
+  max-height: 95%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.headingBox {
+  border-bottom: 1px solid var(--color-dashboard-border);
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  flex-shrink: 0;
+}
+
+.headingBox > :nth-child(1) {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.headingBox > :nth-child(2) {
+  color: var(--text-grey);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  font-family: var(--leagueSpartan-medium-500);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12.5px;
+  padding: 20px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ratingSection,
+.emojiSection,
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  color: var(--black-color);
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular18-);
+  letter-spacing: 0.5px;
+}
+
+/* Star Rating Styles */
+.starRating {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.star {
+  background: none;
+  border: none;
+  font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+  color: var(--pure-white-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.star:hover,
+.star.active {
+  color: var(--orange-color);
+  transform: scale(1.1);
+}
+
+.ratingText {
+  text-align: center;
+  font-size: var(--regular-);
+  font-family: var(--leagueSpartan-medium-500);
+  color: var(--text-grey);
+  margin: 4px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+/* Emoji Styles */
+.emojiContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.emojiButton {
+  background: var(--blue-color1);
+  border: 3px solid transparent;
+  border-radius: 12px;
+  font-size: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emojiButton:hover {
+  background: var(--main-color);
+  transform: scale(1.05);
+}
+
+.emojiButton.selected {
+  background: var(--main-white-color);
+  border-color: var(--main-color);
+  transform: scale(1.1);
+  box-shadow: var(--cards--boxShadow-color);
+}
+
+/* Comment Section Styles */
+.commentTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--grey-color1);
+  border-radius: 8px;
+  font-size: var(--regular-);
+  font-family: var(--leagueSpartan-regular-400);
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.commentTextarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+/* Button Box Styles */
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .modalContent {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .star {
+    font-size: 32px;
+  }
+
+  .emojiButton {
+    padding: 8px;
+  }
+
+  .buttonBox {
+    flex-direction: column;
+  }
+}

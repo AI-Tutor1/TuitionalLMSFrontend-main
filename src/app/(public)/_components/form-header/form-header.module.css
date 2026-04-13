@@ -1,0 +1,21 @@
+.headingBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headingBox > :first-child {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular22-);
+  line-height: var(--regular22-);
+  color: var(--black-color);
+  margin: 0px !important;
+}
+
+.headingBox > :last-child {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--text-grey);
+  margin: 0px !important;
+}

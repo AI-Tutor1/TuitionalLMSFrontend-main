@@ -1,0 +1,191 @@
+.table {
+  flex: 1 1 calc(100% - 10px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.75px;
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  height: max-content;
+  background-color: var(--color-dashboard-border);
+  padding: 15px;
+}
+
+.tableHeadCell {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  width: 12.5%;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 1 calc(100% - 10px);
+  min-height: 0;
+  overflow-y: auto;
+  /* Add this to allow tooltips to overflow */
+  overflow-x: visible;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dashboard-border);
+  height: max-content;
+  padding: 10px;
+  /* Add position relative for proper stacking */
+  position: relative;
+}
+
+.tableColumn {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  width: 12.5%;
+  height: max-content;
+  min-height: max-content;
+  /* Remove overflow hidden to allow tooltip to show */
+  overflow: visible;
+}
+
+.infoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.imageBox {
+  overflow: hidden;
+  border-radius: 40px;
+  position: relative;
+  border: 100%;
+  width: var(--medium28-);
+  height: var(--medium28-);
+}
+
+.sessionCountBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-dashboard-border);
+  width: max-content;
+  /* Add position relative for tooltip positioning */
+  position: relative;
+}
+
+.logoBox {
+  width: var(--regular22-);
+  height: var(--regular22-);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-blue-color);
+  border-radius: 50%;
+  cursor: pointer;
+  /* Changed from relative to static - tooltip will position relative to sessionCountBox */
+  position: static;
+}
+
+.logoBox > svg {
+  width: 90%;
+  height: 90%;
+}
+
+.logoBox > svg:hover {
+  color: var(--main-white-color) !important;
+}
+
+.status {
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: max-content;
+  cursor: pointer;
+}
+.tooltip {
+  position: absolute;
+  /* Position below the sessionCountBox instead of logoBox */
+  top: calc(100% + 8px);
+  right: 0;
+  /* Remove transform to simplify positioning */
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  background: var(--main-white-color);
+  box-shadow: var(--cards--boxShadow-color);
+  height: max-content;
+  max-height: 200px;
+  overflow-y: auto;
+  /* Add min-width for better appearance */
+  min-width: 200px;
+}
+
+.tooltipRow {
+  display: grid;
+  grid-template-columns: 120px 120px 70px 100px 100px;
+  align-items: center;
+  gap: 10px;
+  color: var(--black-color);
+  padding: 5px 0;
+}
+
+.tooltipRow:first-child {
+  border-bottom: 1px solid var(--grey-color1);
+  padding-bottom: 7.5px;
+  position: sticky;
+  top: 0;
+  background: var(--main-white-color);
+  z-index: 1;
+}
+
+.tooltipRow:not(:first-child) > span {
+  height: var(--regular18-);
+  width: var(--regular18-);
+  background-color: var(--main-blue-color);
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.tooltipRow > p {
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  color: var(--black-color);
+  margin: 0px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltipRow:first-child > p {
+  font-weight: 600;
+}
+
+.countBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--color-dashboard-border);
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: var(--regular18-);
+  line-height: var(--regular18-);
+  padding: 5px 10px;
+}
+
+.countBox > div {
+  border-radius: 5px;
+  padding: 5px 10px;
+}

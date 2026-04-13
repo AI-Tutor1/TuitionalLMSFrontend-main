@@ -1,0 +1,67 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  overflow-y: auto;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.625rem, 0.491rem + 0.633vw, 1.25rem);
+  line-height: clamp(0.625rem, 0.491rem + 0.633vw, 1.25rem);
+  color: var(--text-color);
+  margin: 0px !important;
+}
+
+.heading > svg {
+  cursor: pointer;
+  color: var(--black-color);
+}
+
+.heading > span {
+  font-family: var(--leagueSpartan-semiBold-600);
+  font-size: clamp(0.625rem, 0.491rem + 0.633vw, 1.25rem);
+  line-height: clamp(0.625rem, 0.491rem + 0.633vw, 1.25rem);
+  color: var(--black-color);
+}
+
+.section2 {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section2 > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: var(--leagueSpartan-medium-500);
+  font-size: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  line-height: clamp(0.625rem, 0.525rem + 0.5vw, 1.125rem);
+  color: var(--black-color);
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: 1px solid red; */
+}
+
+.slotsBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  /* border: 1px solid red; */
+}

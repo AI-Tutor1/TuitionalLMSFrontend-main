@@ -1,0 +1,6 @@
+.chartWrapper {
+  width: 100%;
+  flex: 1;
+  font-family: var(--leagueSpartan-medium-500);
+  overflow: hidden;
+}
