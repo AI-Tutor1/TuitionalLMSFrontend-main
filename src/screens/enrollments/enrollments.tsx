@@ -1,7 +1,14 @@
 "use client";
 import classes from "./enrollments.module.css";
 // modules & libraries
-import { useState, useCallback, FC, useMemo, useEffect } from "react";
+import {
+  useState,
+  useCallback,
+  FC,
+  useMemo,
+  useEffect,
+  ChangeEvent,
+} from "react";
 import moment from "moment";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import { toast } from "react-toastify";
@@ -134,10 +141,12 @@ const EnrollmentForm: FC = () => {
     [],
   );
 
-  const handleEnrollmentSearch = useCallback((e: any) => {
-    const enrollmentSearch = e.target.value;
-    updateFilter("enrollmentSearch", enrollmentSearch);
-  }, []);
+  const handleEnrollmentSearch = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      updateFilter("enrollmentSearch", e.target.value);
+    },
+    [updateFilter],
+  );
 
   // Event handlers
   const handleChangePage = useCallback(
