@@ -6,7 +6,7 @@ import { useAppSelector } from "@/lib/store/hooks/hooks";
 import moment from "moment";
 import CalenderView from "@/components/ui/superAdmin/class-schedule/tabs-view/calender-view/calender-view";
 import ListView from "@/components/ui/superAdmin/class-schedule/tabs-view/list-view/list-view";
-import WeekDeleteExtraScheduleModal from "@/components/ui/teacher/class-shedule/weekDelete-extraSchedule-modal/weekDelete-extraSchedule-modal";
+import WeekDeleteExtraScheduleModal from "@/components/ui/teacher/class-schedule/weekDelete-extraSchedule-modal/weekDelete-extraSchedule-modal";
 import Tabs from "@/components/global/tabs/tabs";
 import LoadingBox from "@/components/global/loading-box/loading-box";
 import FilterDropdown from "@/components/global/filter-dropdown/filter-dropdown";

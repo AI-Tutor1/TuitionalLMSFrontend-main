@@ -12,7 +12,7 @@ import DropDown from "@/components/global/dropDown-objects/dropDown-objects";
 import Button from "@/components/global/button/button";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import { getAllStudents } from "@/services/dashboard/superAdmin/students/students";
-import AddModal from "@/components/ui/superAdmin/users/add-modal/add-moadl";
+import AddModal from "@/components/ui/superAdmin/users/add-modal/add-modal";
 import { emailRegex } from "@/utils/helpers/regex";
 import StudentsTable from "@/components/ui/superAdmin/students/students-table/students-table";
 import { Country } from "country-state-city";

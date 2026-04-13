@@ -3,7 +3,7 @@ import classes from "./userView-card.module.css";
 import BasicSwitches from "@/components/global/toggle-button/toggle-button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { User_Object_Type } from "@/services/dashboard/superAdmin/uers/users.type";
+import { User_Object_Type } from "@/services/dashboard/superAdmin/users/users.type";
 import PaginationComponent from "@/components/global/pagination/pagination";
 import moment from "moment";
 import { useParams } from "next/navigation";

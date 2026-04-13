@@ -11,13 +11,13 @@ import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { MyAxiosError } from "@/services/error.type";
 import DemmyPic from "../../../public/assets/images/demmyPic.png";
-import { getUserById } from "@/services/dashboard/superAdmin/uers/users";
+import { getUserById } from "@/services/dashboard/superAdmin/users/users";
 import LoadingBox from "@/components/global/loading-box/loading-box";
 import ErrorBox from "@/components/global/error-box/error-box";
 import {
   addUserGmail,
   removeUserGmail,
-} from "@/services/dashboard/superAdmin/uers/users";
+} from "@/services/dashboard/superAdmin/users/users";
 import CalendarIntegration from "@/components/calendar-integration/calendar-integration";
 import defaultClasses from "@/styles/table-styles.module.css";
 

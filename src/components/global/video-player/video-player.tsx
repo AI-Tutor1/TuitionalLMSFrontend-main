@@ -1,4 +1,4 @@
-import styles from "./video-palyer.module.css";
+import styles from "./video-player.module.css";
 import React from "react";
 
 const VideoPalyer = () => {

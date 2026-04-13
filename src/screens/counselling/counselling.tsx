@@ -5,7 +5,7 @@ import { useForm, Controller } from "react-hook-form";
 import Image from "next/image";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useAppSelector } from "@/lib/store/hooks/hooks";
-import { getUserById } from "@/services/dashboard/superAdmin/uers/users";
+import { getUserById } from "@/services/dashboard/superAdmin/users/users";
 import { useParams, useSearchParams } from "next/navigation";
 import { ROLES } from "@/const/dashboard/role_ids_names";
 import { getAllEnrollments } from "@/services/dashboard/superAdmin/enrollments/enrollments";

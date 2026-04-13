@@ -1,7 +1,7 @@
 import { memo, useCallback, useState, useMemo, CSSProperties } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { User_Object_Type } from "@/services/dashboard/superAdmin/uers/users.type";
+import { User_Object_Type } from "@/services/dashboard/superAdmin/users/users.type";
 import PaginationComponent from "@/components/global/pagination/pagination";
 import moment from "moment";
 import classes from "./user-table.module.css";

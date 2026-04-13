@@ -6,7 +6,7 @@ import DropDown from "@/components/global/dropDown-objects/dropDown-objects";
 import classes from "./relation-modal.module.css";
 import MultiSelectDropDown from "@/components/global/multi-select-dropDown/multi-select-dropDown";
 import InputField from "@/components/global/input-field/input-field";
-import { UserByGroup_Object } from "@/services/dashboard/superAdmin/uers/users.type";
+import { UserByGroup_Object } from "@/services/dashboard/superAdmin/users/users.type";
 
 interface BasicModalProps {
   modalOpen: boolean;

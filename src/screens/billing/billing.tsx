@@ -18,7 +18,7 @@ import {
 import { useAppSelector } from "@/lib/store/hooks/hooks";
 import FilterDropdown from "@/components/global/filter-dropdown/filter-dropdown";
 import Button from "@/components/global/button/button";
-import AddModal from "@/components/ui/superAdmin/billing/add-modal/add-moadl";
+import AddModal from "@/components/ui/superAdmin/billing/add-modal/add-modal";
 import {
   generateInvoices,
   generateInvoicesV1,

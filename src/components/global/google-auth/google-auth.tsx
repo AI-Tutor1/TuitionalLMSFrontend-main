@@ -3,13 +3,13 @@ import styles from "./google-auth.module.css";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import { useMutation } from "@tanstack/react-query";
-import { updateUser } from "@/services/dashboard/superAdmin/uers/users";
+import { updateUser } from "@/services/dashboard/superAdmin/users/users";
 import { toast } from "react-toastify";
 import { MyAxiosError } from "@/services/error.type";
 import { useAppDispatch } from "@/lib/store/hooks/hooks";
 import { setUserSyncing } from "@/lib/store/slices/user-slice";
 import { User_Type } from "@/services/auth/auth.types";
-import { UpdateUser_Api_Payload_Type } from "@/services/dashboard/superAdmin/uers/users.type";
+import { UpdateUser_Api_Payload_Type } from "@/services/dashboard/superAdmin/users/users.type";
 
 interface GoogleAuthModalProps {
   token?: string;
