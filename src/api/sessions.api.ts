@@ -101,9 +101,9 @@ export const getSessionsExcelDataApi = (
 };
 export const createSessionApi = () => `${BASE_URL}/api/sessions`;
 export const updateSessionApi = (id: string) =>
-  `${BASE_URL}/api/sessions/${id}}`;
+  `${BASE_URL}/api/sessions/${id}`;
 export const deleteSessionApi = (id: string) =>
-  `${BASE_URL}/api/sessions/${id}}`;
+  `${BASE_URL}/api/sessions/${id}`;
 export const recreateSessionApi = (id: string): string =>
   `${BASE_URL}/api/sessions/recreate/${id}`;
 export const monthlySessionDataForTutuorApi = (options: {
