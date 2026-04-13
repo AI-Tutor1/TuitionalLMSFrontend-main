@@ -8,14 +8,6 @@ import { toast } from "react-toastify";
 import { useAppSelector } from "@/lib/store/hooks/hooks";
 import Sidebar from "@/components/ui/dashboard-sidebar/sidebar";
 import Header from "@/components/ui/dashboard-header/header";
-// import FeedbackModal, {
-//   FeedbackData,
-// } from "@/components/ui/feedback-modal/feedback-modal";
-// import { fetchResources } from "@/lib/store/slices/resources-slice";
-// import { fetchRoles } from "@/lib/store/slices/role-slice";
-// import { fetchUsersByGroup } from "@/lib/store/slices/usersByGroup-slice";
-// import { fetchAllPagesAssignToUser } from "@/lib/store/slices/assignedPages-slice";
-// import EnrollmentFeedbackModal from "@/components/ui/teacher/enrollmentFeedback-modal/enrollmentFeedback-modal";
 import {
   getAllSessionsForRemainingFeedback,
   createSessionFeedback,
@@ -29,15 +21,10 @@ interface LayoutProps {
 }
 
 const ProtectedLayout: React.FC<LayoutProps> = memo(({ children }) => {
-  // const dispatch = useAppDispatch();
   const { user, token } = useAppSelector((state: any) => state.user);
   const [isFeedbackModalOpen, setIsFeedbackModalOpen] =
     useState<boolean>(false);
-  const isAllowedUser = useMemo(
-    () => user?.roleId === 5,
-    // || user?.roleId === 3,
-    [user],
-  );
+  const isAllowedUser = useMemo(() => user?.roleId === 5, [user]);
   const handleFeedbackModal = useCallback(() => {
     if (isFeedbackModalOpen === false) {
       setIsFeedbackModalOpen(true);
@@ -49,45 +36,6 @@ const ProtectedLayout: React.FC<LayoutProps> = memo(({ children }) => {
       setIsFeedbackModalOpen(false);
     }
   }, [isFeedbackModalOpen]);
-  // const [isEnrollmentFeedbackModalOpen, setIsEnrollmentFeedbackModalOpen] =
-  //   useState<boolean>(false);
-
-  // const fetchAllData = async () => {
-  //   try {
-  //     await Promise.all([
-  //       dispatch(
-  //         fetchAllPagesAssignToUser(user?.roleId, {
-  //           token,
-  //         }),
-  //       ),
-  //       dispatch(fetchUsersByGroup({ token }) as any),
-  //       dispatch(fetchResources({ token }) as any),
-  //       dispatch(fetchRoles({ token }) as any),
-  //     ]);
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (!token) return;
-  //   const intervalId = setInterval(() => {
-  //     fetchAllData();
-  //   }, 120000);
-  //   return () => clearInterval(intervalId);
-  // }, [dispatch, token]);
-
-  // const handleFeedbackSubmit = (feedback: FeedbackData) => {
-  //   // console.log("Feedback submitted:", feedback);
-  //   // TODO: Send feedback to your API
-  //   // Example:
-  //   // await fetch('/api/feedback', {
-  //   //   method: 'POST',
-  //   //   headers: { 'Content-Type': 'application/json' },
-  //   //   body: JSON.stringify(feedback)
-  //   // });
-  //   // alert("Thank you for your feedback!");
-  // };
 
   const { data, error, isLoading, refetch } = useQuery({
     queryKey: ["remainingSessionFeedbacks"],
@@ -163,13 +111,11 @@ const ProtectedLayout: React.FC<LayoutProps> = memo(({ children }) => {
     <main className={classes.main}>
       <FcmHandler />
       <Sidebar />
-      {/* <Sidebar /> */}
       <main className={classes.section}>
         <Header />
         <div className={classes.mainContent}>
           <ErrorBoundary>{children}</ErrorBoundary>
         </div>
-        {/* {isAllowedUser && <AddFeedbackModal {...addFeedBackModalProps} />} */}
       </main>
       <div className={classes.backgroundImage}>
         <div className={classes.imageBox}>
@@ -182,14 +128,6 @@ const ProtectedLayout: React.FC<LayoutProps> = memo(({ children }) => {
           />
         </div>
       </div>
-      {/* Feedback Modal */}
-      {/* {user?.roleId === 3 && <EnrollmentFeedbackModal />} */}
-      {/* <EnrollmentFeedbackModal
-        modalOpen={isEnrollmentFeedbackModalOpen}
-        heading="Enrollment Feedback"
-        subHeading="Fill out the feedback form below."
-        handleClose={() => setIsEnrollmentFeedbackModalOpen(false)}
-      /> */}
     </main>
   );
 });

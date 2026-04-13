@@ -41,7 +41,6 @@ const useFCMToken = () => {
 
         if (token) {
           setFcmToken(token);
-          console.log("FCM token retrieved:", token);
         } else {
           console.log("No FCM token received");
         }
