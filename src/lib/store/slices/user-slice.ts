@@ -21,7 +21,12 @@ export const userSlice = createSlice({
   reducers: {
     setUserData: (state, action: PayloadAction<SignIn_Response_Type>) => {
       state.token = action.payload.token;
-      state.user = { ...action.payload.user };
+      const { password, reset_token, reset_token_expiry, ...safeUser } =
+        action.payload.user;
+      void password;
+      void reset_token;
+      void reset_token_expiry;
+      state.user = { ...safeUser } as User_Type;
       state.hasInitialized = false;
       if (action.payload.enrollementIds) {
         state.enrollementIds = [...action.payload.enrollementIds];
