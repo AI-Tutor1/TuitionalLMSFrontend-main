@@ -55,11 +55,11 @@
     "css": 253
   },
   "knownIssues": {
-    "anyTypes": 841,
-    "consoleLogs": 93,
-    "typosInPaths": 7,
-    "jsxFiles": 2,
+    "anyTypes": 840,
+    "consoleLogs": 91,
+    "typosInPaths": 1,
+    "jsxFiles": 0,
     "testFiles": 0,
-    "errorBoundaries": 0
+    "errorBoundaries": 1
   }
 }
