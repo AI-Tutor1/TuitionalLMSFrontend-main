@@ -1,8 +1,8 @@
 import React from "react";
-// import Notifiations from "@/screens/notifications/notifiations";
+// import Notifications from "@/screens/notifications/notifications";
 
 const Page = () => {
-  // return <Notifiations />;
+  // return <Notifications />;
   return <></>;
 };
 
