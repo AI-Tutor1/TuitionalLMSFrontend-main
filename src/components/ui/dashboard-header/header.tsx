@@ -82,7 +82,7 @@ const Header: React.FC = () => {
             <Image
               src={
                 (user as User_Type)?.profileImageUrl ||
-                "/assets/images/demmyPic.png"
+                "/assets/images/dummyPic.png"
               }
               alt={(user as User_Type)?.name || ""}
               fill

@@ -51,7 +51,7 @@ const DropDownObjects: React.FC<DropDownProps> = ({
     ) {
       return url;
     }
-    return "/assets/images/static/demmyPic.png";
+    return "/assets/images/dummyPic.png";
   };
 
   return (
@@ -195,7 +195,7 @@ const DropDownObjects: React.FC<DropDownProps> = ({
                   <Image
                     src={imageUrl(
                       parsedOption?.profileImageUrl ||
-                        "/assets/images/static/demmyPic.png",
+                        "/assets/images/dummyPic.png",
                     )}
                     alt={parsedOption?.name || "No Show"}
                     width={30}

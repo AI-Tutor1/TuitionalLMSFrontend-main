@@ -195,7 +195,7 @@ const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({
                                 <Image
                                   src={
                                     item?.enrollment?.tutor?.profileImageUrl ||
-                                    "/assets/images/static/demmyPic.png"
+                                    "/assets/images/dummyPic.png"
                                   }
                                   alt={"image"}
                                   fill
@@ -222,7 +222,7 @@ const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({
                                     src={
                                       item?.enrollment?.studentsGroups[0]?.user
                                         ?.profileImageUrl ||
-                                      "/assets/images/static/demmyPic.png"
+                                      "/assets/images/dummyPic.png"
                                     }
                                     alt={"image"}
                                     fill
@@ -242,7 +242,7 @@ const ClassScheduleView: React.FC<ClassScheduleViewProps> = ({
                                       src={
                                         item?.enrollment?.studentsGroups[1]
                                           ?.user?.profileImageUrl ||
-                                        "/assets/images/static/demmyPic.png"
+                                        "/assets/images/dummyPic.png"
                                       }
                                       alt={"image"}
                                       fill

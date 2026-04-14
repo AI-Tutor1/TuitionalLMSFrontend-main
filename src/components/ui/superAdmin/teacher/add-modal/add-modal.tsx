@@ -45,7 +45,7 @@ const initialState = {
 };
 
 const countries = Country.getAllCountries();
-const dummyImagePath = "/assets/images/static/demmyPic.png";
+const dummyImagePath = "/assets/images/dummyPic.png";
 
 const validateFormData = ({
   fullName,

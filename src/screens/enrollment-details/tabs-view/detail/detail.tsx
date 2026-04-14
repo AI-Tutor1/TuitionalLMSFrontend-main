@@ -36,7 +36,7 @@ const Detail: React.FC<DetailProps> = ({
                 <div className={classes.imageBox}>
                   <Image
                     src={
-                      student?.profileImageUrl || "/assets/images/demmyPic.png"
+                      student?.profileImageUrl || "/assets/images/dummyPic.png"
                     }
                     alt="profile"
                     fill

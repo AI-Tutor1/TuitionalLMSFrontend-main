@@ -26,7 +26,7 @@ interface CardProps {
   role?: "teacher" | "student" | "parent";
 }
 
-const DEFAULT_IMAGE = "/assets/images/demmyPic.png";
+const DEFAULT_IMAGE = "/assets/images/dummyPic.png";
 
 const Card: FC<CardProps> = ({
   time,

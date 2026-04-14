@@ -124,7 +124,7 @@ const ListView: React.FC<ListScheduleViewProps> = ({ reschedules }) => {
                               <Image
                                 src={
                                   item?.enrollment?.tutor?.profileImageUrl ||
-                                  "/assets/images/static/demmyPic.png"
+                                  "/assets/images/dummyPic.png"
                                 }
                                 alt={"image"}
                                 fill
@@ -145,7 +145,7 @@ const ListView: React.FC<ListScheduleViewProps> = ({ reschedules }) => {
                                   src={
                                     item?.enrollment?.students[0]
                                       ?.profileImageUrl ||
-                                    "/assets/images/static/demmyPic.png"
+                                    "/assets/images/dummyPic.png"
                                   }
                                   alt={"image"}
                                   fill
@@ -164,7 +164,7 @@ const ListView: React.FC<ListScheduleViewProps> = ({ reschedules }) => {
                                     src={
                                       item?.enrollment?.students[1]
                                         ?.profileImageUrl ||
-                                      "/assets/images/static/demmyPic.png"
+                                      "/assets/images/dummyPic.png"
                                     }
                                     alt={"image"}
                                     fill

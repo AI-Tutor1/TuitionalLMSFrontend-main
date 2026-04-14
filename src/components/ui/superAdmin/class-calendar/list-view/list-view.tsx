@@ -300,7 +300,7 @@ const ListView = ({
               const tutorName = slotData?.enrollment?.tutor?.name || "No Show";
               const tutorImageUrl =
                 slotData?.enrollment?.tutor?.profileImageUrl ||
-                "/assets/images/demmyPic.png";
+                "/assets/images/dummyPic.png";
 
               // Student data
               const studentsGroups = slotData?.enrollment?.studentsGroups || [];
@@ -414,7 +414,7 @@ const ListView = ({
                                 src={
                                   student?.user?.profileImageUrl ||
                                   student?.profileImageUrl ||
-                                  "/assets/images/demmyPic.png"
+                                  "/assets/images/dummyPic.png"
                                 }
                                 alt={
                                   student?.user?.name ||

@@ -9,7 +9,8 @@ import PaginationComponent from "@/components/global/pagination/pagination";
 import classes from "./tutorRequest-table.module.css";
 import moment from "moment";
 import { useParams } from "next/navigation";
-import demmyPic from "../../../../../../public/assets/images/demmyPic.png";
+
+const dummyPic = "/assets/images/dummyPic.png";
 
 const headData: { id: number; name: string; width: string }[] = [
   { id: 1, name: "Profile", width: "15%" },
@@ -109,7 +110,7 @@ const TutorRequestTable = ({ data, inlineStyling }: CustomizedTablesProps) => {
                 >
                   <span className={classes.imageBox}>
                     <Image
-                      src={userData?.profileImage || demmyPic}
+                      src={userData?.profileImage || dummyPic}
                       alt={`${userData?.firstName} ${userData?.lastName}`}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

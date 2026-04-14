@@ -425,7 +425,7 @@ const SessionDetailForm: React.FC = () => {
                   <Image
                     src={
                       data?.session?.tutor?.profileImageUrl ||
-                      "/assets/images/demmyPic.png"
+                      "/assets/images/dummyPic.png"
                     }
                     alt="image"
                     fill
@@ -448,7 +448,7 @@ const SessionDetailForm: React.FC = () => {
                   <Image
                     src={
                       data?.session?.sessionEnrollment?.studentsGroups[0]?.user
-                        ?.profileImageUrl || "/assets/images/demmyPic.png"
+                        ?.profileImageUrl || "/assets/images/dummyPic.png"
                     }
                     alt="image"
                     fill
@@ -980,7 +980,7 @@ const NotesBox = ({ notes }: { notes: any[] }) => {
                     <Image
                       src={
                         note.user.profileImageUrl ||
-                        "/assets/images/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
                       alt="User Profile"
                       width={24}
@@ -1029,7 +1029,7 @@ const StudentDetailsBox = ({ data }: { data: any }) => {
                       findById(
                         item?.student_id,
                         data?.session?.sessionEnrollment?.studentsGroups,
-                      )?.user?.profileImageUrl || "/assets/images/demmyPic.png"
+                      )?.user?.profileImageUrl || "/assets/images/dummyPic.png"
                     }
                     alt="profile"
                     fill
@@ -1088,12 +1088,12 @@ const AttendanceDetails = ({ data }: { data: any }) => {
                         src={
                           item?.user_id == data?.tutor?.id
                             ? data?.tutor?.profileImageUrl ||
-                              "/assets/images/demmyPic.png"
+                              "/assets/images/dummyPic.png"
                             : findById(
                                 item?.user_id,
                                 data?.sessionEnrollment?.studentsGroups,
                               )?.user?.profileImageUrl ||
-                              "/assets/images/demmyPic.png"
+                              "/assets/images/dummyPic.png"
                         }
                         alt="profile"
                         fill

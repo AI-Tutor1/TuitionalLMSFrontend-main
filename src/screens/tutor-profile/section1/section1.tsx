@@ -81,7 +81,7 @@ const ProfileSection = memo(
       <div className={classes.box1_inner}>
         <div className={classes.imageBox}>
           <Image
-            src={tutorData?.profileImage || "/assets/images/demmyPic.png"}
+            src={tutorData?.profileImage || "/assets/images/dummyPic.png"}
             alt="Tutor Profile"
             fill
             priority

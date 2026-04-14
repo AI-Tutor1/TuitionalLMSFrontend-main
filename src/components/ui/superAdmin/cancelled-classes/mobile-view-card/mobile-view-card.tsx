@@ -101,7 +101,7 @@ const MobileViewCard: React.FC<MobileViewCardProps> = ({
                       <Image
                         src={
                           enrollment_reschedual?.tutor?.profileImageUrl ||
-                          "/assets/images/demmyPic.png"
+                          "/assets/images/dummyPic.png"
                         }
                         alt={enrollment_reschedual?.tutor?.name ?? "Tutor"}
                         fill
@@ -129,7 +129,7 @@ const MobileViewCard: React.FC<MobileViewCardProps> = ({
                             <Image
                               src={
                                 student?.user?.profileImageUrl ||
-                                "/assets/images/demmyPic.png"
+                                "/assets/images/dummyPic.png"
                               }
                               alt={student?.user?.name ?? "Student"}
                               fill

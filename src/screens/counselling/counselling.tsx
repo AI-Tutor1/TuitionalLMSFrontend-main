@@ -192,7 +192,7 @@ const Counselling = () => {
 
         <div className={classes.imageNameBox}>
           <Image
-            src={userData?.profileImageUrl || "/assets/images/demmyPic.png"}
+            src={userData?.profileImageUrl || "/assets/images/dummyPic.png"}
             alt=""
             width={100}
             height={100}

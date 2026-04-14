@@ -231,7 +231,7 @@ export default function EnrollmentTable({
                       <Image
                         src={
                           tutor?.profileImageUrl ||
-                          "/assets/images/demmyPic.png"
+                          "/assets/images/dummyPic.png"
                         }
                         alt={tutor?.name ?? "Tutor"}
                         fill
@@ -260,7 +260,7 @@ export default function EnrollmentTable({
                               <Image
                                 src={
                                   student?.user?.profileImageUrl ||
-                                  "/assets/images/demmyPic.png"
+                                  "/assets/images/dummyPic.png"
                                 }
                                 alt={student?.user?.name ?? "Student"}
                                 fill

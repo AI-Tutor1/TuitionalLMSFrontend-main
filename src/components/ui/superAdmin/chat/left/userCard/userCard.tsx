@@ -23,7 +23,7 @@ const UserCard: FC<UserCardProps> = ({ item, room, onDelete }) => {
     >
       <span className={classes.imageBox}>
         <Image
-          src={"/assets/images/demmyPic.png"}
+          src={"/assets/images/dummyPic.png"}
           alt={"User"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

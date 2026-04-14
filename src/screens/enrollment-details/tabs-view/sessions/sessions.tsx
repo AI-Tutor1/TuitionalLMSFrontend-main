@@ -66,7 +66,7 @@ const Sessions: React.FC<DetailProps> = ({
                     <Image
                       src={
                         item?.expectedStudents[0]?.profileImageUrl ||
-                        "/assets/images/static/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
                       alt="Student"
                       fill

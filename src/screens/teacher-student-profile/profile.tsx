@@ -10,8 +10,9 @@ import { Country } from "country-state-city";
 import { jwtDecode } from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { MyAxiosError } from "@/services/error.type";
-import DemmyPic from "../../../public/assets/images/demmyPic.png";
 import { getUserById } from "@/services/dashboard/superAdmin/users/users";
+
+const DummyPic = "/assets/images/dummyPic.png";
 import LoadingBox from "@/components/global/loading-box/loading-box";
 import ErrorBox from "@/components/global/error-box/error-box";
 import {
@@ -167,7 +168,7 @@ const StudentProfile: FC = () => {
                 <div className={classes.imageBoxContainer}>
                   <span className={classes.imageBox}>
                     <Image
-                      src={data?.profileImageUrl || DemmyPic}
+                      src={data?.profileImageUrl || DummyPic}
                       alt="Student profile"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

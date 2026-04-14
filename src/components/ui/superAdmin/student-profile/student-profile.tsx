@@ -2,7 +2,7 @@ import { memo } from "react";
 import Image from "next/image";
 import classes from "./student-profile.module.css";
 
-const DEFAULT_PROFILE_IMAGE = "/assets/images/demmyPic.png";
+const DEFAULT_PROFILE_IMAGE = "/assets/images/dummyPic.png";
 
 interface StudentDisplayProps {
   studentsArray: any[];

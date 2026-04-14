@@ -121,9 +121,9 @@ const Ttable: FC<TtableProps> = ({
                     <Image
                       src={
                         item?.userPayout?.profileImageUrl ||
-                        "/assets/images/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
-                      alt={"demmyPic"}
+                      alt="Profile placeholder"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />

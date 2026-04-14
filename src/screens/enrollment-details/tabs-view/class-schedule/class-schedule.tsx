@@ -140,7 +140,7 @@ const ClassSchedule = React.memo(
                   <ImageBox
                     imageUrl1={
                       data?.tutor?.profileImageUrl ||
-                      "/assets/images/static/demmyPic/png"
+                      "/assets/images/dummyPic.png"
                     }
                     alt={"Teacher"}
                     name1={data?.tutor?.name || "Unknown"}
@@ -148,11 +148,11 @@ const ClassSchedule = React.memo(
                   <ImageBox
                     imageUrl1={
                       data?.studentsData[0]?.profileImageUrl ||
-                      "/assets/images/static/demmyPic.png"
+                      "/assets/images/dummyPic.png"
                     }
                     imageUrl2={
                       data?.studentsData[1]?.profileImageUrl ||
-                      "/assets/images/static/demmyPic.png"
+                      "/assets/images/dummyPic.png"
                     }
                     alt={"Student"}
                     name1={data?.studentsData[0]?.name || "Unknown"}
@@ -274,7 +274,7 @@ const ImageBox = React.memo(
       <div className={classes.imageContainer}>
         <div className={classes.imageBox}>
           <Image
-            src={imageUrl1 || "/assets/images/static/demmyPic.png"}
+            src={imageUrl1 || "/assets/images/dummyPic.png"}
             alt={alt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -283,7 +283,7 @@ const ImageBox = React.memo(
         {name2 && (
           <div className={classes.imageBox}>
             <Image
-              src={imageUrl2 || "/assets/images/static/demmyPic.png"}
+              src={imageUrl2 || "/assets/images/dummyPic.png"}
               alt={alt}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

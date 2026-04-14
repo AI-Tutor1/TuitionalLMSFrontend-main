@@ -87,7 +87,7 @@ const Card: FC<CardProps> = ({
                 <div className={classes.imageBox}>
                   <Image
                     src={
-                      profileImageUrl || "/assets/images/static/demmyPic.png"
+                      profileImageUrl || "/assets/images/dummyPic.png"
                     }
                     alt="Profile image"
                     fill
@@ -107,7 +107,7 @@ const Card: FC<CardProps> = ({
                     <Image
                       src={
                         (students && students[0]?.user?.profileImageUrl) ||
-                        "/assets/images/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
                       alt={(students && students[0]?.user?.name) || "Student"}
                       fill
@@ -119,7 +119,7 @@ const Card: FC<CardProps> = ({
                     <Image
                       src={
                         students[1]?.user?.profileImageUrl ||
-                        "/assets/images/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
                       alt={students[1]?.user?.name ?? "Student"}
                       fill

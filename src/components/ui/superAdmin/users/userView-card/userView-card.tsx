@@ -87,7 +87,7 @@ const UserViewCard: React.FC<UsersTablesProps> = ({
                   <div className={classes.profile}>
                     <div className={classes.imageBox}>
                       <Image
-                        src={profileImageUrl || "/assets/images/demmyPic.png"}
+                        src={profileImageUrl || "/assets/images/dummyPic.png"}
                         alt={name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

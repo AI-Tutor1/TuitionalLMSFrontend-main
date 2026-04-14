@@ -168,7 +168,7 @@ const Card: FC<CardProps> = ({
                   src={
                     item?.enrollment?.tutor?.profileImageUrl ||
                     item?.enrollment_reschedual?.tutor?.profileImageUrl ||
-                    "/assets/images/static/demmyPic.png"
+                    "/assets/images/dummyPic.png"
                   }
                   alt="Profile image"
                   fill
@@ -206,7 +206,7 @@ const Card: FC<CardProps> = ({
                 <Image
                   src={
                     (students && students[0]?.user?.profileImageUrl) ||
-                    "/assets/images/static/demmyPic.png"
+                    "/assets/images/dummyPic.png"
                   }
                   alt={(students && students[0]?.name) || "Student"}
                   fill
@@ -218,7 +218,7 @@ const Card: FC<CardProps> = ({
                   <Image
                     src={
                       students[1]?.user?.profileImageUrl ||
-                      "/assets/images/static/demmyPic.png"
+                      "/assets/images/dummyPic.png"
                     }
                     alt={students[1]?.user?.name || "Student"}
                     fill

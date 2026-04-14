@@ -157,7 +157,7 @@ const CalenderView: React.FC<CalenderViewProps> = ({
                               <Image
                                 src={
                                   item.enrollment?.tutor?.profileImageUrl ||
-                                  "/assets/images/static/demmyPic.png"
+                                  "/assets/images/dummyPic.png"
                                 }
                                 alt="Tutor"
                                 fill
@@ -181,7 +181,7 @@ const CalenderView: React.FC<CalenderViewProps> = ({
                                   src={
                                     item.enrollment?.students[0]
                                       ?.profileImageUrl ||
-                                    "/assets/images/static/demmyPic.png"
+                                    "/assets/images/dummyPic.png"
                                   }
                                   alt="Student"
                                   fill
@@ -200,7 +200,7 @@ const CalenderView: React.FC<CalenderViewProps> = ({
                                     src={
                                       item.enrollment?.students[1]
                                         ?.profileImageUrl ||
-                                      "/assets/images/static/demmyPic.png"
+                                      "/assets/images/dummyPic.png"
                                     }
                                     alt="Student"
                                     fill

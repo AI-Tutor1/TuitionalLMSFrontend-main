@@ -52,7 +52,7 @@ export const MessageViewers: React.FC<MessageViewersProps> = React.memo(
                       <Avatar
                         src={
                           view.user.profileImageUrl ||
-                          "/assets/images/demmyPic.png"
+                          "/assets/images/dummyPic.png"
                         }
                         alt={view.user.name}
                         className={classes.viewerAvatar}

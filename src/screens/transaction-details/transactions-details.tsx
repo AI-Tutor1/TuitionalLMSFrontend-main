@@ -143,7 +143,7 @@ const TransactionDetails = () => {
                       <Image
                         src={
                           item?.transactions?.profileImageUrl ||
-                          "/assets/images/demmyPic.png"
+                          "/assets/images/dummyPic.png"
                         }
                         alt={item?.transactions?.name || "User"}
                         fill

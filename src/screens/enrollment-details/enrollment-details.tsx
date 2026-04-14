@@ -587,7 +587,7 @@ const EnrollmentDetailsForm: FC = () => {
                 <Image
                   src={
                     data?.tutor?.profileImageUrl ||
-                    `/assets/images/static/demmyPic.png`
+                    `/assets/images/dummyPic.png`
                   }
                   alt="Teacher"
                   fill

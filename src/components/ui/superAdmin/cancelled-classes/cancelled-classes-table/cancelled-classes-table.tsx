@@ -94,7 +94,7 @@ export default function CancelledClassesTable({
                     <Image
                       src={
                         enrollment_reschedual?.tutor?.profileImageUrl ||
-                        "/assets/images/demmyPic.png"
+                        "/assets/images/dummyPic.png"
                       }
                       alt={enrollment_reschedual?.tutor?.name ?? "Tutor"}
                       fill
@@ -124,7 +124,7 @@ export default function CancelledClassesTable({
                             <Image
                               src={
                                 student?.user?.profileImageUrl ||
-                                "/assets/images/demmyPic.png"
+                                "/assets/images/dummyPic.png"
                               }
                               alt={student?.user?.name ?? "Student"}
                               fill

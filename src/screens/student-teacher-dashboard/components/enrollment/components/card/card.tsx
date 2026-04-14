@@ -28,7 +28,7 @@ interface CardProps {
   tutorHourlyRate?: string;
 }
 
-const DEFAULT_STUDENT_IMAGE = "/assets/images/demmyPic.png";
+const DEFAULT_STUDENT_IMAGE = "/assets/images/dummyPic.png";
 
 const Card: FC<CardProps> = ({
   role,

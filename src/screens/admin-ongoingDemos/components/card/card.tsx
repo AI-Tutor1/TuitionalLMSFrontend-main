@@ -47,7 +47,7 @@ const Card: FC<CardProps> = ({
           <div className={classes.nameImageBox}>
             <div className={classes.imageBox}>
               <Image
-                src={profileImageUrl || "/assets/images/demmyPic.png"}
+                src={profileImageUrl || "/assets/images/dummyPic.png"}
                 alt="Profile image"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -59,7 +59,7 @@ const Card: FC<CardProps> = ({
             <div className={classes.imagesBox}>
               <div className={classes.imageBox}>
                 <Image
-                  src={"/assets/images/demmyPic.png"}
+                  src={"/assets/images/dummyPic.png"}
                   alt={"Student"}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

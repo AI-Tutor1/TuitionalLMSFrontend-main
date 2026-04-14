@@ -15,7 +15,7 @@ import { Tooltip, Checkbox } from "@mui/material";
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 import { getTooltipStyles } from "@/components/global/tooltip/tooltip";
 import EmergencyRecordingRoundedIcon from "@mui/icons-material/EmergencyRecordingRounded";
-const DEFAULT_PROFILE_IMAGE = "/assets/images/demmyPic.png";
+const DEFAULT_PROFILE_IMAGE = "/assets/images/dummyPic.png";
 
 interface MobileViewCardProps {
   data: any[];
@@ -220,7 +220,7 @@ const MobileViewCard: React.FC<MobileViewCardProps> = ({
                       <Image
                         src={
                           tutor?.profileImageUrl ||
-                          "/assets/images/demmyPic.png"
+                          "/assets/images/dummyPic.png"
                         }
                         alt={tutor?.name ?? "Tutor"}
                         fill

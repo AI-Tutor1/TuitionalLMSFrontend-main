@@ -79,7 +79,7 @@ const HEAD_DATA = [
   { id: 8, name: "Actions", width: "6.5%", sort: false, key: "actions" },
 ];
 
-const DEFAULT_PROFILE_IMAGE = "/assets/images/static/demmyPic.png";
+const DEFAULT_PROFILE_IMAGE = "/assets/images/dummyPic.png";
 
 // Helper components
 const UserProfile = memo(({ item }: { item: DataItem }) => {

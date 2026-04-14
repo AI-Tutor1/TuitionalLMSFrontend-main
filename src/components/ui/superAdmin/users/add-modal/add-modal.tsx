@@ -53,7 +53,7 @@ const initialState = {
 };
 
 const countries = Country.getAllCountries();
-const dummyImagePath = "/assets/images/demmyPic.png";
+const dummyImagePath = "/assets/images/dummyPic.png";
 
 const validateFormData = ({
   fullName,

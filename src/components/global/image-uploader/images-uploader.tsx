@@ -42,7 +42,7 @@ export default function ImageUploader({
           <div className={styles.imageItem}>
             <div className={styles.picBox} style={{ ...inlinePicBoxStyles }}>
               <Image
-                src={image?.data_url || "/assets/images/demmyPic.png"}
+                src={image?.data_url || "/assets/images/dummyPic.png"}
                 alt="Uploaded image"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

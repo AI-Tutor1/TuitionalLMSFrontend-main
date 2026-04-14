@@ -30,7 +30,7 @@ interface MobileViewCardProps {
   inlineStyling?: CSSProperties;
 }
 
-const DEFAULT_PROFILE_IMAGE = "/assets/images/static/demmyPic.png";
+const DEFAULT_PROFILE_IMAGE = "/assets/images/dummyPic.png";
 
 const MobileViewCard: React.FC<MobileViewCardProps> = ({
   data,

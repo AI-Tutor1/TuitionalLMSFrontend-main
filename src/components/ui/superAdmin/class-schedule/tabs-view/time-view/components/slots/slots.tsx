@@ -91,7 +91,7 @@ const Slots: FC<SlotsProps> = ({ item, deleteSlotModal }) => {
             <Image
               src={
                 item?.enrollment?.tutor?.profileImageUrl ||
-                "/assets/images/static/demmyPic.png"
+                "/assets/images/dummyPic.png"
               }
               alt="Tutor Image"
               fill
@@ -106,7 +106,7 @@ const Slots: FC<SlotsProps> = ({ item, deleteSlotModal }) => {
               <Image
                 src={
                   item?.enrollment?.students?.[0]?.profileImageUrl ||
-                  "/assets/images/static/demmyPic.png"
+                  "/assets/images/dummyPic.png"
                 }
                 alt="Student Image"
                 fill
@@ -126,7 +126,7 @@ const Slots: FC<SlotsProps> = ({ item, deleteSlotModal }) => {
                     src={
                       (item?.enrollment?.students &&
                         item?.enrollment?.students[1]?.profileImageUrl) ||
-                      "/assets/images/static/demmyPic.png"
+                      "/assets/images/dummyPic.png"
                     }
                     alt="Student Image"
                     fill

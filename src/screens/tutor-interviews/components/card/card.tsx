@@ -26,7 +26,7 @@ const Card: FC<CardProps> = ({ time, name, profileImageUrl, meet_link }) => {
             <div className={styles.nameImageBox}>
               <div className={styles.imageBox}>
                 <Image
-                  src={profileImageUrl || "/assets/images/demmyPic.png"}
+                  src={profileImageUrl || "/assets/images/dummyPic.png"}
                   alt="Profile image"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
