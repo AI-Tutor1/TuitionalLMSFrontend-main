@@ -2,7 +2,8 @@
 .rebuild-cache.json
 
 # Session history files are local — each developer has their own
-sessions/history/
+sessions/history/*
+!sessions/history/.gitkeep
 
 # Current task is local to whoever is working
 sessions/current-task.md
