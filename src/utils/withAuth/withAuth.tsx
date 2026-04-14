@@ -1,20 +1,37 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useRef, useMemo, useCallback, memo } from "react";
+import {
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+  memo,
+  ComponentType,
+} from "react";
 import { useAppSelector } from "@/lib/store/hooks/hooks";
 import { toast } from "react-toastify";
 import { createSelector } from "@reduxjs/toolkit";
+import type { RootState } from "@/lib/store/store";
 
-// Constants moved outside of component to prevent recreation
-const PUBLIC_ROUTES = [
+type RoutePattern = string | RegExp;
+
+interface AssignedPage {
+  route: string;
+}
+
+interface RoleEntry {
+  id: number;
+  name: string;
+}
+
+const PUBLIC_ROUTES: RoutePattern[] = [
   "/signin",
   "/forgot-password",
   /^\/password-reset(\/.*)?$/,
   /^\/confirm-password(\/.*)?$/,
 ];
 
-// Optimized route matching with memoization
-const isMatchingRoute = (path, patterns) => {
+const isMatchingRoute = (path: string, patterns: RoutePattern[]): boolean => {
   if (!patterns || patterns.length === 0) return false;
 
   return patterns.some((pattern) => {
@@ -25,21 +42,19 @@ const isMatchingRoute = (path, patterns) => {
   });
 };
 
-// Memoized route checker to prevent unnecessary recalculations
 const createMemoizedRouteChecker = () => {
-  const cache = new Map();
+  const cache = new Map<string, boolean>();
 
-  return (path, patterns) => {
+  return (path: string, patterns: RoutePattern[]): boolean => {
     const key = `${path}-${JSON.stringify(patterns)}`;
 
     if (cache.has(key)) {
-      return cache.get(key);
+      return cache.get(key) as boolean;
     }
 
     const result = isMatchingRoute(path, patterns);
     cache.set(key, result);
 
-    // Clear cache if it gets too large
     if (cache.size > 100) {
       cache.clear();
     }
@@ -52,16 +67,23 @@ const memoizedRouteChecker = createMemoizedRouteChecker();
 
 const selectAuthData = createSelector(
   [
-    (state) => state.user.user,
-    (state) => state.user.token,
-    (state) => state.assignedPages.assignedPages,
-    (state) => state.roles.roles,
+    (state: RootState) => state.user.user,
+    (state: RootState) => state.user.token,
+    (state: RootState) => state.assignedPages.assignedPages,
+    (state: RootState) => state.roles.roles,
   ],
-  (user, token, assignedPages, ROLES) => ({ user, token, assignedPages, ROLES })
+  (user, token, assignedPages, ROLES) => ({
+    user,
+    token,
+    assignedPages,
+    ROLES,
+  }),
 );
 
-export const withAuth = (WrappedComponent) => {
-  const AuthComponent = memo((props) => {
+export const withAuth = <P extends object>(
+  WrappedComponent: ComponentType<P>,
+): ComponentType<P> => {
+  const AuthComponent = memo((props: P) => {
     const { user, token, assignedPages, ROLES } =
       useAppSelector(selectAuthData);
 
@@ -70,7 +92,7 @@ export const withAuth = (WrappedComponent) => {
 
     // UseRefs to track navigation state
     const hasRedirected = useRef(false);
-    const previousPathRef = useRef(null);
+    const previousPathRef = useRef<string | null>(null);
 
     // Memoized values for better performance
     const isAuthenticated = useMemo(
@@ -78,7 +100,7 @@ export const withAuth = (WrappedComponent) => {
       [token, user?.roleId]
     );
     const roleName = useMemo(() => {
-      const role = ROLES?.find((role) => role.id === user?.roleId);
+      const role = ROLES?.find((role: RoleEntry) => role.id === user?.roleId);
       if (!role?.name) return undefined;
       const words = role.name.split(" ");
       if (words.length === 1) {
@@ -95,9 +117,9 @@ export const withAuth = (WrappedComponent) => {
     const roleFromPath = useMemo(() => pathname.split("/")[1], [pathname]);
 
     // Get protected routes for the current role - Updated for dynamic routes
-    const protectedRoutePatterns = useMemo(() => {
+    const protectedRoutePatterns = useMemo<RoutePattern[]>(() => {
       if (!roleName || !assignedPages) return [];
-      return assignedPages?.map((item) => {
+      return assignedPages?.map((item: AssignedPage) => {
         const baseRoute = `/${roleName}${item?.route}`;
         return baseRoute;
       });
@@ -122,7 +144,10 @@ export const withAuth = (WrappedComponent) => {
 
     // Navigation with toast notification
     const navigateTo = useCallback(
-      (path, message) => {
+      (
+        path: string,
+        message?: { type: "success" | "error"; text: string },
+      ) => {
         if (message) {
           if (message.type === "success") {
             toast.success(message.text);
@@ -132,7 +157,7 @@ export const withAuth = (WrappedComponent) => {
         }
         router.push(path);
       },
-      [router]
+      [router],
     );
 
     // Optimized navigation effect with better performance
@@ -236,7 +261,8 @@ export const withAuth = (WrappedComponent) => {
       if (!isAuthenticated) return false;
 
       // If we haven't loaded assignedPages yet, allow access (loading state)
-      if (!assignedPages || assignedPages.length === 0) return true;
+      if (!assignedPages || (assignedPages as unknown as unknown[]).length === 0)
+        return true;
 
       // Check if user has access to this protected route
       return isProtectedRoute;
@@ -250,7 +276,7 @@ export const withAuth = (WrappedComponent) => {
     WrappedComponent.displayName || WrappedComponent.name || "Component"
   })`;
 
-  return AuthComponent;
+  return AuthComponent as unknown as ComponentType<P>;
 };
 
 export default withAuth;

@@ -113,7 +113,7 @@ const SessionForm: React.FC = () => {
 
   // Fetch enrollments if user is student or teacher
   const { data: enrollmentsData, error: enrollmentsError } = useQuery({
-    queryKey: ["getAllEnrollments", user?.id, isStudent, isTeacher, isParent],
+    queryKey: ["enrollments", "for-session-filters", user?.id, isStudent, isTeacher, isParent],
     queryFn: () =>
       getAllEnrollments(
         {

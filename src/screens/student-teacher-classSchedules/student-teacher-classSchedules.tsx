@@ -198,7 +198,7 @@ const ClassSchedule: FC = () => {
   }, [refractorSchedule, selectedSubject, selectedUser]);
 
   const { data: enrollmentsData } = useQuery({
-    queryKey: ["getAllEnrollments"],
+    queryKey: ["enrollments", "for-class-schedule"],
     queryFn: () =>
       getAllEnrollments(
         {

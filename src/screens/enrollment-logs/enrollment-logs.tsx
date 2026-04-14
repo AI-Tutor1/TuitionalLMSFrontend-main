@@ -235,7 +235,8 @@ const EnrollmentLogs: FC = () => {
   // Data fetching
   const { data, error, isLoading } = useQuery({
     queryKey: [
-      "getAllEnrollments",
+      "enrollments",
+      "logs",
       filters.currentPage,
       filters.rowsPerPage,
       filters.dateFilter,

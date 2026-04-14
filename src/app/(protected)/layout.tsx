@@ -22,6 +22,7 @@ import {
 } from "@/services/dashboard/superAdmin/session-feedbacks/session-feedbacks";
 import AddFeedbackModal from "@/components/ui/superAdmin/session-feedbacks/addFeedback-modal/addFeedback-modal";
 import FcmHandler from "@/components/global/fcm-handler/fcm-handler";
+import ErrorBoundary from "@/components/global/error-boundary/error-boundary";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -165,7 +166,9 @@ const ProtectedLayout: React.FC<LayoutProps> = memo(({ children }) => {
       {/* <Sidebar /> */}
       <main className={classes.section}>
         <Header />
-        <div className={classes.mainContent}>{children}</div>
+        <div className={classes.mainContent}>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </div>
         {/* {isAllowedUser && <AddFeedbackModal {...addFeedBackModalProps} />} */}
       </main>
       <div className={classes.backgroundImage}>
