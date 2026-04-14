@@ -1,5 +1,4 @@
 export const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://dev.tuitionaledu.com";
-// export const BASE_URL = "http://localhost:4000";
 export type configDataType = {
   token?: string;
   contentType?: "application/json" | "multipart/form-data";
