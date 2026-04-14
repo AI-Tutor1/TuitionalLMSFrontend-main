@@ -4,6 +4,7 @@ import { Box, CardMedia, Typography } from "@mui/material";
 import React, { useMemo, memo } from "react";
 import { AboutEducationComponent } from "../../aboutEducation-tab-component/aboutEducation-component";
 import styles from "./about.module.css";
+import { BASE_URL } from "@/services/config";
 
 interface TabItem {
   icon: React.ReactNode;
@@ -40,10 +41,7 @@ const AboutTab: React.FC<AboutTabProps> = ({
     [propsArray]
   );
 
-  const allowedDomains = useMemo(
-    () => ["https://dev.tuitionaledu.com", "http://91.108.112.253:4000"],
-    []
-  );
+  const allowedDomains = useMemo(() => [BASE_URL], []);
 
   const isAllowedDomain = useMemo(() => {
     return (url: string | undefined) => {

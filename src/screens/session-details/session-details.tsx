@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "react-toastify";
 import classes from "./session-details.module.css";
+import { BASE_URL } from "@/services/config";
 import { Box, Typography } from "@mui/material";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
@@ -877,7 +878,7 @@ const TransactionDetails = ({ data }: { data: any }) => {
                       <Image
                         src={
                           item?.transactions?.profileImageUrl ||
-                          "https://dev.tuitionaledu.com/public/uploads/profileImage-1736857222520-815563740-dummy-pic.png"
+                          `${BASE_URL}/public/uploads/profileImage-1736857222520-815563740-dummy-pic.png`
                         }
                         alt={item?.transactions?.name || "User"}
                         fill
