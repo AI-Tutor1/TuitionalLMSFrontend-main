@@ -3,8 +3,8 @@ import { createSlice, PayloadAction, Dispatch } from "@reduxjs/toolkit";
 import {
   GetAllUsersByGroup_ApiResponse_Type,
   UserByGroup_Object,
-} from "@/services/dashboard/superAdmin/uers/users.type";
-import { getAllUsersByGroup } from "@/services/dashboard/superAdmin/uers/users";
+} from "@/services/dashboard/superAdmin/users/users.type";
+import { getAllUsersByGroup } from "@/services/dashboard/superAdmin/users/users";
 import { configDataType } from "@/services/config";
 
 const initialState: {

@@ -11,7 +11,7 @@ import Button from "@/components/global/button/button";
 import InputField from "@/components/global/input-field/input-field";
 import DropDown from "@/components/global/dropDown-objects/dropDown-objects";
 import DatePicker from "@/components/global/date-picker/date-picker";
-import { getAllusers } from "@/services/dashboard/superAdmin/uers/users";
+import { getAllusers } from "@/services/dashboard/superAdmin/users/users";
 import { getAllEnrollments } from "@/services/dashboard/superAdmin/enrollments/enrollments";
 import { useQuery } from "@tanstack/react-query";
 import { useAppSelector } from "@/lib/store/hooks/hooks";

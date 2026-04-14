@@ -10,7 +10,7 @@ import {
   Subject_Type,
   Grade_Type,
 } from "@/services/dashboard/superAdmin/curriulums/curriulums.type";
-import { User } from "@/services/dashboard/superAdmin/uers/users.type";
+import { User } from "@/services/dashboard/superAdmin/users/users.type";
 import CheckBox from "@/components/global/checkbox/checkbox";
 import { toast } from "react-toastify";
 import DatePicker from "@/components/global/date-picker/date-picker";

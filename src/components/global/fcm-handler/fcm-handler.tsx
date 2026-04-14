@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { useAppSelector } from "@/lib/store/hooks/hooks";
 import useFCM from "@/lib/firebase/hooks/useFCM";
-import { updateUser } from "@/services/dashboard/superAdmin/uers/users";
+import { updateUser } from "@/services/dashboard/superAdmin/users/users";
 import { toast } from "react-toastify";
 
 const FcmHandler = () => {

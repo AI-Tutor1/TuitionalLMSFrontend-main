@@ -24,14 +24,14 @@ import {
   deleteUser,
   addRelation,
   getAllusers,
-} from "@/services/dashboard/superAdmin/uers/users";
-import { UpdateUser_Api_Payload_Type } from "@/services/dashboard/superAdmin/uers/users.type";
+} from "@/services/dashboard/superAdmin/users/users";
+import { UpdateUser_Api_Payload_Type } from "@/services/dashboard/superAdmin/users/users.type";
 import SearchBox from "@/components/global/search-box/search-box";
 import FilterByDate from "@/components/global/filter-by-date/filter-by-date";
 import Button from "@/components/global/button/button";
 import FilterDropdown from "@/components/global/filter-dropdown/filter-dropdown";
 import UsersTable from "@/components/ui/superAdmin/users/users-table/users-table";
-import AddModal from "@/components/ui/superAdmin/users/add-modal/add-moadl";
+import AddModal from "@/components/ui/superAdmin/users/add-modal/add-modal";
 import RelationModal from "@/components/ui/superAdmin/users/relation-modal/relationModalOpen";
 import UpdateModal from "@/components/ui/superAdmin/users/edit-modal/edit-modal";
 import DeactivateModal from "@/components/ui/superAdmin/users/deactivate-modal/deactivate-modal";

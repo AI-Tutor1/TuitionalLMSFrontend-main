@@ -14,8 +14,31 @@ const ToastContainerDynamic = dynamic(
   { ssr: false },
 );
 
-// Empty fallback component to avoid hydration mismatch
-const EmptyFallback = () => null;
+// Loading spinner shown during SSR -> client hydration before providers mount.
+const BootstrapLoader = () => (
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100vh",
+      width: "100vw",
+      background: "var(--main-white-color, #fff)",
+    }}
+  >
+    <div
+      style={{
+        width: "40px",
+        height: "40px",
+        border: "3px solid var(--sidebar-border-color, #a0afb8)",
+        borderTopColor: "var(--main-blue-color, #38b6ff)",
+        borderRadius: "50%",
+        animation: "spin 0.8s linear infinite",
+      }}
+    />
+    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+  </div>
+);
 
 const MainProvider = ({ children }: { children: ReactNode }) => {
   // Use useRef to ensure the same QueryClient instance is used across renders
@@ -38,7 +61,7 @@ const MainProvider = ({ children }: { children: ReactNode }) => {
 
   // Skip rendering on the server completely
   if (!isMounted) {
-    return <EmptyFallback />;
+    return <BootstrapLoader />;
   }
 
   return (
