@@ -158,3 +158,32 @@ no_secrets = "grep -rn 'AIzaSy\\|BMg4cJ6' src/"
 no_double_braces = "grep -rn '}}' src/api/ --include='*.ts'"
 no_unsanitized_html = "grep -rn 'dangerouslySetInnerHTML' src/ --include='*.tsx' | grep -v sanitizeHTML"
 no_jsx_files = "find src -name '*.jsx'"
+
+
+**You are NOT allowed to:**
+
+- Create files without checking if something similar already exists
+- Add `any` type annotations
+- Use Tailwind (this project uses CSS Modules)
+- Hardcode colors — use only CSS variables from `globals.css`
+- Use colors that only exist in light theme — every color must be defined in both light and dark theme
+- Use any color styles outside of the global CSS variables system
+- Use `dangerouslySetInnerHTML` without `sanitizeHTML()`
+- Use any font family other than `League Spartan` — never import or reference another font
+- Use any API fetching method other than TanStack Query — no raw fetch(), no axios directly in components, no useEffect for data fetching
+- Create new table styles — always use the existing shared table component and its styles
+- Create new modal styles — always use the existing shared modal component and its styles
+- Push to `main` or `master` branch
+- Modify `.agent-context/project.toml`, `.agent-context/rules.toml`, or `.agent-context/contracts/`
+- Skip validation after changes
+- Use `useEffect` for data fetching — this belongs in TanStack Query
+- Add inline styles (`style={{}}`) — all styling goes through CSS Modules
+- Create new CSS files without checking if an existing module already covers the case
+- Hardcode any string that should be an environment variable
+- Import from `src/` using relative paths like `../../../` — use path aliases
+- Add `console.log` statements in committed code
+- Use `// @ts-ignore` or `// @ts-nocheck` to suppress TypeScript errors
+- Skip error handling in mutations — always use `handleMutationError()`
+- Build query params manually — always use `buildQueryParams()`
+- Write duplicate utility logic — check `src/utils/helpers/` before writing any helper
+- Modify shared components (god nodes) without first checking `god-nodes.json` blast radius
